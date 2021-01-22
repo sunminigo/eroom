@@ -1,0 +1,9 @@
+@mixin transition ($property: all, $duration: 400ms, $animate: linear, $delay:0s) {
+	transition: $property $duration $animate $delay;
+}
+
+
+@mixin transform ($total) {
+	-webkit-transition: $total;
+	transition: $total;
+}

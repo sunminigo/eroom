@@ -1,0 +1,31 @@
+/*---------------
+	MY BASE SET
+---------------*/
+/* Margin, Padding */
+$base-space: 8px;
+$base-space-2x: 16px;
+$base-space-3x: 24px;
+$base-space-4x: 32px;
+$base-space-5x: 40px;
+
+/* Border Radius */
+$base-radius-4px: 4px;
+$base-radius: 8px;
+$base-radius-2x: 12px;
+$base-radius-3x: 16px;
+$base-radius-4x: 32px;
+$base-radius-circle: 100%;
+
+/* box-shadow */
+$box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+$box-shadow-2x: 2px 2px 16px rgba(0, 0, 0, 0.1);
+$box-shadow-3x: 2px 2px 24px rgba(0, 0, 0, 0.1);
+$filter-shadow: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.1));
+
+/* breakpoint */
+$breakpoint-sm: 320px;
+$breakpoint-md: 758px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1024px;
+
+

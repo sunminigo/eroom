@@ -1,0 +1,13 @@
+ul,
+ol,
+li{
+	list-style-type: none;
+}
+
+.menu+.menu:before {
+	content: '';
+	display: inline-block;
+	width: 1px;
+	height: 31px;
+	background: #C4C4C4;
+}

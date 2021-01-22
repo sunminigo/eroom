@@ -1,0 +1,118 @@
+/*---------------
+	COLOR SET
+---------------*/
+$brand1: #6D6695;
+$brand2: #4D4482;
+$brand3: #8980BE;
+$brand4: #e6168d;
+
+$white:      #fff;
+$offWhite:   #FCFCFC;
+$light:      #f8f9fa;
+$lightGrey1: #dfdfdf;
+$lightGrey2: #C1C1C1;
+$grey1:      #A5A5A5;
+$grey2:      #8B8B8B;
+$grey3:      #6F6F6F;
+$grey4:      #555;
+$dark:       #343a40;
+$darkGrey1:  #3D3D3D;
+$darkGrey2:  #242424;
+$default:    #222;
+$black:      #000;
+
+$lightBlueGrey1: #F7F7FC;
+$lightBlueGrey2: #EFF0F6;
+$blueGrey1:      #D6D8E7;
+$blueGrey2:      #A0A3BD;
+$blueGrey3:      #6E7191;
+$blueGrey4:      #4E4B66;
+$darkBlueGrey:   #14142A;
+
+$primary:   #0078D4;
+$secondary: #E6168D;
+$success:   #33B6FF;
+$info:      #03a9f3;
+$warning:   #FF9D43;
+$danger:    #CD103E;
+$muted:     #dbdbdb;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+		(
+			"brand1": $brand1,
+			"brand2": $brand2,
+			"brand3": $brand3,
+			"brand4": $brand4,
+			
+			"white":      $white,
+			"offWhite":   $offWhite,
+			"light":      $light,
+			"lightGrey1": $lightGrey1,
+			"lightGrey2": $lightGrey2,
+			"grey1":      $grey1,
+			"grey2":      $grey2,
+			"grey3":      $grey3,
+			"grey4":      $grey4,
+			"dark":       $dark,
+			"darkGrey1":  $darkGrey1,
+			"darkGrey2":  $darkGrey2,
+			"default":    $default,
+			"black":      $black,
+			
+			"lightBlueGrey1": $lightBlueGrey1,
+			"lightBlueGrey2": $lightBlueGrey2,
+			"blueGrey1":      $blueGrey1,
+			"blueGrey2":      $blueGrey2,
+			"blueGrey3":      $blueGrey3,
+			"blueGrey4":      $blueGrey4,
+			"darkBlueGrey":   $darkBlueGrey,
+			
+			"primary":    $primary,
+			"secondary":  $secondary,
+			"success":    $success,
+			"info":       $info,
+			"warning":    $warning,
+			"danger":     $danger,
+			"muted":      $muted,
+		),
+		$theme-colors
+);
+:export {
+	brand1: $brand1;
+	brand2: $brand2;
+	brand3: $brand3;
+	brand4: $brand4;
+	
+	white:      $white;
+	offWhite:   $offWhite;
+	light:      $light;
+	lightGrey1: $lightGrey1;
+	lightGrey2: $lightGrey2;
+	grey1:      $grey1;
+	grey2:      $grey2;
+	grey3:      $grey3;
+	grey4:      $grey4;
+	dark:       $dark;
+	darkGrey1:  $darkGrey1;
+	darkGrey2:  $darkGrey2;
+	default:    $default;
+	black:      $black;
+	
+	lightBlueGrey1: $lightBlueGrey1;
+	lightBlueGrey2: $lightBlueGrey2;
+	blueGrey1:      $blueGrey1;
+	blueGrey2:      $blueGrey2;
+	blueGrey3:      $blueGrey3;
+	blueGrey4:      $blueGrey4;
+	darkBlueGrey:   $darkBlueGrey;
+	
+	primary:    $primary;
+	secondary:  $secondary;
+	success:    $success;
+	info:       $info;
+	warning:    $warning;
+	danger:     $danger;
+	muted:      $muted;
+};
+

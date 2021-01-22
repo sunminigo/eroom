@@ -1,22 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
-/* line 3, workspace/assets/style/default.scss */
+/* line 3, workspace/assets/style/reset.scss */
 * {
     margin: 0;
     padding: 0;
     font-family: 'Nanum Gothic', sans-serif; }
 
-/* line 8, workspace/assets/style/default.scss */
+/* line 8, workspace/assets/style/reset.scss */
 html,
 body {
     height: 100%; }
 
-/* line 12, workspace/assets/style/default.scss */
+/* line 12, workspace/assets/style/reset.scss */
 .wrapper {
     height: 100%;
     background: #EEEEEE;
     padding: 26px 26px 0 25px; }
 
-/* line 17, workspace/assets/style/default.scss */
+/* line 17, workspace/assets/style/reset.scss */
 .hide {
     position: relative;
     width: 1px;
@@ -25,13 +25,13 @@ body {
     font-size: 0;
     z-index: -999; }
 
-/* line 25, workspace/assets/style/default.scss */
+/* line 25, workspace/assets/style/reset.scss */
 .box {
     background: #FFFFFF;
     box-shadow: 0px 8px 16px -8px rgba(0, 0, 0, 0.25);
     border-radius: 16px; }
 
-/* line 30, workspace/assets/style/default.scss */
+/* line 30, workspace/assets/style/reset.scss */
 .menu + .menu:before {
     content: '';
     display: inline-block;
