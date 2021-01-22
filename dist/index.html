@@ -1,76 +1,75 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-		<meta charset="UTF-8">
-		<meta name="author"
-		      content="">
-		<meta name="description"
-		      content="">
-		<!-- 링크커버 -->
-		<meta property="og:image"
-		      content="">
-		<!-- 링크타이틀 -->
-		<meta property="og:title"
-		      content="">
-		<!-- 링크설명 -->
-		<meta property="og:description"
-		      content="">
-		<!-- 파비콘 -->
-		<!-- third-generation iPad with high-resolution Retina display: -->
-		<link type="image/x-icon"
-		      rel="apple-touch-icon-precomposed"
-		      sizes="144x144"
-		      href="">
-		<!-- iPhone with high-resolution Retina display: -->
-		<link type="image/x-icon"
-		      rel="apple-touch-icon-precomposed"
-		      sizes="114x114"
-		      href="">
-		<!-- first- and second-generation iPad: -->
-		<link type="image/x-icon"
-					rel="apple-touch-icon-precomposed"
-		      sizes="72x72"
-		      href="">
-		 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-		<link type="image/x-icon"
-					rel="apple-touch-icon-precomposed"
-					href="">
-		 <!-- basic favicon -->
-		<link type="image/x-icon"
-					rel="shortcut icon"
-		      href="">
+	<meta charset="UTF-8">
+	<meta name="author"content="">
+	<meta name="description"content="">
+	<!-- 링크커버 -->
+	<meta property="og:image"content="">
+	<!-- 링크타이틀 -->
+	<meta property="og:title"content="">
+	<!-- 링크설명 -->
+	<meta property="og:description"content="">
+	<!-- 파비콘 -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="">
+	<!-- basic favicon -->
+	<link rel="shortcut icon" href="">
 
 	<title>eroom</title>
 
-	<link rel="stylesheet"
-	      href="/assets/style/default.css"/>
+	<!-- slick -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<!-- eroom -->
+	<link rel="stylesheet" href="/assets/style/style.css"/>
 
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <div class="wrapper">
-	<section class="content_wrap">
-		main
+	<section class="container_wrap">
+		<section class="content_wrap">
+			main
+		</section>
 
-	</section>
-	<section class="side_wrap">
-		<div class="side_box">
-	side menu
+		<section class="info_wrap">
+			<div class="info_box">
+	<div class="info_box__icon">
+		<img src="/assets/images/icon/speaker.png" alt="icon" />
+	</div>
+	<div id="banner" class="info_box__txt">
+		<div>
+			<p><span>[News]</span> 1‘발달장애인 산업현장 안전사고 예방’ 쉬운 책 발간</p>
+		</div>
+	</div>
 </div>
 
-	</section>
-	<section class="info_wrap">
-			<div>footer</div>
+<script>
+	$(document).ready(function(){
+		$("#banner").slick({
+			vertical: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 3000,
+			arrows: false,
+			verticalSwiping: true
+		});
+	});
+</script>
 
-
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="/assets/script/common.js"></script>
-</body>
-</html>
-
-	</section>
-	<section class="navigation_wrap">
-		<ul class="navigation_box">
+		</section>
+		<section class="navigation_wrap">
+			<ul class="navigation_box">
 	<li>
 		<a href="">
 			<img src="/assets/images/icon/home.png" alt="icon" />
@@ -91,9 +90,10 @@
 	</li>
 </ul>
 
-	</section>
-	<section class="control_wrap">
-		<div class="control_box">
+
+		</section>
+		<section class="control_wrap">
+			<div class="control_box">
 	<button type="button">
 		<img src="/assets//images/icon/magnifier-plus.png"
 		     alt="icon" />
@@ -106,8 +106,23 @@
 	</button>
 </div>
 
+		</section>
+	</section>
+	<section class="side_wrap">
+		<div class="side_box">
+	side menu
+</div>
+
 	</section>
 </div>
+
+	<!-- slick -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<!-- eroom -->
+	<script type="text/javascript" src="/assets/script/common.js"></script>
 </body>
 </html>
+
+
+
 

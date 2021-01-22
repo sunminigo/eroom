@@ -1,7 +1,24 @@
-	<div>footer</div>
+<div class="info_box">
+	<div class="info_box__icon">
+		<img src="/assets/images/icon/speaker.png" alt="icon" />
+	</div>
+	<div id="banner" class="info_box__txt">
+		<div>
+			<p><span>[News]</span> 1‘발달장애인 산업현장 안전사고 예방’ 쉬운 책 발간</p>
+		</div>
+	</div>
+</div>
 
-
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="/assets/script/common.js"></script>
-</body>
-</html>
+<script>
+	$(document).ready(function(){
+		$("#banner").slick({
+			vertical: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 3000,
+			arrows: false,
+			verticalSwiping: true
+		});
+	});
+</script>

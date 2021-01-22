@@ -58,7 +58,7 @@ gulp.task( 'html-include', () => {
 gulp.task( 'scss:compile', () => {
 	return new Promise( resolve => {
 		var options = {
-			outputStyle: "nested", // nested, expanded, compact, compressed
+			outputStyle: "compact", // nested, expanded, compact, compressed
 			indentType: "space", // space, tab
 			indentWidth: 4,
 			precision: 8,

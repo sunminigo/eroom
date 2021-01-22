@@ -4,6 +4,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	@include vendorPrefix(box-sizing, border-box)
 }
 html,
 body{
@@ -63,13 +64,4 @@ i{
 
 .hand {
 	cursor: pointer;
-}
-
-/*---------------------------
-	layout
----------------------------*/
-.wrapper {
-	height: 100%;
-	background: #EEEEEE;
-	padding: 26px 26px 0 25px;
 }

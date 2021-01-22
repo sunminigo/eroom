@@ -1,15 +1,13 @@
 /*---------------
 	COLOR SET
 ---------------*/
-$brand1: #6D6695;
-$brand2: #4D4482;
-$brand3: #8980BE;
-$brand4: #e6168d;
+$brand1: #2460AF;
+$brand2: #FFC32F;
 
 $white:      #fff;
 $offWhite:   #FCFCFC;
 $light:      #f8f9fa;
-$lightGrey1: #dfdfdf;
+$lightGrey1: #EEEEEE;
 $lightGrey2: #C1C1C1;
 $grey1:      #A5A5A5;
 $grey2:      #8B8B8B;
@@ -18,7 +16,7 @@ $grey4:      #555;
 $dark:       #343a40;
 $darkGrey1:  #3D3D3D;
 $darkGrey2:  #242424;
-$default:    #222;
+$default:    #242424;
 $black:      #000;
 
 $lightBlueGrey1: #F7F7FC;
@@ -29,11 +27,11 @@ $blueGrey3:      #6E7191;
 $blueGrey4:      #4E4B66;
 $darkBlueGrey:   #14142A;
 
-$primary:   #0078D4;
+$primary:   #2460AF;
 $secondary: #E6168D;
 $success:   #33B6FF;
-$info:      #03a9f3;
-$warning:   #FF9D43;
+$info:      #14142A;
+$warning:   #FFC32F;
 $danger:    #CD103E;
 $muted:     #dbdbdb;
 
@@ -42,9 +40,7 @@ $theme-colors: map-merge(
 		(
 			"brand1": $brand1,
 			"brand2": $brand2,
-			"brand3": $brand3,
-			"brand4": $brand4,
-			
+
 			"white":      $white,
 			"offWhite":   $offWhite,
 			"light":      $light,
@@ -59,7 +55,7 @@ $theme-colors: map-merge(
 			"darkGrey2":  $darkGrey2,
 			"default":    $default,
 			"black":      $black,
-			
+
 			"lightBlueGrey1": $lightBlueGrey1,
 			"lightBlueGrey2": $lightBlueGrey2,
 			"blueGrey1":      $blueGrey1,
@@ -67,7 +63,7 @@ $theme-colors: map-merge(
 			"blueGrey3":      $blueGrey3,
 			"blueGrey4":      $blueGrey4,
 			"darkBlueGrey":   $darkBlueGrey,
-			
+
 			"primary":    $primary,
 			"secondary":  $secondary,
 			"success":    $success,
@@ -81,9 +77,7 @@ $theme-colors: map-merge(
 :export {
 	brand1: $brand1;
 	brand2: $brand2;
-	brand3: $brand3;
-	brand4: $brand4;
-	
+
 	white:      $white;
 	offWhite:   $offWhite;
 	light:      $light;
@@ -98,7 +92,7 @@ $theme-colors: map-merge(
 	darkGrey2:  $darkGrey2;
 	default:    $default;
 	black:      $black;
-	
+
 	lightBlueGrey1: $lightBlueGrey1;
 	lightBlueGrey2: $lightBlueGrey2;
 	blueGrey1:      $blueGrey1;
@@ -106,7 +100,7 @@ $theme-colors: map-merge(
 	blueGrey3:      $blueGrey3;
 	blueGrey4:      $blueGrey4;
 	darkBlueGrey:   $darkBlueGrey;
-	
+
 	primary:    $primary;
 	secondary:  $secondary;
 	success:    $success;
