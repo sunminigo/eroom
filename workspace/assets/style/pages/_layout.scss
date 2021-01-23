@@ -29,21 +29,20 @@
 				position: relative;
 				display: flex;
 
-				.gnb {
+				& > .gnb {
 					position: relative;
 					text-align: center;
 					width: 281px;
 					height: 102px;
 					line-height: 102px;
 					font-size: 36px;
-					font-weight: 600;
 
 					& + .gnb:before {
-						@include position-translate(absolute, $t: 50%, $l: 0, $x: 0, $y: -50%);
+						@include position-translate(absolute, $t:  50%, $l: 0, $x: 0, $y: -50%);
 						content: '';
 						width: 1px;
 						height: 31px;
-						background: #C4C4C4;
+						background: $light;
 					}
 					&:first-child {
 						width: 102px;
@@ -52,39 +51,48 @@
 						background: $warning;
 					}
 					&.floor {
+						/*
 						&:after {
 							content: '';
-							@include position-translate(absolute, $t:-64px, $l:50%, $x: 0, $y: -50%);
-							width: 43px;
-							height: 44px;
-							background: red;
+							@include position-translate(absolute, $t: -87px, $l: 50%, $x: -50%, $y: 0);
+							background: #fff;
 							box-shadow: $box-shadow;
-							transform: rotate(-180deg);
+							width: 0px;
+							height: 0px;
+							border-top: 21px solid transparent;
+							border-bottom: 21px solid #fff;
+							border-right: 21px solid #fff;
+							border-left: 21px solid  transparent;
+							transform: rotate(45deg);
 						}
+						*/
 					}
 					a {
 						display: block;
 					}
 				}
-				.lnb_wrap {
-					@include position-translate(absolute, $t:-136px, $l:0, $x:-50%, $y:0);
-					display: flex;
-					align-items: center;
+			}
+			.lnb_wrap {
+				@include position-translate(absolute, $t:-136px, $l:0, $x:-50%, $y:0);
+				display: flex;
+				align-items: center;
+				height: 88px;
+				padding: 8px 7px;
+				overflow: hidden;
+
+				& > .lnb {
+					width: 88px;
 					height: 72px;
-					padding: 8px 7px;
-					overflow: hidden;
+					line-height: 72px;
+					font-size: 30px;
+					font-weight: 800;
+					border-radius: 3px;
 
-					.lnb {
-						width: 88px;
-						font-size: 30px;
-						font-weight: 800;
-
-						&.active {
-							background: $warning;
-						}
-						a {
-							display: block;
-						}
+					&.active {
+						background: $warning;
+					}
+					a {
+						display: block;
 					}
 				}
 			}
@@ -117,7 +125,6 @@
 				padding: 12px;
 				background: $brand2;
 				font-size:30px;
-				font-weight: 600;
 				border-radius: 10px 10px 0 0;
 
 				&__icon {
@@ -140,5 +147,103 @@
 	}
 	.side_wrap {
 		width: 456px;
+
+		.side_box {
+
+			.weather_wrap {
+				text-align: center;
+				display: flex;
+				align-items: center;
+				height: 144px;
+				padding: 0 14px;
+
+				& > div {
+					position: relative;
+					padding: 0 8px;
+
+					& + div:before  {
+						@include position-translate(absolute, $t:  50%, $l: 0, $x: 0, $y: -50%);
+						content: '';
+						width: 1px;
+						height: 31px;
+						background: $light;
+					}
+				}
+				.today_info {
+					flex: .85;
+
+					&__date {
+						font-size: 18px;
+					}
+					&__time {
+						margin-top: 6px;
+						font-size: 32px;
+						font-weight: 800;
+					}
+				}
+				.temp_info {
+					display: flex;
+					align-items: center;
+
+
+					&__img {
+						width: 86px;
+						height: 86px;
+					}
+					&__txt {}
+				}
+			}
+			.info_wrap {
+				margin-top: 17px;
+				padding: 16px 12px;
+
+				.title {
+
+				}
+				.info_list {
+
+					li {
+						margin-top: 18px;
+
+						& + li {
+							margin-top: 17px;
+						}
+						.btn {
+							display: flex;
+							align-items: center;
+							width: 100%;
+							height: 86px;
+							padding: 0 15px;
+							background: $lightGrey1;
+							border-radius: 4px 4px 0px 0px;
+							font-size: 26px;
+
+							& > p {
+								position: relative;
+								text-align: left;
+								flex: 1;
+
+								& + p:before  {
+									@include position-translate(absolute, $t:  50%, $l: 0, $x: 0, $y: -50%);
+									content: '';
+									width: 1px;
+									height: 31px;
+									background: $light;
+								}
+							}
+							&__time {
+								padding: 0 8px 0 32px;
+								background: url('/assets/images/icon/clock.png') no-repeat center left;
+							}
+							&__place {
+								padding: 0 8px 0 40px;
+								background: url('/assets/images/icon/conference.png') no-repeat 8px center;
+
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
