@@ -1,20 +1,27 @@
 @@include('../include/head.html', { title: 'eroom' })
 <div class="wrapper">
 	<section class="container_wrap">
+		<h1 class="logo">
+			<img src="/assets/images/logo.svg" alt="errom logo">
+		</h1>
+
 		<section class="content_wrap">
-			main
+			<div class="main">
+				<img src="/assets/images/banner/people.png" alt="">
+			</div>
 		</section>
 
+		<section class="navigation_wrap box">
+			@@include('../include/navigation.html')
+		</section>
 		<section class="info_wrap">
 			@@include('../include/info.html')
-		</section>
-		<section class="navigation_wrap">
-			@@include('../include/navigation.html')
 		</section>
 		<section class="control_wrap">
 			@@include('../include/control.html')
 		</section>
 	</section>
+
 	<section class="side_wrap">
 		@@include('../include/sideMenu.html')
 	</section>
