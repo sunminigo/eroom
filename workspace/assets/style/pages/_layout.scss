@@ -1,3 +1,9 @@
+body {
+	font-size: 16px;
+}
+body.controlFontSize {
+	font-size: 20px;
+}
 .wrapper {
 	position: relative;
 	display: flex;
@@ -10,7 +16,7 @@
 	}
 	.container_wrap {
 		width: calc(100% - 482px);
-		padding-left: 25px;
+		//padding-left: 25px;
 		overflow: hidden;
 
 		.logo_wrap {
@@ -32,6 +38,10 @@
 				display: flex;
 
 				& > .gnb {
+
+					&.active {
+						background: $warning;
+					}
 					& + .gnb > button:before {
 						@include position-translate(absolute, $t:  50%, $l: 0, $x: 0, $y: -50%);
 						content: '';
@@ -39,13 +49,11 @@
 						height: 31px;
 						background: $light;
 					}
-					&.active {
-						background: $warning;
-					}
 					&:first-child > .btn_menu {
 						width: 102px;
 					}
 					.btn_menu {
+						position: relative;
 						text-align: center;
 						display: block;
 						width: 281px;
@@ -273,6 +281,62 @@
 					color: #fff;
 					background: $primary url('/assets/images/icon/calender.png') no-repeat 80px center;
 				}
+			}
+		}
+	}
+}
+.popup_wrap {
+	@include position(fixed, $t: 0, $l: 0, $b: 0, $r: 0);
+	z-index: -999;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+
+	&.active {
+		z-index: 10;
+		opacity: 1;
+		visibility: visible;
+		transition: all 0.3s ease-in-out;
+	}
+	.mask {
+		@include position(absolute, $t: 0, $l: 0);
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.5);
+	}
+	.popup_box {
+		@include position-translate(absolute, $t: 50%, $l: 138px, $x: 0, $y: -50%);
+		width: 90%;
+		height: 90%;
+		background: #fff;
+		box-shadow: $box-shadow-2x;
+		border-radius: $base-radius;
+
+		&__header {
+			text-align: center;
+			height: 99px;
+			padding: 24px 26px;
+			font-size: 44px;
+		}
+		&__container {
+			height: calc(100% - 219px);
+			padding: 0 26px;
+			overflow-y: auto;
+		}
+		&__footer {
+			text-align: center;
+			height: 120px;
+			padding: 24px 26px;
+
+			.btn {
+				width: 235px;
+				height: 72px;
+				font-size: 30px;
+				font-weight: 800;
+				border-radius: 3px;
+			}
+			.btn_close {
+				border: 1px solid #444444;
 			}
 		}
 	}

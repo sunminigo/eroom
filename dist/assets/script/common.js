@@ -9,16 +9,17 @@ $(document).ready(function(){
 	//slider
 	$('#visual_slider').slick({
 		autoplay: true,
-		autoplaySpeed: 1000,
+		autoplaySpeed: 5000,
 		arrows: false,
-		dot: true,
+		dots: true,
 	});
+
 	$("#info_slider").slick({
 		vertical: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 1000,
+		autoplaySpeed: 3000,
 		arrows: false,
 		verticalSwiping: true
 	});
@@ -29,7 +30,10 @@ $(document).ready(function(){
 		return false;
 	});
 
-
+	// 텍스트 사이즈
+	$(".control_text").bind("click", function () {
+		$('body').toggleClass('controlFontSize');
+	});
 
 });
 

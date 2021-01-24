@@ -1,60 +1,32 @@
-.main {}
-.popup_wrap {
-	@include position(fixed, $t: 0, $l: 0, $b: 0, $r: 0);
-	z-index: -999;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.3s ease-in-out;
+.main {
+	text-align: center;
+	width: 100%;
 
-	&.active {
-		z-index: 10;
-		opacity: 1;
-		visibility: visible;
-		transition: all 0.3s ease-in-out;
-	}
-	.mask {
-		@include position(absolute, $t: 0, $l: 0);
-		width: 100%;
-		height: 100%;
-		background: rgba(0,0,0,.5);
-	}
-	.popup_box {
-		@include position-translate(absolute, $t: 50%, $l: 138px, $x: 0, $y: -50%);
-		width: 90%;
-		height: 90%;
-		background: #fff;
-		box-shadow: $box-shadow-2x;
-		border-radius: $base-radius;
-
-		&__header {
-			text-align: center;
-			height: 99px;
-			padding: 24px 26px;
-			font-size: 44px;
-		}
-		&__container {
-			height: calc(100% - 219px);
-			padding: 0 26px;
-			overflow-y: auto;
-		}
-		&__footer {
-			text-align: center;
-			height: 120px;
-			padding: 24px 26px;
-
-			.btn {
-				width: 235px;
-				height: 72px;
-				font-size: 30px;
-				font-weight: 800;
-				border-radius: 3px;
+	.visual_wrap {
+		.slick-slide {
+			img {
+				margin: 0 auto;
 			}
-			.btn_close {
-				border: 1px solid #444444;
+		}
+		.slick-dots {
+			display: flex !important;
+			align-items: center;
+			justify-content: center;
+			margin-top: 17px;
+
+			li {
+				width: 8px;
+				height: 8px;
+				margin: 0 3px;
+				text-indent: -99px;
+				border-radius: 6px;
+				background: rgba($black, .22);
+				overflow: hidden;
+			}
+			.slick-active {
+				width: 24px;
+				background: $info;
 			}
 		}
 	}
-}
-#popup_schedule {
-
 }
