@@ -31,17 +31,6 @@ DEST_PATH = {
 	}
 };
 
-/*
-gulp.task( 'html', () => {
-	return new Promise( resolve => {
-		gulp.src( PATH.HTML + '/!**!/!*.html' )
-				.pipe( gulp.dest( DEST_PATH.HTML ) )
-				.pipe( browserSync.reload({stream: true}) );
-
-		resolve();
-	});
-});
-*/
 gulp.task( 'html-include', () => {
 	return new Promise( resolve => {
 		gulp.src( PATH.HTML + '/**/*.html' )

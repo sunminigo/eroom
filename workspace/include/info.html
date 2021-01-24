@@ -1,23 +1,27 @@
 <div class="info_box">
 	<div class="info_box__icon">
-		<img src="/assets/images/icon/speaker.png" alt="icon" />
-		<span class="blind">알림</span>
+		<img src="/assets/images/icon/speaker.png"
+		     alt="알림"
+		/><span class="blind">알림</span>
 	</div>
-	<div id="banner" class="info_box__txt">
+	<div id="info_slider" class="info_box__txt">
 		<div>
 			<p><span>[News]</span> 1‘발달장애인 산업현장 안전사고 예방’ 쉬운 책 발간</p>
+		</div>
+		<div>
+			<p><span>[News]</span> 2‘발달장애인 산업현장 안전사고 예방’ 쉬운 책 발간</p>
 		</div>
 	</div>
 </div>
 
 <script>
 	$(document).ready(function(){
-		$("#banner").slick({
+		$("#info_slider").slick({
 			vertical: true,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			autoplay: true,
-			autoplaySpeed: 3000,
+			autoplaySpeed: 1000,
 			arrows: false,
 			verticalSwiping: true
 		});

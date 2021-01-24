@@ -1,14 +1,11 @@
 /*---------------
 	COLOR SET
 ---------------*/
-$brand1: #2460AF;
-$brand2: #FFC32F;
-
 $white:      #fff;
 $offWhite:   #FCFCFC;
 $light:      #C4C4C4;
 $lightGrey1: #EEEEEE;
-$lightGrey2: #C1C1C1;
+$lightGrey2: #F7F7F7;
 $grey1:      #A5A5A5;
 $grey2:      #8B8B8B;
 $grey3:      #6F6F6F;
@@ -38,9 +35,6 @@ $muted:     #dbdbdb;
 $theme-colors: ();
 $theme-colors: map-merge(
 		(
-			"brand1": $brand1,
-			"brand2": $brand2,
-
 			"white":      $white,
 			"offWhite":   $offWhite,
 			"light":      $light,
@@ -75,9 +69,6 @@ $theme-colors: map-merge(
 		$theme-colors
 );
 :export {
-	brand1: $brand1;
-	brand2: $brand2;
-
 	white:      $white;
 	offWhite:   $offWhite;
 	light:      $light;

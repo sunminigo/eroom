@@ -1,13 +1,20 @@
-@@include('../include/head.html', { title: 'eroom' })
+@@include('../include/header.html', { title: 'eroom' })
 <div class="wrapper">
 	<section class="container_wrap">
-		<h1 class="logo">
+		<h1 class="logo_wrap">
 			<img src="/assets/images/logo.svg" alt="errom logo">
 		</h1>
 
 		<section class="content_wrap">
 			<div class="main">
-				<img src="/assets/images/banner/people.png" alt="">
+				<div id="visual_slider">
+					<div>
+						<img src="/assets/images/banner/people.png" alt="사람들 모여있는 그림">
+					</div>
+					<div>
+						<img src="/assets/images/banner/people.png" alt="사람들 모여있는 그림">
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -26,7 +33,41 @@
 		@@include('../include/sideBox.html')
 	</section>
 </div>
+<div id="popup_schedule">
+@@include('../include/popup_schedule_info.html')
+</div>
 @@include('../include/footer.html')
 
-
 <!-- @@include('./pages/main.html') -->
+
+<script>
+	$(document).ready(function(){
+		$("#visual_slider").slick({
+			autoplay: true,
+			autoplaySpeed: 1000,
+			arrows: false,
+			dot: true,
+		});
+
+
+		$("#schedule_list").hide();
+		$("#btn_schedule").click(function(){
+			$("#btn_schedule").blur();
+			$("#schedule_list").show();
+			$("#schedule_list").focus();
+			return false;
+		});
+		$("#schedule_list").keydown(function(e){
+			if(e.shiftKey && e.keyCode == 9){ // Shift + Tab 키를 의미합니다.
+				$("#btn_schedule").focus();
+				$("#schedule_list").hide();
+				return false;
+			}
+		});
+
+		$("#schedule_list .btn_close").click(function(){
+			$("#btn_schedule").focus();
+			$("#schedule_list").hide();
+		});
+	});
+</script>

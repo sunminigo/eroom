@@ -42,15 +42,8 @@
 		</h1>
 
 		<section class="content_wrap">
-			<div class="main">
-				<div id="visual_slider">
-					<div>
-						<img src="/assets/images/banner/people.png" alt="사람들 모여있는 그림">
-					</div>
-					<div>
-						<img src="/assets/images/banner/people.png" alt="사람들 모여있는 그림">
-					</div>
-				</div>
+			<div class="introduce_wrap">
+dddddddddd
 			</div>
 		</section>
 
@@ -185,23 +178,6 @@
 
 	</section>
 </div>
-<div id="popup_schedule">
-<div id="schedule_list" class="popup_wrap">
-	<div class="mask"></div>
-	<div class="popup_box">
-		<div class="popup_box__header">
-			<h3>대관 일정 안내</h3>
-		</div>
-		<div class="popup_box__container"></div>
-		<div class="popup_box__footer">
-			<button type="button"
-			        class="btn btn_close"
-			>닫기</button>
-		</div>
-	</div>
-</div>
-
-</div>
 
 	<!-- slick -->
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -210,37 +186,3 @@
 </body>
 </html>
 
-
-
-
-<script>
-	$(document).ready(function(){
-		$("#visual_slider").slick({
-			autoplay: true,
-			autoplaySpeed: 1000,
-			arrows: false,
-			dot: true,
-		});
-
-
-		$("#schedule_list").hide();
-		$("#btn_schedule").click(function(){
-			$("#btn_schedule").blur();
-			$("#schedule_list").show();
-			$("#schedule_list").focus();
-			return false;
-		});
-		$("#schedule_list").keydown(function(e){
-			if(e.shiftKey && e.keyCode == 9){ // Shift + Tab 키를 의미합니다.
-				$("#btn_schedule").focus();
-				$("#schedule_list").hide();
-				return false;
-			}
-		});
-
-		$("#schedule_list .btn_close").click(function(){
-			$("#btn_schedule").focus();
-			$("#schedule_list").hide();
-		});
-	});
-</script>
