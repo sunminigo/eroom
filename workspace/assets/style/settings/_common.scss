@@ -51,10 +51,10 @@ input[type="submit"]{
 button{
 	background: transparent;
 	border: none;
-	outline: none;
+	//outline: none;
 }
 button:focus {
-	outline: none!important;
+	//outline: none!important;
 }
 
 img,

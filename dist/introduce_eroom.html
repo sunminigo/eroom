@@ -48,135 +48,121 @@ dddddddddd
 		</section>
 
 		<section class="navigation_wrap box">
-			<ul class="gnb_wrap box">
-	<li class="gnb">
-		<a href="index.html">
-			<img src="/assets/images/icon/home.png" alt="홈" />
-		</a>
-	</li>
-	<li id="introduce" class="gnb active">
-		<a href="">센터소개</a>
-		<ul class="lnb_wrap box">
-			<li class="lnb active"><a href="">아름센터 소개</a></li>
-			<li class="lnb"><a href="">대관실 소개</a></li>
-			<li class="lnb"><a href="">편의시설 안내</a></li>
-		</ul>
-	</li>
-	<li class="gnb">
-		<a href="">대관안내</a>
-	</li>
-	<li class="gnb floor">
-		<a href="">층별안내</a>
-		<ul class="lnb_wrap box">
-			<li class="lnb active"><a href="">1F</a></li>
-			<li class="lnb"><a href="">2F</a></li>
-			<li class="lnb"><a href="">3F</a></li>
-			<li class="lnb"><a href="">4F</a></li>
-			<li class="lnb"><a href="">5F</a></li>
-			<li class="lnb"><a href="">6F</a></li>
-			<li class="lnb"><a href="">7F</a></li>
-			<li class="lnb"><a href="">8F</a></li>
-			<li class="lnb"><a href="">9F</a></li>
-			<li class="lnb"><a href="">10F</a></li>
-		</ul>
-	</li>
-	<li class="gnb">
-		<a href="">교통안내</a>
-	</li>
-</ul>
+	<ul class="gnb_wrap box">
+		<li class="gnb">
+			<button type="button" class="btn_menu">
+				<img src="/assets/images/icon/home.png" alt="홈" />
+			</button>
+		</li>
+		<li id="introduce" class="gnb">
+			<button type="button" class="btn_menu">센터소개</button>
+			<ul class="lnb_wrap box">
+				<li class="lnb"><a href="">아름센터 소개</a></li>
+				<li class="lnb"><a href="">대관실 소개</a></li>
+				<li class="lnb"><a href="">편의시설 안내</a></li>
+			</ul>
+		</li>
+		<li class="gnb">
+			<button type="button" class="btn_menu">대관안내</button>
+		</li>
+		<li class="gnb">
+			<button type="button" class="btn_menu">층별안내</button>
+			<ul class="lnb_wrap box">
+				<li class="lnb active"><a href="">1F</a></li>
+				<li class="lnb"><a href="">2F</a></li>
+				<li class="lnb"><a href="">3F</a></li>
+				<li class="lnb"><a href="">4F</a></li>
+				<li class="lnb"><a href="">5F</a></li>
+				<li class="lnb"><a href="">6F</a></li>
+				<li class="lnb"><a href="">7F</a></li>
+				<li class="lnb"><a href="">8F</a></li>
+				<li class="lnb"><a href="">9F</a></li>
+				<li class="lnb"><a href="">10F</a></li>
+			</ul>
+		</li>
+		<li class="gnb">
+			<button type="button" class="btn_menu">교통안내</button>
+		</li>
+	</ul>
+</section>
 
 
-		</section>
 		<section class="info_wrap">
-			<div class="info_box">
-	<div class="info_box__icon">
-		<img src="/assets/images/icon/speaker.png"
-		     alt="알림"
-		/><span class="blind">알림</span>
-	</div>
-	<div id="info_slider" class="info_box__txt">
-		<div>
-			<p><span>[News]</span> 1‘발달장애인 산업현장 안전사고 예방’ 쉬운 책 발간</p>
+	<div class="info_box">
+		<div class="info_box__icon">
+			<img src="/assets/images/icon/speaker.png"
+			     alt="알림"
+			/><span class="blind">알림</span>
 		</div>
-		<div>
-			<p><span>[News]</span> 2‘발달장애인 산업현장 안전사고 예방’ 쉬운 책 발간</p>
+		<div id="info_slider" class="info_box__txt">
+			<div>
+				<p><span>[News]</span> 1‘발달장애인 산업현장 안전사고 예방’ 쉬운 책 발간</p>
+			</div>
+			<div>
+				<p><span>[News]</span> 2‘발달장애인 산업현장 안전사고 예방’ 쉬운 책 발간</p>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
 
-<script>
-	$(document).ready(function(){
-		$("#info_slider").slick({
-			vertical: true,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			autoplay: true,
-			autoplaySpeed: 1000,
-			arrows: false,
-			verticalSwiping: true
-		});
-	});
-</script>
-
-		</section>
 		<section class="control_wrap">
-			<div class="control_box">
-	<div class="box">
-		<button type="button">
-			<img src="/assets/images/icon/magnifier-plus.png"
-			     alt="확대" />
-		</button>
-		<button type="button">
-			<img src="/assets/images/icon/magnifier-minus.png"
-			     alt="축소" />
+	<div class="control_box">
+		<div class="box">
+			<button type="button" onclick="zoomIn()">
+				<img src="/assets/images/icon/magnifier-plus.png" alt="확대" />
+			</button>
+			<button type="button" onclick="zoomOut()">
+				<img src="/assets/images/icon/magnifier-minus.png"
+				     alt="축소" />
+			</button>
+		</div>
+		<button type="button" class="control_text box">
+			<img src="/assets/images/icon/text.png"
+			     alt="글자크기조절" />
 		</button>
 	</div>
-	<button type="button" class="control_text box">
-		<img src="/assets/images/icon/text.png"
-		     alt="글자크기조절" />
-	</button>
-</div>
+</section>
 
-		</section>
 	</section>
-
 	<section class="side_wrap">
-		<div class="side_box">
-	<section class="weather_wrap box">
-		<div class="today_info">
-			<p class="today_info__date">2021년 01년 22일</p>
-			<p class="today_info__time">2:53 PM</p>
-		</div>
-		<div class="temp_info">
-			<div class="temp_info__img">
-				<img src="/assets/images/banner/weather_rain.png" alt="" />
+	<div class="side_box">
+		<section class="weather_wrap box">
+			<div class="today_info">
+				<p class="today_info__date">2021년 01년 22일</p>
+				<p class="today_info__time">2:53 PM</p>
 			</div>
-			<div class="temp_info__txt">
-				<p>-5℃</p>
-				<p class="location">서울 영등포구</p>
+			<div class="temp_info">
+				<div class="temp_info__img">
+					<img src="/assets/images/banner/weather_rain.png" alt="" />
+				</div>
+				<div class="temp_info__txt">
+					<p>-5℃</p>
+					<p class="location">서울 영등포구</p>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section class="info_wrap box">
-		<h2 class="title">오늘의 대관현황</h2>
-		<ul class="info_list">
-			<li>
-				<div class="title_box">
-					<p class="title_box__time">09시 ~ 16시</p>
-					<p class="title_box__place">회의실 4</p>
-				</div>
-				<div class="content_box">
-					<h3 class="content_box__title">이사회</h3>
-					<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-				</div>
-			</li>
-		</ul>
-		<button type="button" id="btn_schedule" class="btn_more">일정 전체 보기</button>
-	</section>
-</div>
+		<section class="info_wrap box">
+			<h2 class="title">오늘의 대관현황</h2>
+			<ul class="info_list">
+				<li>
+					<div class="title_box">
+						<p class="title_box__time">09시 ~ 16시</p>
+						<p class="title_box__place">회의실 4</p>
+					</div>
+					<div class="content_box">
+						<h3 class="content_box__title">이사회</h3>
+						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
+					</div>
+				</li>
+			</ul>
+			<button type="button"
+			   class="btn_more btn_schedule"
+			>일정 전체 보기</button>
+		</section>
+	</div>
+</section>
 
-	</section>
 </div>
 
 	<!-- slick -->

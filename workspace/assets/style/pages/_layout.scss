@@ -32,44 +32,26 @@
 				display: flex;
 
 				& > .gnb {
-					text-align: center;
-					width: 281px;
-					height: 102px;
-					line-height: 102px;
-					font-size: 36px;
-
-					& + .gnb:before {
+					& + .gnb > button:before {
 						@include position-translate(absolute, $t:  50%, $l: 0, $x: 0, $y: -50%);
 						content: '';
 						width: 1px;
 						height: 31px;
 						background: $light;
 					}
-					&:first-child {
-						width: 102px;
-					}
 					&.active {
 						background: $warning;
 					}
-					&.floor {
-						/*
-						&:after {
-							content: '';
-							@include position-translate(absolute, $t: -87px, $l: 50%, $x: -50%, $y: 0);
-							background: #fff;
-							box-shadow: $box-shadow;
-							width: 0px;
-							height: 0px;
-							border-top: 21px solid transparent;
-							border-bottom: 21px solid #fff;
-							border-right: 21px solid #fff;
-							border-left: 21px solid  transparent;
-							transform: rotate(45deg);
-						}
-						*/
+					&:first-child > .btn_menu {
+						width: 102px;
 					}
-					a {
+					.btn_menu {
+						text-align: center;
 						display: block;
+						width: 281px;
+						height: 102px;
+						line-height: 102px;
+						font-size: 36px;
 					}
 				}
 			}
@@ -77,10 +59,20 @@
 				@include position-translate(absolute, $t: -106px, $l: 50%, $x: -50%, $y: 0);
 				display: flex;
 				align-items: center;
-				height: 88px;
+				text-align: center;
+				height: 0;
 				padding: 8px 7px;
+				opacity: 0;
+				z-index: -999;
 				overflow: hidden;
+				transition: opacity 0.3 ease-in-out;
 
+				&.active {
+					height: 88px;
+					opacity: 1;
+					z-index: 1;
+					transition: opacity 0.3 ease-in-out;
+				}
 				& > .lnb {
 					width: 88px;
 					height: 72px;
