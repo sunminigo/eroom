@@ -56,10 +56,7 @@ function zooms() {
 	var wrapper = document.getElementById('zoom');
 			wrapper.style.zoom = nowZoom + "%";
 
-	if(nowZoom == 100) {
-		alert("더 이상 축소할 수 없습니다.");
-	}
-	if(nowZoom == 200) {
+	if(nowZoom === 200) {
 		alert("더 이상 확대할 수 없습니다.");
 	}
 }
