@@ -42,7 +42,7 @@ body.controlFontSize {
 					&.active {
 						background: $warning;
 					}
-					& + .gnb > button:before {
+					& + .gnb > .btn_menu:before {
 						@include position-translate(absolute, $t:  50%, $l: 0, $x: 0, $y: -50%);
 						content: '';
 						width: 1px;

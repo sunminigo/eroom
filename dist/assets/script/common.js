@@ -1,10 +1,29 @@
 $(document).ready(function(){
 	//navigation
-
 	$('.gnb').click(function(){
 		$(this).addClass('active').find('.lnb_wrap').addClass('active');
 		$('.gnb').not($(this)).removeClass('active').find('.lnb_wrap').removeClass('active');
 	});
+
+	var url = document.location.pathname
+	var menu = document.querySelectorAll('.gnb');
+	for (var i = 0; i < menu.length; i++) {
+		var refName = menu[i].children[0].attributes[1].value;
+		if (url.includes(refName)) {
+			menu[i].className += ' active';
+		} else {
+			menu[i].className += '';
+		}
+	}
+
+
+
+
+
+
+
+
+
 
 	//slider
 	$('#visual_slider').slick({
@@ -60,3 +79,4 @@ function zooms() {
 		alert("더 이상 확대할 수 없습니다.");
 	}
 }
+
