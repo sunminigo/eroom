@@ -1,24 +1,119 @@
 $(document).ready(function(){
 	//navigation
-	$('.gnb').click(function(){
-		$(this).addClass('active').find('.lnb_wrap').addClass('active');
-		$('.gnb').not($(this)).removeClass('active').find('.lnb_wrap').removeClass('active');
+	var url = window.location.pathname;
+	var urlName = url.replace('/', '').split('.')[0];
+
+	$('.gnb').each(function () {
+		var ref = $(this).children('button').attr('ref');
+		var href = $(this).find('a').attr('href');
+		if (href != undefined) {
+			href = href.split('.')[0]
+		}
+		// console.log('urlName:', urlName);
+		// console.log('ref:', ref);
+
+		if (urlName.indexOf(ref) != -1) {
+			$(this).addClass('active');
+			$(this).find('.lnb_wrap').addClass('active')
+			if ($(this).children().hasClass('lnb_wrap')) {
+				$(this).parent().addClass('active')
+			}
+		}
+
+		$(this).on('click', function() {
+			if ($(this).children().hasClass('lnb_wrap')) {
+				console.log('있어')
+				$('.gnb_wrap').addClass('active');
+				$(this).find('.lnb_wrap').addClass('active');
+				return true;
+			} else {
+				console.log('없어')
+				$('.gnb_wrap').removeClass('active');
+				return false;
+			}
+		});
+	});
+/*
+	$('.lnb').each(function () {
+		var href = $(this).find('a').attr('href');
+
+		if (href != undefined) {
+			href = href.split('.')[0]
+		}
+		if (urlName.indexOf(href) != -1) {
+			$(this).addClass('active');
+		}
+	});
+*/
+
+	$('.btn_back').on('click', function(){
+		$('.gnb_wrap').removeClass('active');
+		$('.lnb_wrap').removeClass('active');
+		$('.lnb').removeClass('active');
+		return false;
 	});
 
-	var url = document.location.pathname
-	var menu = document.querySelectorAll('.gnb');
-	for (var i = 0; i < menu.length; i++) {
-		var refName = menu[i].children[0].attributes[1].value;
-		if (url.includes(refName)) {
-			menu[i].className += ' active';
-		} else {
-			menu[i].className += '';
+
+
+	/*
+		var url = document.location.pathname
+		var gnb = document.querySelectorAll('.gnb');
+		var btn_back = document.getElementsByClassName('btn_back');
+
+		for (var i = 0; i < gnb.length; i++) {
+			var refName = gnb[i].children[0].attributes[1].value;
+
+			if (url.includes(refName)) {
+				gnb[i].className += ' active';
+				console.log('11111111', gnb[i].children[1]);
+
+				if (gnb[i].children[1]) {
+					console.log('2222222222222')
+					gnb[i].parentNode.className += ' active';
+					gnb[i].children[1].className += ' active';
+
+					$('.btn_back').click(function() {
+						console.log('dddddddddddddd');
+						$('.gnb_wrap').removeClass('active');
+						console.log($(this).parents('.lnb_wrap'))
+						$(this).parents('.lnb_wrap').removeClass('active');
+					});
+				}
+			} else {
+				gnb[i].className += '';
+				if (gnb[i].children[1]) {
+					gnb[i].parentNode.className += '';
+					gnb[i].children[1].className += '';
+				}
+			}
 		}
-	}
+
+	*/
+
+/*
+	$('.gnb > button').click(function() {
+		console.log($(this))
+		if ($(this).next($('lnb_wrap'))) {
+			console.log('있어')
+				$(this).addClass('active');
+				$(this).find('.lnb_wrap').addClass('active');
+				$('.gnb').not($(this)).removeClass('active').find('.lnb_wrap').removeClass('active');
+		} else {
+			console.log('없어');
+			$(this).parents('.gnb_wrap').removeClass('active');
+		}
+	});
+*/
 
 
 
-
+	/*
+	* gnb 를 클릭하면
+	* lnb_wrap 이 있으면 lnb_wrap, gnb_wrap 에 active를 추가한다
+	* 없으면 return false
+	* lnb_wrap 에서 btn_back을 클릭하면
+	* lnb_wrap, gnb_wrap 에 active 를 제거한다
+	* */
 
 
 

@@ -36,23 +36,28 @@ body.controlFontSize {
 			.gnb_wrap {
 				position: relative;
 				display: flex;
+				height: auto;
+				z-index: 1;
 
+				&.active {
+					& > .gnb > button {
+						display: none;
+					}
+				}
 				& > .gnb {
+					height: 100%;
 
 					&.active {
 						background: $warning;
 					}
-					& + .gnb > .btn_menu:before {
+					& + .gnb > button:before {
 						@include position-translate(absolute, $t:  50%, $l: 0, $x: 0, $y: -50%);
 						content: '';
 						width: 1px;
 						height: 31px;
 						background: $light;
 					}
-					&:first-child > .btn_menu {
-						width: 102px;
-					}
-					.btn_menu {
+					& > button {
 						position: relative;
 						text-align: center;
 						display: block;
@@ -61,30 +66,40 @@ body.controlFontSize {
 						line-height: 102px;
 						font-size: 36px;
 					}
+					&:first-child button {
+						width: 102px;
+						height: 100%;
+					}
 				}
 			}
 			.lnb_wrap {
-				@include position-translate(absolute, $t: -106px, $l: 50%, $x: -50%, $y: 0);
+				@include position-translate(absolute, $b: 0, $l: 1000%, $x: -50%, $y: 0);
+				//@include position-translate(absolute, $t: -106px, $l: 50%, $x: -50%, $y: 0);
 				display: flex;
-				align-items: center;
 				text-align: center;
 				height: 0;
-				padding: 8px 7px;
+				padding: 0;
 				opacity: 0;
 				z-index: -999;
 				overflow: hidden;
-				transition: opacity 0.3 ease-in-out;
+				transition: left 1s ease-in-out;
 
 				&.active {
-					height: 88px;
+					//height: 88px;
+					left: 50%;
+					height: auto;
+					padding: 8px 7px;
 					opacity: 1;
 					z-index: 1;
-					transition: opacity 0.3 ease-in-out;
+					transition: left 1s ease-in-out;
 				}
 				& > .lnb {
-					width: 88px;
-					height: 72px;
-					line-height: 72px;
+					position: relative;
+					text-align: center;
+					//height: 72px;
+					//line-height: 72px;
+					height: 100%;
+					line-height: 86px;
 					font-size: 30px;
 					font-weight: 800;
 					border-radius: 3px;
@@ -92,8 +107,19 @@ body.controlFontSize {
 					&.active {
 						background: $warning;
 					}
+					&:first-child {
+						width: 102px !important;
+					}
 					a {
 						display: block;
+					}
+					.btn_back {
+						width: 100%;
+						height: 86px;
+						.icon_back {
+							vertical-align: -8px;
+						}
+
 					}
 				}
 			}
@@ -101,6 +127,13 @@ body.controlFontSize {
 				.lnb_wrap {
 					.lnb {
 						width: 235px;
+					}
+				}
+			}
+			#floor {
+				.lnb_wrap {
+					.lnb {
+						width: 86px;
 					}
 				}
 			}
