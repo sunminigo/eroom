@@ -6,9 +6,6 @@ $(document).ready(function(){
 	$('.gnb').each(function () {
 		var ref = $(this).children('button').attr('ref');
 		var href = $(this).find('a').attr('href');
-		if (href != undefined) {
-			href = href.split('.')[0]
-		}
 		// console.log('urlName:', urlName);
 		// console.log('ref:', ref);
 
@@ -33,7 +30,6 @@ $(document).ready(function(){
 			}
 		});
 	});
-/*
 	$('.lnb').each(function () {
 		var href = $(this).find('a').attr('href');
 
@@ -44,7 +40,6 @@ $(document).ready(function(){
 			$(this).addClass('active');
 		}
 	});
-*/
 
 	$('.btn_back').on('click', function(){
 		$('.gnb_wrap').removeClass('active');
@@ -53,9 +48,7 @@ $(document).ready(function(){
 		return false;
 	});
 
-
-
-	/*
+/*
 		var url = document.location.pathname
 		var gnb = document.querySelectorAll('.gnb');
 		var btn_back = document.getElementsByClassName('btn_back');
@@ -105,21 +98,6 @@ $(document).ready(function(){
 	});
 */
 
-
-
-	/*
-	* gnb 를 클릭하면
-	* lnb_wrap 이 있으면 lnb_wrap, gnb_wrap 에 active를 추가한다
-	* 없으면 return false
-	* lnb_wrap 에서 btn_back을 클릭하면
-	* lnb_wrap, gnb_wrap 에 active 를 제거한다
-	* */
-
-
-
-
-
-
 	//slider
 	$('#visual_slider').slick({
 		autoplay: true,
@@ -140,7 +118,11 @@ $(document).ready(function(){
 
 	// 대관현황 전체보기 팝업
 	$('.btn_schedule').on('click', function() {
-		$('.popup_wrap').toggleClass('active');
+		$('.popup_wrap').addClass('active');
+		return false;
+	});
+	$('.btn_close').on('click', function() {
+		$('.popup_wrap').removeClass('active');
 		return false;
 	});
 
