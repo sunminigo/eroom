@@ -1,9 +1,68 @@
 @@include('../include/header.html', { title: 'eroom' })
-<div class="wrapper">
+<div id="zoom" class="wrapper">
 	<section class="container_wrap">
 		<section class="content_wrap">
-			<div class="introduce_wrap">
-				room
+			<div class="introduce_box">
+				<figure class="box">
+					<button type="button"
+					        class="btn_show_popup"
+					        data-popup-open="room_detail__eroom"
+					>
+						<img src="./assets/images/banner/room_1.jpg" alt="" />
+						<figcaption>이룸홀</figcaption>
+						<p>지하 1층</p>
+					</button>
+				</figure>
+				<figure class="box">
+					<button type="button"
+					        class="btn_show_popup"
+					        data-popup-open="room_detail__nuri"
+					>
+						<img src="./assets/images/banner/room_2.jpg" alt="" />
+						<figcaption>누리홀</figcaption>
+						<p>지하 1층</p>
+					</button>
+				</figure>
+				<figure class="box">
+					<button type="button"
+					        class="btn_show_popup"
+					        data-popup-open="room_detail__edu"
+					>
+						<img src="./assets/images/banner/room_3.jpg" alt="" />
+						<figcaption>교육실</figcaption>
+						<p>2층</p>
+					</button>
+				</figure>
+				<figure class="box">
+					<button type="button"
+					        class="btn_show_popup"
+					        data-popup-open="room_detail__multi"
+					>
+						<img src="./assets/images/banner/room_4.jpg" alt="" />
+						<figcaption>다목적실</figcaption>
+						<p>-</p>
+					</button>
+				</figure>
+				<figure class="box">
+					<button type="button"
+					        class="btn_show_popup"
+					        data-popup-open="room_detail__conference"
+					>
+						<img src="./assets/images/banner/room_5.jpg" alt="" />
+						<figcaption>대회의실</figcaption>
+						<p>-</p>
+					</button>
+				</figure>
+				<figure class="box">
+					<button type="button"
+					        class="btn_show_popup"
+					        data-popup-open="room_detail__meeting"
+					>
+						<img src="./assets/images/banner/room_6.jpg" alt="" />
+						<figcaption>회의실</figcaption>
+						<p>-</p>
+					</button>
+				</figure>
 			</div>
 		</section>
 
@@ -15,3 +74,9 @@
 </div>
 @@include('../include/footer.html')
 @@include('../include/popup_schedule_info.html')
+@@include('../include/popup_room_detail__eroom.html')
+@@include('../include/popup_room_detail__nuri.html')
+@@include('../include/popup_room_detail__edu.html')
+@@include('../include/popup_room_detail__multi.html')
+@@include('../include/popup_room_detail__conference.html')
+@@include('../include/popup_room_detail__meeting.html')

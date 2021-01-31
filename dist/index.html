@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<meta name="author"content="">
 	<meta name="description"content="">
 	<!-- 링크커버 -->
@@ -26,9 +26,9 @@
 	<title>eroom</title>
 
 	<!-- slick -->
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<!-- eroom -->
-	<link rel="stylesheet" href="/assets/style/style.css"/>
+	<link rel="stylesheet" href="./assets/style/style.css"/>
 
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -38,17 +38,17 @@
 <div id="zoom" class="wrapper">
 	<section class="container_wrap">
 		<h1 class="logo_wrap">
-			<img src="/assets/images/logo.svg" alt="errom logo">
+			<img src="./assets/images/logo.svg" alt="errom logo" />
 		</h1>
 
 		<section class="content_wrap">
-			<div class="main">
+			<div class="main_box">
 				<div id="visual_slider" class="visual_wrap">
 					<div>
-						<img src="/assets/images/banner/people.png" alt="사람들 모여있는 그림">
+						<img src="./assets/images/banner/people.png" alt="사람들 모여있는 그림" />
 					</div>
 					<div>
-						<img src="/assets/images/banner/people.png" alt="사람들 모여있는 그림">
+						<img src="./assets/images/banner/people.png" alt="사람들 모여있는 그림" />
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,7 @@
 			        ref="index"
 			        onclick="location.href='index.html'"
 			>
-				<img src="/assets/images/icon/home.png" alt="홈" />
+				<img src="./assets/images/icon/home.png" alt="홈" />
 			</button>
 		</li>
 		<li id="introduce" class="gnb">
@@ -69,13 +69,6 @@
 			        ref="introduce"
 			>센터소개</button>
 			<ul class="lnb_wrap box">
-				<li class="lnb">
-					<button type="button"
-					        class="btn_back"
-					>
-						<img src="/assets/images/icon/arrow_left.png" alt="뒤로가기" class="icon_back"/>
-					</button>
-				</li>
 				<li class="lnb">
 					<a href="introduce_eroom.html">아름센터 소개</a>
 				</li>
@@ -90,7 +83,7 @@
 		<li class="gnb">
 			<button type="button"
 			        ref="rental"
-			        onclick="location.href='rental_information.html'"
+			        onclick="location.href='rental_Information.html'"
 			>대관안내</button>
 		</li>
 		<li id="floor" class="gnb">
@@ -98,13 +91,6 @@
 			        ref="floor"
 			>층별안내</button>
 			<ul class="lnb_wrap box">
-				<li class="lnb">
-					<button type="button"
-					        class="btn_back"
-					>
-						<img src="/assets/images/icon/arrow_left.png" alt="뒤로가기" class="icon_back"/>
-					</button>
-				</li>
 				<li class="lnb">
 					<a href="">1F</a>
 				</li>
@@ -137,11 +123,22 @@
 				</li>
 			</ul>
 		</li>
-		<li class="gnb">
+		<li id="traffic" class="gnb">
 			<button type="button"
 			        ref="traffic"
 			        onclick="location.href='traffic_guide.html'"
 			>교통안내</button>
+			<ul class="lnb_wrap box">
+				<li class="lnb">
+					<a href="">버스</a>
+				</li>
+				<li class="lnb">
+					<a href="">지하철</a>
+				</li>
+				<li class="lnb">
+					<a href="">위치보기</a>
+				</li>
+			</ul>
 		</li>
 	</ul>
 </section>
@@ -150,7 +147,7 @@
 		<section class="info_wrap">
 	<div class="info_box">
 		<div class="info_box__icon">
-			<img src="/assets/images/icon/speaker.png"
+			<img src="./assets/images/icon/speaker.png"
 			     alt="알림"
 			/><span class="blind">알림</span>
 		</div>
@@ -169,15 +166,15 @@
 	<div class="control_box">
 		<div class="box">
 			<button type="button" onclick="zoomIn()">
-				<img src="/assets/images/icon/magnifier-plus.png" alt="확대" />
+				<img src="./assets/images/icon/magnifier-plus.png" alt="확대" />
 			</button>
 			<button type="button" onclick="zoomOut()">
-				<img src="/assets/images/icon/magnifier-minus.png"
+				<img src="./assets/images/icon/magnifier-minus.png"
 				     alt="축소" />
 			</button>
 		</div>
 		<button type="button" class="control_text box">
-			<img src="/assets/images/icon/text.png"
+			<img src="./assets/images/icon/text.png"
 			     alt="글자크기조절" />
 		</button>
 	</div>
@@ -193,7 +190,7 @@
 			</div>
 			<div class="temp_info">
 				<div class="temp_info__img">
-					<img src="/assets/images/banner/weather_rain.png" alt="" />
+					<img src="./assets/images/banner/weather_rain.png" alt="" />
 				</div>
 				<div class="temp_info__txt">
 					<p>-5℃</p>
@@ -217,7 +214,8 @@
 				</li>
 			</ul>
 			<button type="button"
-			   class="btn_more btn_schedule"
+			        class="btn_more"
+			        data-popup-open="schedule_detail"
 			>일정 전체 보기</button>
 		</section>
 	</div>
@@ -226,22 +224,38 @@
 </div>
 
 	<!-- slick -->
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<!-- eroom -->
-	<script type="text/javascript" src="/assets/script/common.js"></script>
+	<script type="text/javascript" src="./assets/script/common.js"></script>
 </body>
 </html>
 
-<div class="schedule_list popup_wrap">
-	<div class="mask"></div>
+<div class="popup_wrap schedule_detail"
+     data-popup="schedule_detail"
+>
 	<div class="popup_box">
 		<div class="popup_box__header">
 			<h3>대관 일정 안내</h3>
 		</div>
-		<div class="popup_box__container"></div>
+		<div class="popup_box__container">
+			<ul class="list_box">
+				<li>
+					<h4>이사회</h4>
+					<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+					<div class="info">
+						<p class="info__time"><img src="./assets/images/banner/icon/clock.png" alt="" />14시 ~ 16시</p>
+						<p class="info__place"><img src="./assets/images/banner/icon/place_big.png" alt="" width="24px" height="24px" />회의실 3</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button" class="btn">위치보기</button>
+					</div>
+				</li>
+			</ul>
+		</div>
 		<div class="popup_box__footer">
 			<button type="button"
-			        class="btn btn_close btn_schedule"
+			        class="btn btn_close"
+			        data-popup-close="schedule_detail"
 			>닫기</button>
 		</div>
 	</div>
