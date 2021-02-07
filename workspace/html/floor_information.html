@@ -1,17 +1,16 @@
 @@include('../include/header.html', { title: 'eroom' })
-<div class="wrapper">
-	<section class="container_wrap">
-		<section class="content_wrap">
-			<div class="introduce_wrap">
-				floor_information
+<div id="zoom" class="wrapper">
+	<main class="container_wrap">
+		<section class="content_box floor_page" aria-label="층별 안내">
+			<div class="floor_box">
+				<img src="./assets/images/banner/floor_1.png" alt="1층" />
 			</div>
 		</section>
 
 		@@include('../include/navigation.html')
 		@@include('../include/info.html')
 		@@include('../include/control.html')
-	</section>
+	</main>
 	@@include('../include/sideBox.html')
 </div>
 @@include('../include/footer.html')
-@@include('../include/popup_schedule_info.html')

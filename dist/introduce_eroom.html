@@ -27,120 +27,69 @@
 
 	<!-- slick -->
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 	<!-- eroom -->
 	<link rel="stylesheet" href="./assets/style/style.css"/>
 
 	<!-- jquery -->
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script type="text/javascript"
+	        src="https://code.jquery.com/jquery-2.2.4.min.js"
+	        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	        crossorigin="anonymous"></script>
+	<!-- slick -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<!-- eroom -->
+	<script type="text/javascript" src="./assets/script/common.js"></script>
 </head>
 <body>
 
 <div id="zoom" class="wrapper">
-	<section class="container_wrap">
-		<section class="content_wrap">
-			<div class="introduce_wrap">
-				<img src="./assets/images/banner/introduce_eroom.png" alt="" style="width: 100%;height: 100%;"/>
+	<main class="container_wrap">
+		<section class="content_box introduce_page" aria-label="이룸 소개">
+			<div class="eroom_box">
+				<h1 class="title">장애인을 위한 따뜻한 공간 <img src="./assets/images/logo.svg" alt="" width="200px"/></h1>
+				<p class="eroom_intro">한국장애인개발원이 운영하고 있는 이룸센터는 복권기금을 통해  2007년 5월 건립 된 지상 10층, 지하 4층의 총 14개 층으로 이루어진  장애인 종합복지공간입니다. 150석 규모의 이룸홀과 100석 규모의  누리홀 뿐만 아니라 회의실, 소규모 강의실과 세미나실 등 다양한  행사기반 시설을 갖추고 있어 장애인의 정보교류와 상호화합의 장으로  활용되고 있습니다. 또한 장애인들의 적극적인 사회·문화 참여를  활성화하고 국내·외 장애교류의 중심공간으로서 장애인의 안전과  편의를 우선으로 하는 시설들을 갖추고 있습니다.</p>
+
+				<ul class="history_list">
+					<li><span>’07.05</span>이룸센터(가칭)건립</li>
+					<li><span>’07.09</span>"이룸센터"로 건물명칭 확정</li>
+					<li><span>’07.12</span>이룸센터 개관</li>
+					<li><span>’08.03</span>제1차 리모델링 공사(3, 4, 5층 사무실 및 화장실, 엘리베이터)</li>
+					<li><span>’08.05</span>제2차 리모델링 공사(2층 대관시설)</li>
+					<li><span>’10.06</span>제3차 리모델링 공사(지하 1층 대강당 및 다목적 세미나실)</li>
+					<li><span>’10.08</span>이룸홀, 누리홀 개관</li>
+					<li><span>’14.06</span>「장애물 없는 생활환경(Barrier Free)」 본인증 획득</li>
+					<li><span>’19.11</span>1층 로비 리모델링 완료</li>
+					<li><span>’20.01</span>「장애물 없는 생활환경(Barrier Free)」 재인증 획득</li>
+				</ul>
 			</div>
 		</section>
 
-		<section class="navigation_wrap box">
-	<ul class="gnb_wrap box">
-		<li class="gnb">
-			<button type="button"
-			        ref="index"
-			        onclick="location.href='index.html'"
-			>
-				<img src="./assets/images/icon/home.png" alt="홈" />
-			</button>
-		</li>
-		<li id="introduce" class="gnb">
-			<button type="button"
-			        ref="introduce"
-			>센터소개</button>
-			<ul class="lnb_wrap box">
-				<li class="lnb">
-					<a href="introduce_eroom.html">아름센터 소개</a>
-				</li>
-				<li class="lnb">
-					<a href="introduce_room.html">대관실 소개</a>
-				</li>
-				<li class="lnb">
-					<a href="introduce_convenience.html">편의시설 안내</a>
-				</li>
-			</ul>
-		</li>
-		<li class="gnb">
-			<button type="button"
-			        ref="rental"
-			        onclick="location.href='rental_Information.html'"
-			>대관안내</button>
-		</li>
-		<li id="floor" class="gnb">
-			<button typee="button"
-			        ref="floor"
-			>층별안내</button>
-			<ul class="lnb_wrap box">
-				<li class="lnb">
-					<a href="">1F</a>
-				</li>
-				<li class="lnb">
-					<a href="">2F</a>
-				</li>
-				<li class="lnb">
-					<a href="">3F</a>
-				</li>
-				<li class="lnb">
-					<a href="">4F</a>
-				</li>
-				<li class="lnb">
-					<a href="">5F</a>
-				</li>
-				<li class="lnb">
-					<a href="">6F</a>
-				</li>
-				<li class="lnb">
-					<a href="">7F</a>
-				</li>
-				<li class="lnb">
-					<a href="">8F</a>
-				</li>
-				<li class="lnb">
-					<a href="">9F</a>
-				</li>
-				<li class="lnb">
-					<a href="">10F</a>
-				</li>
-			</ul>
-		</li>
-		<li id="traffic" class="gnb">
-			<button type="button"
-			        ref="traffic"
-			        onclick="location.href='traffic_guide.html'"
-			>교통안내</button>
-			<ul class="lnb_wrap box">
-				<li class="lnb">
-					<a href="">버스</a>
-				</li>
-				<li class="lnb">
-					<a href="">지하철</a>
-				</li>
-				<li class="lnb">
-					<a href="">위치보기</a>
-				</li>
-			</ul>
-		</li>
-	</ul>
-</section>
+		<nav class="lnb_box box">
+			<div class="lnb">
+				<a href="index.html">
+					<img src="./assets/images/icon/arrow_left.png" alt="뒤로가기" />
+				</a>
+			</div>
+			<div class="lnb active">
+				<a href="introduce_eroom.html">아름센터 소개</a>
+			</div>
+			<div class="lnb">
+				<a href="introduce_room.html">대관실 소개</a>
+			</div>
+			<div class="lnb">
+				<a href="introduce_convenience.html">편의시설 안내</a>
+			</div>
+		</nav>
 
-
-		<section class="info_wrap">
-	<div class="info_box">
-		<div class="info_box__icon">
+		<section class="info_box">
+	<div class="info">
+		<div class="info__icon">
 			<img src="./assets/images/icon/speaker.png"
 			     alt="알림"
 			/><span class="blind">알림</span>
 		</div>
-		<div id="info_slider" class="info_box__txt">
+		<div id="info_slider" class="info__txt">
 			<div>
 				<p><span>[News]</span> 1‘발달장애인 산업현장 안전사고 예방’ 쉬운 책 발간</p>
 			</div>
@@ -151,44 +100,45 @@
 	</div>
 </section>
 
-		<section class="control_wrap">
-	<div class="control_box">
-		<div class="box">
-			<button type="button" onclick="zoomIn()">
-				<img src="./assets/images/icon/magnifier-plus.png" alt="확대" />
-			</button>
-			<button type="button" onclick="zoomOut()">
-				<img src="./assets/images/icon/magnifier-minus.png"
-				     alt="축소" />
-			</button>
-		</div>
-		<button type="button" class="control_text box">
-			<img src="./assets/images/icon/text.png"
-			     alt="글자크기조절" />
+		<section class="control_box">
+	<h2 class="blind">화면 확대축소 및 글자 확대축소가 가능합니다.</h2>
+	<div class="box">
+		<button type="button" onclick="zoomIn()">
+			<img src="./assets/images/icon/magnifier-plus.png" alt="확대" />
+		</button>
+		<button type="button" onclick="zoomOut()">
+			<img src="./assets/images/icon/magnifier-minus.png"
+			     alt="축소" />
 		</button>
 	</div>
+	<button type="button" class="control_btn control_text box">
+		<img src="./assets/images/icon/text.png"
+		     alt="글자크기조절" />
+	</button>
+	<button type="button" class="control_btn box" onclick="location.href='index.html'">
+		<img src="./assets/images/icon/home.png" alt="홈" />
+	</button>
 </section>
 
-	</section>
-	<section class="side_wrap">
-	<div class="side_box">
-		<section class="weather_wrap box">
-			<div class="today_info">
-				<p class="today_info__date">2021년 01년 22일</p>
-				<p class="today_info__time">2:53 PM</p>
+	</main>
+	<section class="side_box" aria-label="현재 날씨 및 대관일정을 확인할 수 있습니다.">
+	<article class="weather_wrap box">
+		<div class="today_info">
+			<p class="today_info__date">2021년 01년 22일</p>
+			<p class="today_info__time">2:53 PM</p>
+		</div>
+		<div class="temp_info">
+			<div class="temp_info__img">
+				<img src="./assets/images/weather/weather_01.svg" alt="날씨" />
 			</div>
-			<div class="temp_info">
-				<div class="temp_info__img">
-					<img src="./assets/images/banner/weather_rain.png" alt="" />
-				</div>
-				<div class="temp_info__txt">
-					<p>-5℃</p>
-					<p class="location">서울 영등포구</p>
-				</div>
+			<div class="temp_info__txt">
+				<p>-5℃</p>
+				<p class="location">서울 영등포구</p>
 			</div>
-		</section>
+		</div>
+	</article>
 
-		<section class="info_wrap box">
+	<article class="info_wrap box">
 			<h2 class="title">오늘의 대관현황</h2>
 			<ul class="info_list">
 				<li>
@@ -205,38 +155,144 @@
 			<button type="button"
 			        class="btn_more"
 			        data-popup-open="schedule_detail"
-			>일정 전체 보기</button>
-		</section>
-	</div>
+			><img src="./assets/images/icon/calender.png" alt="" class="m-r-8">일정 전체 보기</button>
+		</article>
 </section>
 
 </div>
-
-	<!-- slick -->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<!-- eroom -->
-	<script type="text/javascript" src="./assets/script/common.js"></script>
-</body>
-</html>
-
-<div class="popup_wrap schedule_detail"
+	<div class="popup_wrap schedule_detail"
      data-popup="schedule_detail"
 >
 	<div class="popup_box">
 		<div class="popup_box__header">
-			<h3>대관 일정 안내</h3>
+			<h2>대관 일정 안내</h2>
 		</div>
 		<div class="popup_box__container">
 			<ul class="list_box">
 				<li>
-					<h4>이사회</h4>
+					<h3>이사회</h3>
 					<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
 					<div class="info">
-						<p class="info__time"><img src="./assets/images/banner/icon/clock.png" alt="" />14시 ~ 16시</p>
-						<p class="info__place"><img src="./assets/images/banner/icon/place_big.png" alt="" width="24px" height="24px" />회의실 3</p>
+						<p class="info__time">14시 ~ 16시</p>
+						<p class="info__place">회의실 3</p>
 					</div>
 					<div class="btn_wrap">
-						<button type="button" class="btn">위치보기</button>
+						<button type="button"
+						        class="btn"
+						        onclick="location.href='floor_information.html'"
+						>위치보기</button>
+					</div>
+				</li>
+				<li>
+					<h3>이사회</h3>
+					<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+					<div class="info">
+						<p class="info__time">14시 ~ 16시</p>
+						<p class="info__place">회의실 3</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button"
+						        class="btn"
+						        onclick="location.href='floor_information.html'"
+						>위치보기</button>
+					</div>
+				</li>
+				<li>
+					<h3>이사회</h3>
+					<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+					<div class="info">
+						<p class="info__time">14시 ~ 16시</p>
+						<p class="info__place">회의실 3</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button"
+						        class="btn"
+						        onclick="location.href='floor_information.html'"
+						>위치보기</button>
+					</div>
+				</li>
+				<li>
+					<h3>이사회</h3>
+					<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+					<div class="info">
+						<p class="info__time">14시 ~ 16시</p>
+						<p class="info__place">회의실 3</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button"
+						        class="btn"
+						        onclick="location.href='floor_information.html'"
+						>위치보기</button>
+					</div>
+				</li>
+				<li>
+					<h3>이사회</h3>
+					<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+					<div class="info">
+						<p class="info__time">14시 ~ 16시</p>
+						<p class="info__place">회의실 3</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button"
+						        class="btn"
+						        onclick="location.href='floor_information.html'"
+						>위치보기</button>
+					</div>
+				</li>
+				<li>
+					<h3>이사회</h3>
+					<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+					<div class="info">
+						<p class="info__time">14시 ~ 16시</p>
+						<p class="info__place">회의실 3</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button"
+						        class="btn"
+						        onclick="location.href='floor_information.html'"
+						>위치보기</button>
+					</div>
+				</li>
+				<li>
+					<h3>이사회</h3>
+					<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+					<div class="info">
+						<p class="info__time">14시 ~ 16시</p>
+						<p class="info__place">회의실 3</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button"
+						        class="btn"
+						        onclick="location.href='floor_information.html'"
+						>위치보기</button>
+					</div>
+				</li>
+				<li>
+					<h3>이사회</h3>
+					<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+					<div class="info">
+						<p class="info__time">14시 ~ 16시</p>
+						<p class="info__place">회의실 3</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button"
+						        class="btn"
+						        onclick="location.href='floor_information.html'"
+						>위치보기</button>
+					</div>
+				</li>
+				<li>
+					<h3>이사회</h3>
+					<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+					<div class="info">
+						<p class="info__time">14시 ~ 16시</p>
+						<p class="info__place">회의실 3</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button"
+						        class="btn"
+						        onclick="location.href='floor_information.html'"
+						>위치보기</button>
 					</div>
 				</li>
 			</ul>
@@ -249,4 +305,10 @@
 		</div>
 	</div>
 </div>
+
+
+
+
+</body>
+</html>
 

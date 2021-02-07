@@ -1,35 +1,14 @@
-//Poppins
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900');
-// notoSansKr
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
-//Inter
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;800;900&display=swap');
 //NanumGothic
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 $NanumGothic: 'Nanum Gothic', sans-serif;
-$Poppins: 'Poppins', sans-serif;
-$OpenSans: 'OpenSans', sans-serif;
-$NotoSansKR: 'Noto Sans KR', sans-serif;
-$Inter: 'Inter', sans-serif;
 
 * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 600;
-	letter-spacing: -0.6px;
 	color: $default;
-}
-
-.ff-open_sans{
-	font-family: $OpenSans, sans-serif;
-}
-.ff-poppins{
-	font-family: $Poppins, sans-serif;
-}
-.ff-inter{
-	font-family: $Inter, sans-serif;
 }
 
 .fw-100 {font-weight: 100;}

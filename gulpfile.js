@@ -1,12 +1,12 @@
 const gulp = require('gulp'),
-		scss = require('gulp-sass'),
-		sourcemaps = require('gulp-sourcemaps'),
-		nodemon = require('gulp-nodemon'),
-		browserSync = require('browser-sync'),
-		concat = require('gulp-concat'),
-		imagemin = require('gulp-imagemin'),
-		del = require('del'),
-		include = require('gulp-file-include');
+			scss = require('gulp-sass'),
+			sourcemaps = require('gulp-sourcemaps'),
+			nodemon = require('gulp-nodemon'),
+			browserSync = require('browser-sync'),
+			concat = require('gulp-concat'),
+			imagemin = require('gulp-imagemin'),
+			del = require('del'),
+			include = require('gulp-file-include');
 
 // 소스 파일 경로
 const PATH = {
@@ -47,16 +47,16 @@ gulp.task( 'html-include', () => {
 gulp.task( 'scss:compile', () => {
 	return new Promise( resolve => {
 		var options = {
-			outputStyle: "compact", // nested, expanded, compact, compressed
-			indentType: "space", // space, tab
-			indentWidth: 4,
+			outputStyle: "expanded", // nested, expanded, compact, compressed
+			indentType: "tab", // space, tab
+			indentWidth: 2,
 			precision: 8,
 			sourceComments: true // 코멘트 제거 여부
 		};
 
 		gulp.src( PATH.ASSETS.STYLE + '/*.scss' )
 				.pipe( sourcemaps.init() )
-				.pipe( scss(options) )
+				.pipe( scss(options).on('error', scss.logError) )
 				.pipe( sourcemaps.write() )
 				.pipe( gulp.dest( DEST_PATH.ASSETS.STYLE ) )
 				.pipe( browserSync.reload({stream: true}) );
@@ -147,6 +147,7 @@ gulp.task( 'browserSync', () => {
 		resolve();
 	});
 });
+
 
 // 호출 묶음
 const ALL_SERIES = gulp.series([

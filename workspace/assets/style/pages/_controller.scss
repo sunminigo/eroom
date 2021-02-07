@@ -1,0 +1,16 @@
+.control_box {
+	@include position-translate(absolute, $t: 50%, $l: 25px, $x: 0, $y: -50%);
+	text-align: center;
+	width: 88px;
+	z-index: 11;
+
+	button {
+		width: 88px;
+		height: 88px;
+
+		&.control_btn {
+			width: 88px;
+			margin-top: 16px;
+		}
+	}
+}

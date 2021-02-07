@@ -1,5 +1,0 @@
-@mixin opacity($opacity) {
-	opacity:$opacity; /* All modern browsers */
-	$opacityIE:$opacity * 100;
-	filter:alpha(opacity=$opacityIE); /* For IE5~IE9 */
-}

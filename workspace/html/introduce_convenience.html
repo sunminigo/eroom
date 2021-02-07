@@ -1,17 +1,107 @@
 @@include('../include/header.html', { title: 'eroom' })
-<div class="wrapper">
-	<section class="container_wrap">
-		<section class="content_wrap">
-			<div class="introduce_wrap">
-				convenience_information
+<div id="zoom" class="wrapper">
+	<main class="container_wrap">
+		<section class="content_box introduce_page" aria-label="편의시설 소개">
+			<div class="convenience_box">
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_1.jpg" alt="" />
+					<figcaption>안내 촉지도</figcaption>
+					<p>이룸센터 정문 앞</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_2.jpg" alt="" />
+					<figcaption>화상전화기</figcaption>
+					<p>전동휠체어 급속 충전기B1,2층</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_3.jpg" alt="" />
+					<figcaption>전동휠체어 급속 충전기</figcaption>
+					<p>B1,2층</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_4.jpg" alt="" />
+					<figcaption>물품보관함</figcaption>
+					<p>이룸센터 정문 앞</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_5.jpg" alt="" />
+					<figcaption>무인과금복합기</figcaption>
+					<p>(1층 로비데스크 옆)</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_6.jpg" alt="" />
+					<figcaption>전자음성안내시스템</figcaption>
+					<p>B1,2층</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_7.jpg" alt="" />
+					<figcaption>장애인화장실</figcaption>
+					<p>B1, 1~6층</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_8.jpg" alt="" />
+					<figcaption>안전유도 손잡이</figcaption>
+					<p>-</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_9.jpg" alt="" />
+					<figcaption>B1-1층 전용 엘리베이터</figcaption>
+					<p>-</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_10.jpg" alt="" />
+					<figcaption>음성유도기</figcaption>
+					<p>각 층</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_11.jpg" alt="" />
+					<figcaption>음성유도기 안내리모콘</figcaption>
+					<p>1층 로비문의</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_12.jpg" alt="" />
+					<figcaption>피난대피용 보조기기</figcaption>
+					<p>각 층 계단</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_13.jpg" alt="" />
+					<figcaption>혈압측정기</figcaption>
+					<p>2층</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_14.jpg" alt="" />
+					<figcaption>통로 문턱 없음</figcaption>
+					<p>-</p>
+				</figure>
+				<figure class="box">
+					<img src="./assets/images/banner/convenience/item_15.jpg" alt="" />
+					<figcaption>점자형 블록</figcaption>
+					<p>-</p>
+				</figure>
 			</div>
 		</section>
 
-		@@include('../include/navigation.html')
+		<nav class="lnb_box box">
+			<div class="lnb">
+				<a href="index.html">
+					<img src="./assets/images/icon/arrow_left.png" alt="뒤로가기" />
+				</a>
+			</div>
+			<div class="lnb">
+				<a href="introduce_eroom.html">아름센터 소개</a>
+			</div>
+			<div class="lnb">
+				<a href="introduce_room.html">대관실 소개</a>
+			</div>
+			<div class="lnb active">
+				<a href="introduce_convenience.html">편의시설 안내</a>
+			</div>
+		</nav>
+
+<!--		@@include('../include/navigation.html')-->
 		@@include('../include/info.html')
 		@@include('../include/control.html')
-	</section>
+	</main>
 	@@include('../include/sideBox.html')
 </div>
 @@include('../include/footer.html')
-@@include('../include/popup_schedule_info.html')

@@ -29,5 +29,9 @@
     "chrome > 0",
     "ie > 0",
     "firefox > 0"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "slick-carousel": "^1.8.1"
+  }
 }

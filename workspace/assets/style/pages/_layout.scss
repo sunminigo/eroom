@@ -1,348 +1,54 @@
-body {
+html, body {
 	font-size: 16px;
 }
+html.controlFontSize,
 body.controlFontSize {
-	font-size: 20px;
+	font-size: 18px;
 }
+.text-danger {
+	color: $danger;
+}
+.text-warning {
+	color: $warning;
+}
+
 .wrapper {
 	position: relative;
 	display: flex;
 	width: 100%;
 	height: 100%;
 	background: #EEEEEE;
+}
+.container_wrap {
+	position: relative;
+	width: calc(100% - 360px);
+	overflow: hidden;
 
-	& > section {
-		position: relative;
+	.logo_box {
+		position: absolute;
+		top: 58px;
+		left: 46px;
+		width: 127px;
+
+		img {
+			width: 100%;
+		}
 	}
-	.container_wrap {
-		width: calc(100% - 482px);
+	.content_box {
+		width: 100%;
+		max-width: 1232px;
+		height: 100%;
+		margin: 0 auto;
+		padding: 55px 0 205px;
 		overflow: hidden;
-
-		.logo_wrap {
-			position: absolute;
-			top: 58px;
-			left: 46px;
-		}
-		.content_wrap {
-			height: 100%;
-			overflow: hidden;
-			overflow-y: auto;
-		}
-		.navigation_wrap {
-			@include position-translate(absolute, $b: 101px, $l: 50%, $x: -50%, $y: 0);
-
-			.gnb_wrap {
-				position: relative;
-				display: flex;
-				align-items: center;
-				height: auto;
-				z-index: 1;
-
-				& > .gnb {
-					height: 100%;
-
-					&.active {
-						background: $warning;
-						border-radius: 16px;
-					}
-					& + .gnb > button:before {
-						@include position-translate(absolute, $t:  50%, $l: 0, $x: 0, $y: -50%);
-						content: '';
-						width: 1px;
-						height: 31px;
-						background: $light;
-					}
-					& > button {
-						position: relative;
-						text-align: center;
-						display: block;
-						width: 281px;
-						height: 102px;
-						font-size: 36px;
-					}
-					&:first-child button {
-						width: 102px;
-					}
-				}
-			}
-			.lnb_wrap {
-				@include position-translate(absolute, $t: -106px, $l: 50%, $x: -50%, $y: 0);
-				display: flex;
-				text-align: center;
-				height: 0;
-				padding: 0;
-				opacity: 0;
-				z-index: -999;
-				overflow: hidden;
-				transition: left 1s ease-in-out;
-
-				&.active {
-					left: 50%;
-					height: 88px;
-					padding: 8px 7px;
-					opacity: 1;
-					z-index: 1;
-					transition: left 1s ease-in-out;
-				}
-				& > .lnb {
-					position: relative;
-					text-align: center;
-					height: 72px;
-					line-height: 72px;
-					height: 100%;
-					font-size: 30px;
-					font-weight: 800;
-					border-radius: 3px;
-
-					&.active {
-						background: $warning;
-					}
-					a {
-						display: block;
-					}
-					.btn_back {
-						width: 100%;
-						height: 100%;
-					}
-				}
-			}
-			#introduce,
-			#traffic {
-				.lnb_wrap {
-					.lnb {
-						width: 235px;
-					}
-				}
-			}
-			#floor {
-				.lnb_wrap {
-					.lnb {
-						width: 86px;
-					}
-				}
-			}
-		}
-		.control_wrap {
-			@include position-translate(absolute, $t: 50%, $l: 25px, $x: 0, $y: -50%);
-			text-align: center;
-			width: 88px;
-			z-index: 11;
-
-			.control_box {
-
-				button {
-					width: 88px;
-					height: 88px;
-
-					&.control_text {
-						width: 88px;
-						margin-top: 16px;
-					}
-				}
-			}
-		}
-		.info_wrap {
-			@include position-translate(absolute, $b:0, $l:50%, $x:-50%, $y:0);
-			width: 98%;
-
-			.info_box {
-				display: flex;
-				align-items: center;
-				padding: 12px;
-				background: $warning;
-				font-size:30px;
-				border-radius: 10px 10px 0 0;
-
-				&__icon {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					@include box-circle(56px);
-					margin-right:  17px;
-					background: #fff;
-				}
-				&__txt {
-					width: calc(100% - 76px);
-
-					p {
-						@include dot(1);
-					}
-				}
-			}
-		}
-	}
-	.side_wrap {
-		width: 482px;
-		padding: 23px 26px 0 0;
-
-		.side_box {
-			height: 100%;
-
-			.weather_wrap {
-				text-align: center;
-				display: flex;
-				align-items: center;
-				height: 144px;
-				padding: 0 14px;
-
-				& > div {
-					position: relative;
-					padding: 0 8px;
-
-					& + div:before  {
-						@include position-translate(absolute, $t:  50%, $l: 0, $x: 0, $y: -50%);
-						content: '';
-						width: 1px;
-						height: 31px;
-						background: $light;
-					}
-				}
-				.today_info {
-					flex: .85;
-
-					&__date {
-						font-size: 18px;
-					}
-					&__time {
-						margin-top: 6px;
-						font-size: 32px;
-						font-weight: 800;
-					}
-				}
-				.temp_info {
-					display: flex;
-					align-items: center;
-
-					&__img {
-						width: 86px;
-						height: 86px;
-					}
-					&__txt {
-						font-size: 44px;
-
-						.location {
-							font-size: 16px;
-						}
-					}
-				}
-			}
-			.info_wrap {
-				height: calc(100% - 161px);
-				margin-top: 17px;
-				padding: 26px 12px;
-				overflow: hidden;
-
-				.title {
-					text-align: center;
-					font-size: 28px;
-				}
-				.info_list {
-					height: calc(100% - 140px);
-					margin-top: 28px;
-					overflow-y: auto;
-
-					li {
-						margin-top: 18px;
-
-						& + li {
-							margin-top: 17px;
-						}
-						.title_box {
-							text-align: left;
-							display: flex;
-							flex-direction: column;
-							width: 100%;
-							padding: 16px;
-							background: $lightGrey2;
-							border-radius: 4px 4px 0px 0px;
-							font-size: 26px;
-
-							& > p {
-								flex: 1;
-								padding: 0 8px 0 32px;
-								@include dot(1);
-							}
-							&__time {
-								background: url('./assets/images/icon/clock.png') no-repeat center left;
-							}
-							&__place {
-								margin-top: 14px;
-								background: url('./assets/images/icon/conference.png') no-repeat center left;
-
-							}
-						}
-						.content_box {
-							padding: 16px;
-							font-size: 24px;
-							border: 1px solid $lightGrey1;
-
-							&__title {
-								padding-left: 32px;
-								background: url('./assets/images/icon/info.png') no-repeat center left;
-							}
-							&__txt {
-								margin-top: 12px;
-								padding-left: 32px;
-								font-weight: 400;
-							}
-						}
-					}
-				}
-				.btn_more {
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					width: 100%;
-					height: 81px;
-					font-size: 28px;
-					color: #fff;
-					background: $primary url('./assets/images/icon/calender.png') no-repeat 80px center;
-				}
-			}
-		}
+		overflow-y: auto;
 	}
 }
-.popup_wrap {
-	display: none;
-	@include position(fixed, $t: 0, $l: 0, $b: 0, $r: 0);
-	z-index: 10;
-	background: rgba(0,0,0,.4);
-
-	.popup_box {
-		@include position-translate(absolute, $t: 50%, $l: 138px, $x: 0, $y: -50%);
-		width: 90%;
-		height: 90%;
-		padding: 0 26px;
-		background: #fff;
-		box-shadow: $box-shadow-2;
-		border-radius: $base-radius;
-
-		&__header {
-			text-align: center;
-			height: 99px;
-			padding: 24px 0;
-			font-size: 44px;
-		}
-		&__container {
-			height: calc(100% - 219px);
-			border: 1px solid #DDDDDD;
-			overflow-y: auto;
-		}
-		&__footer {
-			text-align: center;
-			height: 120px;
-			padding: 24px 0;
-
-			.btn {
-				width: 235px;
-				height: 72px;
-				font-size: 30px;
-				font-weight: 800;
-				border-radius: 3px;
-			}
-			.btn_close {
-				border: 1px solid #444444;
-			}
-		}
-	}
+.floor_page,
+.traffic_page,
+.rental_page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 100px;
 }

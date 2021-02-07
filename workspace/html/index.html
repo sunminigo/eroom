@@ -1,18 +1,18 @@
 @@include('../include/header.html', { title: 'eroom' })
 <div id="zoom" class="wrapper">
-	<section class="container_wrap">
-		<h1 class="logo_wrap">
+	<main class="container_wrap">
+		<h1 class="logo_box">
 			<img src="./assets/images/logo.svg" alt="errom logo" />
 		</h1>
 
-		<section class="content_wrap">
+		<section class="content_box" aria-label="메인">
 			<div class="main_box">
 				<div id="visual_slider" class="visual_wrap">
 					<div>
-						<img src="./assets/images/banner/people.png" alt="사람들 모여있는 그림" />
+						<img data-lazy="./assets/images/banner/people.png" alt="사람들 모여있는 그림" />
 					</div>
 					<div>
-						<img src="./assets/images/banner/people.png" alt="사람들 모여있는 그림" />
+						<img data-lazy="./assets/images/banner/people.png" alt="사람들 모여있는 그림" />
 					</div>
 				</div>
 			</div>
@@ -21,10 +21,7 @@
 		@@include('../include/navigation.html')
 		@@include('../include/info.html')
 		@@include('../include/control.html')
-	</section>
+	</main>
 		@@include('../include/sideBox.html')
 </div>
 @@include('../include/footer.html')
-@@include('../include/popup_schedule_info.html')
-
-<!-- @@include('./pages/main.html') -->

@@ -1,17 +1,46 @@
 @@include('../include/header.html', { title: 'eroom' })
-<div class="wrapper">
-	<section class="container_wrap">
-		<section class="content_wrap">
-			<div class="introduce_wrap">
-				<img src="/assets/images/banner/introduce_eroom.png" alt="" style="width: 100%;height: 100%;"/>
+<div id="zoom" class="wrapper">
+	<main class="container_wrap">
+		<section class="content_box introduce_page" aria-label="이룸 소개">
+			<div class="eroom_box">
+				<h1 class="title">장애인을 위한 따뜻한 공간 <img src="./assets/images/logo.svg" alt="" width="200px"/></h1>
+				<p class="eroom_intro">한국장애인개발원이 운영하고 있는 이룸센터는 복권기금을 통해  2007년 5월 건립 된 지상 10층, 지하 4층의 총 14개 층으로 이루어진  장애인 종합복지공간입니다. 150석 규모의 이룸홀과 100석 규모의  누리홀 뿐만 아니라 회의실, 소규모 강의실과 세미나실 등 다양한  행사기반 시설을 갖추고 있어 장애인의 정보교류와 상호화합의 장으로  활용되고 있습니다. 또한 장애인들의 적극적인 사회·문화 참여를  활성화하고 국내·외 장애교류의 중심공간으로서 장애인의 안전과  편의를 우선으로 하는 시설들을 갖추고 있습니다.</p>
+
+				<ul class="history_list">
+					<li><span>’07.05</span>이룸센터(가칭)건립</li>
+					<li><span>’07.09</span>"이룸센터"로 건물명칭 확정</li>
+					<li><span>’07.12</span>이룸센터 개관</li>
+					<li><span>’08.03</span>제1차 리모델링 공사(3, 4, 5층 사무실 및 화장실, 엘리베이터)</li>
+					<li><span>’08.05</span>제2차 리모델링 공사(2층 대관시설)</li>
+					<li><span>’10.06</span>제3차 리모델링 공사(지하 1층 대강당 및 다목적 세미나실)</li>
+					<li><span>’10.08</span>이룸홀, 누리홀 개관</li>
+					<li><span>’14.06</span>「장애물 없는 생활환경(Barrier Free)」 본인증 획득</li>
+					<li><span>’19.11</span>1층 로비 리모델링 완료</li>
+					<li><span>’20.01</span>「장애물 없는 생활환경(Barrier Free)」 재인증 획득</li>
+				</ul>
 			</div>
 		</section>
 
-		@@include('../include/navigation.html')
+		<nav class="lnb_box box">
+			<div class="lnb">
+				<a href="index.html">
+					<img src="./assets/images/icon/arrow_left.png" alt="뒤로가기" />
+				</a>
+			</div>
+			<div class="lnb active">
+				<a href="introduce_eroom.html">아름센터 소개</a>
+			</div>
+			<div class="lnb">
+				<a href="introduce_room.html">대관실 소개</a>
+			</div>
+			<div class="lnb">
+				<a href="introduce_convenience.html">편의시설 안내</a>
+			</div>
+		</nav>
+<!--		@@include('../include/navigation.html')-->
 		@@include('../include/info.html')
 		@@include('../include/control.html')
-	</section>
+	</main>
 	@@include('../include/sideBox.html')
 </div>
 @@include('../include/footer.html')
-@@include('../include/popup_schedule_info.html')

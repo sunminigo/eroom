@@ -1,0 +1,137 @@
+.side_box {
+	position: relative;
+	width: 360px;
+	height: 100%;
+	padding: 23px 26px 0 0;
+
+	.weather_wrap {
+		text-align: center;
+		display: flex;
+		align-items: center;
+		height: 144px;
+		padding: 0 8px;
+
+		& > div {
+			position: relative;
+			padding: 0 8px;
+
+			& + div:before  {
+				@include position-translate(absolute, $t:  50%, $l: 0, $x: 0, $y: -50%);
+				content: '';
+				width: 1px;
+				height: 31px;
+				background: $light;
+			}
+			&:first-child {
+				margin-right: 8px;
+			}
+		}
+		.today_info {
+			&__date {
+				font-size: 16px;
+				letter-spacing: -1px;
+			}
+			&__time {
+				margin-top: 8px;
+				font-size: 30px;
+				font-weight: 800;
+			}
+		}
+		.temp_info {
+			display: flex;
+			align-items: center;
+
+			&__img {
+				width: 58px;
+				height: 58px;
+
+				img {
+					width: 100%;
+				}
+			}
+			&__txt {
+				font-size: 40px;
+
+				.location {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	.info_wrap {
+		height: calc(100% - 161px);
+		margin-top: 17px;
+		padding: 26px 10px;
+		overflow: hidden;
+
+		.title {
+			text-align: center;
+			font-size: 1.75rem; /* 28px */
+		}
+		.info_list {
+			height: calc(100% - 140px);
+			margin-top: 28px;
+			overflow-y: auto;
+
+			li {
+				margin-top: 26px;
+
+				& + li {
+					margin-top: 10px;
+				}
+				.title_box {
+					text-align: left;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					padding: 16px;
+					background: $lightGrey2;
+					border-radius: 4px 4px 0px 0px;
+					font-size: 1.25rem; /* 20px */
+
+					& > p {
+						flex: 1;
+						padding: 0 8px 0 32px;
+						@include dot(1);
+					}
+					&__time {
+						background: url('/assets/images/icon/clock.png') no-repeat center left;
+					}
+					&__place {
+						margin-top: 14px;
+						background: url('/assets/images/icon/conference.png') no-repeat center left;
+
+					}
+				}
+				.content_box {
+					padding: 16px;
+					font-size: 1.25rem; /* 20px */
+					border: 1px solid $lightGrey1;
+
+					&__title {
+						padding-left: 32px;
+						background: url('/assets/images/icon/info.png') no-repeat center left;
+					}
+					&__txt {
+						margin-top: 12px;
+						padding-left: 32px;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+		.btn_more {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 81px;
+			font-size: 1.75rem; /* 28px */
+			color: #fff;
+			background: $primary;
+		}
+	}
+}
