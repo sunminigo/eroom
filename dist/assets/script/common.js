@@ -115,3 +115,48 @@ function zooms() {
 		alert("더 이상 확대할 수 없습니다.");
 	}
 }
+
+(function () {
+	var color = ['#127BDC', '#AF1280', '#FFB500', '#7CD800'];
+	var result = Math.floor(color.length * Math.random());
+	var selector = document.getElementsByClassName('randomColor');
+
+/*
+	Array.prototype.forEach.call(selector, function(i) {
+		console.log(i)
+		i.style.borderLeftColor = color[result];
+	});
+*/
+	Array.from(selector.childNodes, i => {
+		console.log(i)
+		i.style.borderLeftColor = color[result];
+	});
+
+	/*
+	Array.from(selector).forEach(function(i) {
+		console.log(i)
+		i.style.borderLeftColor = color[result];
+	});
+*/
+
+	// [].forEach.call(ele, function(element, index, array){ console.log(element, index); });
+
+})()
+
+/*
+randomTagColor: function (idx) {
+	var color = ['#EA5E0F', '#E50670', '#E02F8F', '#E61FC6', '#BA2A78',
+		'#922FE0', '#B823ED', '#8971CD', '#582ABA', '#811E92',
+		'#0094FF', '#3667E6', '#2FA0E0', '#1B5168', '#202486',
+		'#36BDB3', '#25AE8D', '#068587', '#82CA28', '#30CCB0'];
+	var result = Math.floor(color.length * Math.random());
+
+	return this.colorCache[idx] || (this.colorCache[idx] = color[result]);
+
+	/!* all color random
+	const r = () => Math.floor(256 * Math.random());
+
+	return this.colorCache[idx] || (this.colorCache[idx] = `rgb(${r()}, ${r()}, ${r()})`);*!/
+},
+
+*/

@@ -1,11 +1,16 @@
 @@include('../include/header.html', { title: 'eroom' })
 <div id="zoom" class="wrapper">
 	<main class="container_wrap">
+		<header>
+			<img src="./assets/images/logo_symbol.svg" alt="eroom logo" />이룸센터 소개
+		</header>
+
 		<section class="content_box introduce_page" aria-label="이룸 소개">
 			<div class="eroom_box">
-				<h1 class="title">장애인을 위한 따뜻한 공간 <img src="./assets/images/logo.svg" alt="" width="200px"/></h1>
-				<p class="eroom_intro">한국장애인개발원이 운영하고 있는 이룸센터는 복권기금을 통해  2007년 5월 건립 된 지상 10층, 지하 4층의 총 14개 층으로 이루어진  장애인 종합복지공간입니다. 150석 규모의 이룸홀과 100석 규모의  누리홀 뿐만 아니라 회의실, 소규모 강의실과 세미나실 등 다양한  행사기반 시설을 갖추고 있어 장애인의 정보교류와 상호화합의 장으로  활용되고 있습니다. 또한 장애인들의 적극적인 사회·문화 참여를  활성화하고 국내·외 장애교류의 중심공간으로서 장애인의 안전과  편의를 우선으로 하는 시설들을 갖추고 있습니다.</p>
-
+				<div class="eroom_intro">
+					<h1 class="title">장애인을 위한 <span class="text_yellow">따뜻한 공간</span><img src="./assets/images/logo.svg" alt="" width="146px"/></h1>
+					<p class="eroom_intro"><span class="text_blue">한국장애인개발원이 운영하고 있는 이룸센터</span>는 복권기금을 통해  2007년 5월 건립 된 지상 10층, 지하 4층의 총 14개 층으로 이루어진  장애인 종합복지공간입니다. 150석 규모의 이룸홀과 100석 규모의  누리홀 뿐만 아니라 회의실, 소규모 강의실과 세미나실 등 다양한  행사기반 시설을 갖추고 있어 장애인의 정보교류와 상호화합의 장으로  활용되고 있습니다. 또한 장애인들의 적극적인 사회·문화 참여를  활성화하고 국내·외 장애교류의 중심공간으로서 장애인의 안전과  편의를 우선으로 하는 시설들을 갖추고 있습니다.</p>
+				</div>
 				<ul class="history_list">
 					<li><span>’07.05</span>이룸센터(가칭)건립</li>
 					<li><span>’07.09</span>"이룸센터"로 건물명칭 확정</li>
@@ -21,24 +26,7 @@
 			</div>
 		</section>
 
-		<nav class="lnb_box box">
-			<div class="lnb">
-				<a href="index.html">
-					<img src="./assets/images/icon/arrow_left.png" alt="뒤로가기" />
-				</a>
-			</div>
-			<div class="lnb active">
-				<a href="introduce_eroom.html">아름센터 소개</a>
-			</div>
-			<div class="lnb">
-				<a href="introduce_room.html">대관실 소개</a>
-			</div>
-			<div class="lnb">
-				<a href="introduce_convenience.html">편의시설 안내</a>
-			</div>
-		</nav>
-<!--		@@include('../include/navigation.html')-->
-		@@include('../include/info.html')
+		@@include('../include/lnb_introduce.html')
 		@@include('../include/control.html')
 	</main>
 	@@include('../include/sideBox.html')

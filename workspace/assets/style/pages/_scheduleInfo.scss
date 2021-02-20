@@ -1,59 +1,70 @@
-.schedule_detail {
+.rental_page {
+	height: 100%;
+	padding-bottom: 100px;
+	overflow-y: auto;
+
+	.title {
+		text-align: center;
+		margin-bottom: 59px;
+		font-size: 42px;
+	}
+}
+.rental_detail_list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -24px;
+
+	li {
+		width: calc((100% / 3) - 24px);
+		margin: 0 0 24px 24px;
+		padding: 32px;
+		background: #FFFFFF;
+		border-radius: 8px;
+		font-size: 1.75rem; /* 28px */
+
+		.intro {
+			margin-top: 20px;
+			font-weight: 400;
+			@include dot(3, 1.2);
+		}
+		.info {
+			margin-top: 15px;
+
+			& > p {
+				padding-left: 32px;
+				font-size: 1.625rem; /* 26px */
+				font-weight: 800;
+
+				& + p {
+					margin-top: 24px;
+				}
+			}
+			&__time {
+				background: url('/assets/images/icon/clock.png') no-repeat center left;
+			}&__place {
+				 background: url('/assets/images/icon/place_big.png') no-repeat center left / 24px 24px;
+			 }
+		}
+		.btn_wrap {
+			text-align: center;
+			margin-top: 61px;
+
+			.btn {
+				width: 214px;
+				height: 65px;
+				font-size: 1.625rem; /* 26px */
+				background: #2460AF;
+				border-radius: 50px;
+				color: #fff;
+			}
+		}
+	}
+}
+.rental_detail_popup {
 	.popup_box {
 		&__container {
 			padding: 24px;
 			background: #EFEFEF;
-		}
-	}
-	.list_box {
-		display: flex;
-		flex-wrap: wrap;
-		margin-left: -24px;
-
-		li {
-			width: calc((100% / 3) - 24px);
-			margin: 0 0 24px 24px;
-			padding: 32px;
-			background: #FFFFFF;
-			border-radius: 8px;
-			font-size: 1.75rem; /* 28px */
-
-			.intro {
-				margin-top: 20px;
-				font-weight: 400;
-				@include dot(3, 1.2);
-			}
-			.info {
-				margin-top: 15px;
-
-				& > p {
-					padding-left: 32px;
-					font-size: 1.625rem; /* 26px */
-					font-weight: 800;
-
-					& + p {
-						margin-top: 24px;
-					}
-				}
-				&__time {
-					background: url('/assets/images/icon/clock.png') no-repeat center left;
-				}&__place {
-					background: url('/assets/images/icon/place_big.png') no-repeat center left / 24px 24px;
-				}
-			}
-			.btn_wrap {
-				text-align: center;
-				margin-top: 61px;
-
-				.btn {
-					width: 214px;
-					height: 65px;
-					font-size: 1.625rem; /* 26px */
-					background: #2460AF;
-					border-radius: 50px;
-					color: #fff;
-				}
-			}
 		}
 	}
 }

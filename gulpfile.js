@@ -6,7 +6,7 @@ const gulp = require('gulp'),
 			concat = require('gulp-concat'),
 			imagemin = require('gulp-imagemin'),
 			del = require('del'),
-			include = require('gulp-file-include');
+			fileInclude = require('gulp-file-include');
 
 // 소스 파일 경로
 const PATH = {
@@ -34,9 +34,11 @@ DEST_PATH = {
 gulp.task( 'html-include', () => {
 	return new Promise( resolve => {
 		gulp.src( PATH.HTML + '/**/*.html' )
-				.pipe( include({
+				.pipe( fileInclude({
 					prefix: '@@',
-					basepath: '@file'
+					basepath: '@file',
+					indent: true,
+					amount: 2
 				}) )
 				.pipe( gulp.dest( DEST_PATH.HTML ) )
 				.pipe( browserSync.reload({stream: true}) );
