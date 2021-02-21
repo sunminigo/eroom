@@ -20,7 +20,7 @@
 			height: 100%;
 
 			&.active {
-				background: $muted;
+				background: $brandColor-yellow;
 				border-radius: 8px;
 			}
 			& > button {
@@ -59,7 +59,7 @@
 		text-align: center;
 		width: 281px;
 		line-height: 76px;
-		font-size: 2.125rem; /* 34px */
+		font-size: 1.625rem; /* 26px */
 		font-weight: 800;
 		border-radius: 8px;
 
@@ -78,7 +78,7 @@
 			}
 		}
 		&.active {
-			background: $muted;
+			background: $brandColor-yellow;
 			border-radius: 8px;
 		}
 		a {
@@ -92,9 +92,10 @@
 }
 #lnb_floor.lnb_box {
 	& > .lnb {
-		width: 102px !important;
-	}
-	.lnb:last-child {
-		width: auto;
+		width: 102px;
+
+		&:last-child {
+			width: 153px;
+		}
 	}
 }

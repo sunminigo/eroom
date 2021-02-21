@@ -43,13 +43,18 @@ $(document).ready(function(){
 	//popup open
 	$('[data-popup-open]').on('click', function(e)  {
 		var targeted_popup_class = $(this).attr('data-popup-open');
+
 		$('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+		$('.zoom_box').addClass('box');
+		$('.control_btn').addClass('box');
 		e.preventDefault();
 	});
 	//popup close
 	$('[data-popup-close]').on('click', function(e)  {
 		var targeted_popup_class = $(this).attr('data-popup-close');
 		$('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+		$('.zoom_box').removeClass('box');
+		$('.control_btn').removeClass('box');
 		e.preventDefault();
 	});
 
@@ -77,19 +82,28 @@ $(document).ready(function(){
 	});
 
 	$(".room_view").slick({
-		autoplay: true,
+		autoplay: false,
 		slidesToShow: 1,
 		arrows: false,
 		asNavFor: '.rooms'
 	});
 
 	$(".rooms").slick({
-		slidesToShow: 6,
+		// slidesToShow: 6,
 		arrows: false,
 		focusOnSelect: true,
 		asNavFor: '.room_view'
 	});
 
+	$('.card_slider').slick({
+		rows: 2,
+		autoplay: false,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		autoplaySpeed: 5000,
+		arrows: true,
+		dots: true,
+	});
 
 });
 

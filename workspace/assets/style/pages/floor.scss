@@ -1,6 +1,7 @@
 .floor_page {
-
 	.floor_list {
+		padding: 50px 0;
+
 		& > li {
 			display: flex;
 			margin-bottom: 10px;
@@ -76,6 +77,18 @@
 					margin-top: 20px;
 				}
 			}
+		}
+	}
+	.floor_box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+
+		.floor_title {
+			@include position(absolute, $t: 32px, $l: 32px);
+			font-size: 88px;
+			font-weight: 700;
 		}
 	}
 }

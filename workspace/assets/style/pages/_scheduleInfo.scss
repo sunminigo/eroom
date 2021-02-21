@@ -1,8 +1,10 @@
 .rental_page {
-	height: 100%;
-	padding-bottom: 100px;
-	overflow-y: auto;
-
+	.slick-active {
+		button:before {
+			background: $brandColor-green !important;
+			opacity: 1;
+		}
+	}
 	.title {
 		text-align: center;
 		margin-bottom: 59px;
@@ -11,56 +13,64 @@
 }
 .rental_detail_list {
 	display: flex;
-	flex-wrap: wrap;
-	margin-left: -24px;
+	align-items: center;
+	justify-content: center;
 
-	li {
-		width: calc((100% / 3) - 24px);
-		margin: 0 0 24px 24px;
-		padding: 32px;
+	.card {
+		margin: 8px;
+		padding: 25px 24px 10px;
+		border-radius: 4px;
 		background: #FFFFFF;
-		border-radius: 8px;
-		font-size: 1.75rem; /* 28px */
 
+		h3 {
+			font-size: 1.5rem; /* 24px */
+		}
 		.intro {
+			min-height: 120px;
 			margin-top: 20px;
+			font-size: 1.25rem; /* 20px */
 			font-weight: 400;
-			@include dot(3, 1.2);
+			@include dot(5, 1.2);
 		}
 		.info {
-			margin-top: 15px;
+			padding-top: 17px;
+			border-top: 1px solid $light;
 
 			& > p {
 				padding-left: 32px;
-				font-size: 1.625rem; /* 26px */
-				font-weight: 800;
-
-				& + p {
-					margin-top: 24px;
-				}
+				font-size: 1.125rem; /* 18px */
+				font-weight: 400;
+				background-position: center left;
+				background-size: 18px;
+				background-repeat: no-repeat;
 			}
 			&__time {
-				background: url('/assets/images/icon/clock.png') no-repeat center left;
-			}&__place {
-				 background: url('/assets/images/icon/place_big.png') no-repeat center left / 24px 24px;
+				background: url('/assets/images/icon/clock.png');
+			}
+			&__place {
+				margin-top: 7px;
+				background: url('/assets/images/icon/place_big.png');
 			 }
 		}
 		.btn_wrap {
 			text-align: center;
-			margin-top: 61px;
+			margin-top: 27px;
 
 			.btn {
-				width: 214px;
-				height: 65px;
-				font-size: 1.625rem; /* 26px */
+				width: 166px;
+				height: 42px;
+				font-size: 1.125rem; /* 18px */
 				background: #2460AF;
-				border-radius: 50px;
+				border-radius: 4px;
 				color: #fff;
 			}
 		}
 	}
 }
 .rental_detail_popup {
+	.rental_detail_list {
+		padding: 0 0 52px;
+	}
 	.popup_box {
 		&__container {
 			padding: 24px;

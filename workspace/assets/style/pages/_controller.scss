@@ -11,5 +11,8 @@
 		&.control_text {
 			margin-top: 24px;
 		}
+		& + .control_btn {
+			margin-top: 13px;
+		}
 	}
 }
