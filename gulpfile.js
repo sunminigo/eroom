@@ -51,7 +51,7 @@ gulp.task( 'scss:compile', () => {
 		var options = {
 			outputStyle: "expanded", // nested, expanded, compact, compressed
 			indentType: "tab", // space, tab
-			indentWidth: 2,
+			indentWidth: 1,
 			precision: 8,
 			sourceComments: true // 코멘트 제거 여부
 		};

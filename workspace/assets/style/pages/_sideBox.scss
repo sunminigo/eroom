@@ -82,20 +82,32 @@
 				height: 60px;
 				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.08) 100%);
 			}
-
 			li {
+				margin-bottom: 13px;
 				padding: 15px 16px;
 				border-radius: 4px;
 				border: 1px solid $light;
-				border-left-width: 8px;
+				border-left: 8px solid $brandColor-yellow;
 
-				& + li {
-					margin-top: 13px;
+				&:nth-child(n+1) {
+					border-left-color: $brandColor-yellow;
+				}
+				&:nth-child(2n+2) {
+					border-left-color: $brandColor-blue;
+				}
+				&:nth-child(3n+3) {
+					border-left-color: $brandColor-orange;
+				}
+				&:nth-child(4n+4) {
+					border-left-color: $brandColor-purple;
+				}
+				&:nth-child(5n+5) {
+					border-left-color: $brandColor-green;
 				}
 				.content_box {
-					font-size: 1.5rem; /* 24px */
 
 					&__title {
+						font-size: 1.5rem; /* 24px */
 						font-weight: 800;
 					}
 					&__txt {

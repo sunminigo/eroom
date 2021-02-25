@@ -36,22 +36,117 @@
 	        src="https://code.jquery.com/jquery-2.2.4.min.js"
 	        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 	        crossorigin="anonymous"></script>
-	<!-- slick -->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<!-- eroom -->
-	<script type="text/javascript" src="./assets/script/common.js"></script>
+	<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 <body>
 
 <div id="zoom" class="wrapper">
 	<main class="container_wrap">
 		<header>
-			<h1><img src="./assets/images/logo_symbol.svg" alt="eroom simbol" />교통 안내</h1>
+			<h1><img src="./assets/images/logo_symbol.svg" alt="eroom simbol" />교통안내 - 버스</h1>
 		</header>
 
 		<section class="content_box traffic_page" aria-label="버스 안내">
 			<div class="traffic_box">
-				버스
+				<article class="step_box">
+					<h2 class="step_box__title">국회의사당<p class="station_number">19-133</p></h2>
+					<div class="step_box__coming_soon_list">
+						<span class="info">곧 도착</span>
+						<span>162, 271B, 영등포10, 7613, 70</span>
+					</div>
+					<ul class="step_box__bus_list">
+						<li class="bus_blue">
+							<p class="number">153<br/>저상</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_blue">
+							<p class="number">260</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_green">
+							<p class="number">5615</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_blue2">
+							<p class="number">7613</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_red">
+							<p class="number">70-2</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_blue active">
+							<p class="number">G7625</p>
+							<p class="time">곧 도착</p>
+						</li>
+						<li class="bus_blue">
+							<p class="number">162</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_blue">
+							<p class="number">271B</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_green">
+							<p class="number">5618</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_blue2">
+							<p class="number">10</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_green">
+							<p class="number">영등포10</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_green">
+							<p class="number">8716</p>
+							<p class="time">4분27초 후</p>
+						</li>
+					</ul>
+				</article>
+
+				<article class="step_box">
+					<h2 class="step_box__title">국회의사당역.국민은행<p class="station_number">19-133</p></h2>
+					<div class="step_box__coming_soon_list">
+						<span class="info">곧 도착</span>
+						<span>162, 271B</span>
+					</div>
+					<ul class="step_box__bus_list">
+						<li class="bus_blue active">
+							<p class="number">153<br/>저상</p>
+							<p class="time">곧 도착</p>
+						</li>
+						<li class="bus_blue">
+							<p class="number">10</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_blue2">
+							<p class="number">10</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_red">
+							<p class="number">G7625</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_blue">
+							<p class="number">271B</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_blue">
+							<p class="number">463</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_red">
+							<p class="number">7007-1</p>
+							<p class="time">4분27초 후</p>
+						</li>
+						<li class="bus_green">
+							<p class="number">8716</p>
+							<p class="time">4분27초 후</p>
+						</li>
+					</ul>
+				</article>
 			</div>
 		</section>
 
@@ -199,7 +294,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -213,7 +308,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -227,7 +322,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -241,7 +336,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -255,7 +350,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -269,7 +364,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -283,7 +378,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -297,7 +392,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -311,7 +406,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -320,16 +415,55 @@
 		</div>
 		<div class="popup_box__footer">
 			<button type="button"
-			        class="btn btn_close"
+			        class="btn btn_fill"
 			        data-popup-close="schedule_detail"
 			>닫기</button>
 		</div>
 	</div>
 </div>
 
+	<div class="popup_wrap type_loding">
+		<div class="popup_box">
+			<div class="popup_box__container">
+				<div class="loding_lottie">
+					<lottie-player src="./assets/images/loding.json"
+					               class="lottie"
+					               background="transparent"
+					               speed="1"
+					               loop
+					               autoplay
+					></lottie-player>
+				</div>
+				<p>디바이스 연결중 ...</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup_wrap type_alert active" data-popup="alert_btn">
+		<div class="popup_box">
+			<div class="popup_box__container">
+				<p>alert line 1</p>
+			</div>
+			<div class="popup_box__footer">
+				<button type="button"
+				        class="btn btn_outline"
+				        data-popup-close="alert_btn"
+				>닫기</button>
+				<button type="button"
+				        class="btn btn_fill"
+				        data-popup-close="alert_btn"
+				>확인</button>
+			</div>
+		</div>
+	</div>
 
 
-
+	<!-- slick -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<!-- eroom -->
+	<script type="text/javascript" src="./assets/script/common.js"></script>
+	<!-- lottie	-->
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 </html>
 

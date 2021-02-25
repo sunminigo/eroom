@@ -3,15 +3,25 @@ html, body {
 }
 html.controlFontSize,
 body.controlFontSize {
-	font-size: 18px;
+	font-size: 20px;
 }
 
-::-webkit-scrollbar-track {
-	width: 50px;
-	border-left: 3px solid transparent;
-	border-right: 3px solid transparent;
-	background-color: red;
-	background-clip: content-box;
+/* ---------------------------------------------
+	scrollbar
+---------------------------------------------- */
+::-webkit-scrollbar {
+	width: 20px;
+	height: 10px;
+	border-radius: 30px;
+}
+::-webkit-scrollbar-button {
+	background: #f9f9f9
+}
+::-webkit-scrollbar-track-piece {
+	background: #f9f9f9
+}
+::-webkit-scrollbar-thumb {
+	background: #bfbfbf
 }
 
 /* ---------------------------------------------
@@ -80,13 +90,6 @@ body.controlFontSize {
 		overflow-y: auto;
 	}
 }
-.traffic_page {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding-bottom: 100px;
-}
-
 .card_box {
 	display: flex;
 	align-items: center;
@@ -117,7 +120,7 @@ body.controlFontSize {
 					left: -130px;
 
 					&:before {
-						background: url('/assets/images/icon/arrow_angle_left.png') no-repeat center;
+						background: url('../images/icon/arrow_angle_left.png') no-repeat center;
 						content: '';
 						display: block;
 						width: 108px;
@@ -128,7 +131,7 @@ body.controlFontSize {
 					right: -130px;
 
 					&:before {
-						background: url('/assets/images/icon/arrow_angle_right.png') no-repeat center;
+						background: url('../images/icon/arrow_angle_right.png') no-repeat center;
 						content: '';
 						display: block;
 						width: 108px;

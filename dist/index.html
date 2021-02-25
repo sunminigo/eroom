@@ -36,10 +36,7 @@
 	        src="https://code.jquery.com/jquery-2.2.4.min.js"
 	        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 	        crossorigin="anonymous"></script>
-	<!-- slick -->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<!-- eroom -->
-	<script type="text/javascript" src="./assets/script/common.js"></script>
+	<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 <body>
 
@@ -65,14 +62,6 @@
 		<section class="navigation_box">
 			<nav class="navigation">
 				<ul class="gnb_box">
-			<!--
-					<li class="gnb">
-						<button type="button"
-						        ref="index"
-						        onclick="location.href='index.html'"
-						><img src="./assets/images/icon/home.png" alt="홈" /></button>
-					</li>
-			-->
 					<li id="introduce" class="gnb">
 						<button type="button"
 						        ref="introduce"
@@ -88,13 +77,13 @@
 					<li id="floor" class="gnb">
 						<button typee="button"
 						        ref="floor"
-						        onclick="location.href='floor_B1.html'"
+						        onclick="location.href='floor_all.html'"
 						>층별안내</button>
 					</li>
 					<li id="traffic" class="gnb">
 						<button type="button"
 						        ref="traffic"
-						        onclick="location.href='traffic_guide.html'"
+						        onclick="location.href='traffic_bus.html'"
 						>교통안내</button>
 					</li>
 				</ul>
@@ -226,7 +215,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -240,7 +229,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -254,7 +243,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -268,7 +257,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -282,7 +271,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -296,7 +285,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -310,7 +299,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -324,7 +313,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -338,7 +327,7 @@
 						<div class="btn_wrap">
 							<button type="button"
 							        class="btn"
-							        onclick="location.href='floor_information.html'"
+							        onclick="location.href='floor_B1.html'"
 							>위치보기</button>
 						</div>
 					</div>
@@ -347,16 +336,55 @@
 		</div>
 		<div class="popup_box__footer">
 			<button type="button"
-			        class="btn btn_close"
+			        class="btn btn_fill"
 			        data-popup-close="schedule_detail"
 			>닫기</button>
 		</div>
 	</div>
 </div>
 
+	<div class="popup_wrap type_loding">
+		<div class="popup_box">
+			<div class="popup_box__container">
+				<div class="loding_lottie">
+					<lottie-player src="./assets/images/loding.json"
+					               class="lottie"
+					               background="transparent"
+					               speed="1"
+					               loop
+					               autoplay
+					></lottie-player>
+				</div>
+				<p>디바이스 연결중 ...</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup_wrap type_alert active" data-popup="alert_btn">
+		<div class="popup_box">
+			<div class="popup_box__container">
+				<p>alert line 1</p>
+			</div>
+			<div class="popup_box__footer">
+				<button type="button"
+				        class="btn btn_outline"
+				        data-popup-close="alert_btn"
+				>닫기</button>
+				<button type="button"
+				        class="btn btn_fill"
+				        data-popup-close="alert_btn"
+				>확인</button>
+			</div>
+		</div>
+	</div>
 
 
-
+	<!-- slick -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<!-- eroom -->
+	<script type="text/javascript" src="./assets/script/common.js"></script>
+	<!-- lottie	-->
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 </html>
 

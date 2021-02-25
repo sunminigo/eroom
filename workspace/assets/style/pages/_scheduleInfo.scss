@@ -17,6 +17,7 @@
 	justify-content: center;
 
 	.card {
+		width: 376px !important;
 		margin: 8px;
 		padding: 25px 24px 10px;
 		border-radius: 4px;
@@ -45,11 +46,11 @@
 				background-repeat: no-repeat;
 			}
 			&__time {
-				background: url('/assets/images/icon/clock.png');
+				background: url('../images/icon/clock.png');
 			}
 			&__place {
 				margin-top: 7px;
-				background: url('/assets/images/icon/place_big.png');
+				background: url('../images/icon/place_big.png');
 			 }
 		}
 		.btn_wrap {

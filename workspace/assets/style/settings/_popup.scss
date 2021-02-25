@@ -1,24 +1,42 @@
 .popup_wrap {
-	display: none;
+	//display: none;
 	@include position(fixed, $t: 0, $l: 0, $b: 0, $r: 0);
-	z-index: 10;
+	z-index: -2;
 	background: rgba(0,0,0,.5);
+	transform: scale(0);
+	animation: fadeOut .5s .3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 
+	&.active {
+		transform: scale(1);
+		animation: fadeIn .5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+		z-index: 10;
+
+		.popup_box {
+			background: #fff;
+			opacity: 1;
+			//animation: scaleUp .7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+			@include position-translate(absolute, $t: 50%, $l: 120px, $x: 0, $y: -50%);
+			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+		}
+	}
 	.popup_box {
-		@include position-translate(absolute, $t: 50%, $l: 120px, $x: 0, $y: -50%);
+		@include position-translate(absolute, $t: 50%, $l: 120px, $x: 0, $y: 120%);
 		width: calc(100% - 172px);
 		height: 95%;
-		padding: 0 26px;
 		border-top: 8px solid $brandColor-yellow;
 		background: #fff;
 		box-shadow: $box-shadow-2;
 		border-radius: 8px;
+		opacity: 0;
+		transition: all 0.65s ease;
+		//animation: scaleDown .7s .8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 
 		&__header {
 			text-align: center;
 			display: flex;
 			align-items: center;
 			height: 85px;
+			padding: 0 26px;
 			font-size: 32px;
 
 			h2 {
@@ -26,7 +44,8 @@
 			}
 		}
 		&__container {
-			height: calc(100% - 202px);
+			height: calc(100% - 203px);
+			padding: 0 26px;
 			//border: 1px solid #DDDDDD;
 			background: $lightGrey2;
 			overflow-y: auto;
@@ -39,15 +58,142 @@
 			height: 118px;
 
 			.btn {
-				width: 235px;
-				height: 72px;
+				width: 196px;
+				height: 62px;
 				font-size: 1.875rem; /* 30px */
 				font-weight: 800;
-				border-radius: 3px;
+				border-radius: 4px;
+
+				& + .btn {
+					margin-left: 12px;
+				}
 			}
-			.btn_close {
-				border: 1px solid #444444;
+			.btn_outline {
+				background: $brandColor-blue;
+				color: $brandColor-blue;
+				background: #FFFFFF;
+				border: 1px solid #B9C1C6;
+			}
+			.btn_fill {
+				background: $brandColor-blue;
+				color: #fff;
 			}
 		}
+	}
+	&.type_alert {
+		&.active {
+			.popup_box {
+				@include position-translate(absolute, $t: 50%, $l: 50%, $x: -50%, $y: -50%);
+			}
+		}
+		.popup_box {
+			@include position-translate(absolute, $t: 50%, $l: 50%, $x: -50%, $y: 200%);
+			width: 662px;
+			height: 317px;
+			border-top: 0px;
+
+			&__container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 16px 16px 0;
+				height: calc(100% - 94px);
+				background: none;
+
+				& * {
+					font-size: 32px;
+					font-weight: normal;
+				}
+			}
+			&__footer {
+				height: 93px;
+			}
+		}
+	}
+	&.type_loding {
+		&.active {
+			.popup_box {
+				@include position-translate(absolute, $t: 50%, $l: 50%, $x: -50%, $y: -50%);
+			}
+		}
+		.popup_box {
+			@include position-translate(absolute, $t: 50%, $l: 50%, $x: -50%, $y: 200%);
+			text-align: center;
+			width: 431px;
+			height: 263px;
+			border-top: 0px;
+
+			&__container {
+				position: relative;
+				height: 100%;
+				background: none;
+
+				.loding_lottie {
+					position: relative;
+					overflow: hidden;
+					height: 168px;
+					margin: 0 auto 30px;
+
+					.lottie {
+						position: absolute;
+						top: -65%;
+						left: -18%;
+						width: 512px;
+						height: 512px;
+					}
+					.main {
+						@include position(absolute, $t: -65%, $l: -15%);
+
+						svg {
+							width: 512px;
+							height: 512px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Dimmed showing */
+@keyframes fadeIn {
+	0% {
+		background: transparent;
+	}
+	100% {
+		background: rgba(0, 0, 0, .5);
+	}
+}
+/* Show modal content from bottom to top */
+@keyframes scaleUp {
+	0% {
+		/* 모달 콘텐츠를 하단에 위치시킴 */
+		transform: scale(.8) translateY(200%);
+		opacity: 0;
+	}
+	100% {
+		/* 모달 콘텐츠를 본래 위치로 돌려놓음 */
+		transform: scale(1) translateY(-50%);
+		opacity: 1;
+	}
+}
+/* Dimmed hiding */
+@keyframes fadeOut {
+	0% {
+		background: rgba(0, 0, 0, .5);
+	}
+	100% {
+		background: transparent;
+	}
+}
+/* modal content from top to bottom */
+@keyframes scaleDown {
+	0% {
+		transform: scale(1) translateY(-50%);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(.8) translateY(200%);
+		opacity: 0;
 	}
 }
