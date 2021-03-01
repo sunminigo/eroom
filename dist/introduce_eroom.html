@@ -91,18 +91,18 @@
 
 		<section class="control_box" aria-label="화면 확대축소 및 글자 확대축소가 가능합니다.">
 			<div class="zoom_box">
-				<button type="button" onclick="zoomIn()">
-					<img src="./assets/images/icon/magnifier-plus.png" alt="전체 브라우저 확대" />
+				<button type="button" onclick="zoomIn()" alt="버튼 화면 확대">
+					<img src="./assets/images/icon/magnifier-plus.png" alt="" />
 				</button>
-				<button type="button" onclick="zoomOut()">
-					<img src="./assets/images/icon/magnifier-minus.png" alt="전체 브라우저 축소" />
+				<button type="button" onclick="zoomOut()" alt="버튼 화면 축소">
+					<img src="./assets/images/icon/magnifier-minus.png" alt="" />
 				</button>
 			</div>
-			<button type="button" class="control_btn control_text">
-				<img src="./assets/images/icon/text.png" alt="글자크기조절 한번 누르면 확대, 다시 누르면 축소 합니다." />
+			<button type="button" class="control_btn control_text" alt="버튼 글자크기 확대 축소">
+				<img src="./assets/images/icon/text.png" alt="" />
 			</button>
-			<button type="button" class="control_btn" onclick="location.href='index.html'">
-				<img src="./assets/images/icon/home.png" alt="홈" />
+			<button type="button" class="control_btn" onclick="location.href='index.html'" alt="버튼홈으로이동">
+				<img src="./assets/images/icon/home.png" alt="" />
 			</button>
 		</section>
 
@@ -362,16 +362,18 @@
 	<div class="popup_wrap type_alert active" data-popup="alert_btn">
 		<div class="popup_box">
 			<div class="popup_box__container">
-				<p>alert line 1</p>
+				<p alt="alert text">alert line 1</p>
 			</div>
 			<div class="popup_box__footer">
 				<button type="button"
 				        class="btn btn_outline"
 				        data-popup-close="alert_btn"
+				        alt="버튼닫기"
 				>닫기</button>
 				<button type="button"
 				        class="btn btn_fill"
 				        data-popup-close="alert_btn"
+				        alt="버튼확인"
 				>확인</button>
 			</div>
 		</div>

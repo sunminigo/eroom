@@ -155,3 +155,28 @@ function zooms() {
 		alert('더 이상 확대할 수 없습니다.');
 	}
 }
+
+/****************************************
+ * TEXT READ
+ *****************************************/
+var synth = window.speechSynthesis;
+
+$(function() {
+	$('[alt]').focus(function() {
+		textToSpeech( $(this).attr('alt') );
+	});
+});
+
+function textToSpeech( text ) {
+	var utterThis = new SpeechSynthesisUtterance( text );
+	utterThis.onend = function (event) {
+		console.log('SpeechSynthesisUtterance.onend');
+	}
+	utterThis.onerror = function (event) {
+		console.error('SpeechSynthesisUtterance.onerror');
+	}
+	utterThis.lang = 'ko-KR';
+	utterThis.pitch = 1;
+	utterThis.rate = 1;
+	synth.speak(utterThis);
+}

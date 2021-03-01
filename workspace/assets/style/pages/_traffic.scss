@@ -5,143 +5,284 @@
 		justify-content: center;
 		padding: 18px;
 	}
-	#bus {
-		.step_box {
-			text-align: center;
-			width: 721px;
-			height: 888px;
-			padding: 42px 15px;
-			background: #fff;
-			border: 1px solid #A8A8A8;
-			border-radius: 8px;
+}
+#bus {
+	.step_box {
+		text-align: center;
+		width: 721px;
+		height: 888px;
+		padding: 42px 15px;
+		background: #fff;
+		border: 1px solid #A8A8A8;
+		border-radius: 8px;
 
-			& + .step_box {
-				margin-left: 10px;
+		& + .step_box {
+			margin-left: 10px;
+		}
+		.title {
+			font-size: 42px;
+			font-weight: bold;
+
+			p {
+				margin-top: 10px;
+				font-size: 24px;
+				color: #666666;
 			}
-			.title {
-				font-size: 42px;
-				font-weight: bold;
+		}
+		.coming_soon_list {
+			display: flex;
+			align-items: center;
+			height: 72px;
+			margin: 25px 0 0;
+			padding: 17px 16px 16px;
+			background: #333333;
+			border-radius: 8px;
+			font-size: 34px;
+			font-weight: 800;
+			color: #FFFFFF;
+			overflow: hidden;
 
-				p {
-					margin-top: 10px;
-					font-size: 24px;
-					color: #666666;
+			& > * {
+				color: inherit;
+			}
+			span {
+				text-align: left;
+
+				& + span {
+					width: calc(100% - 130px);
+					white-space: nowrap;
 				}
 			}
-			.coming_soon_list {
-				display: flex;
-				align-items: center;
-				height: 72px;
-				margin: 25px 0 0;
-				padding: 17px 16px 16px;
-				background: #333333;
-				border-radius: 8px;
-				font-size: 34px;
-				font-weight: 800;
-				color: #FFFFFF;
-				overflow: hidden;
+			.info {
+				position: relative;
+				width: 130px;
 
-				& > * {
-					color: inherit;
+				&:after {
+					content: '';
+					@include position-translate(absolute, $t: 50%, $r: -5px, $x: 0, $y: -50%);
+					width: 1px;
+					height: 28px;
+					margin: 0 15px;
+					background: #C4C4C4;
+				}
+			}
+		}
+		.bus_list {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -10px;
+
+			li {
+				display: table;
+				//text-align: center;
+				//display: flex;
+				width: calc(50% - 10px);
+				height: 98px;
+				margin: 10px 0 0 10px;
+				border-radius: 4px;
+				border: 1px solid #646464;
+
+				&.bus_blue .number {background: #0074E6;}
+				&.bus_blue2 .number {background: #00ACC4;}
+				&.bus_green .number {background: #00B43D;}
+				&.bus_red .number {background: #CB0031;}
+				&.active {
+					.time {
+						color: #FF0000;
+					}
+				}
+				& > p {
+					vertical-align: middle;
+					display: table-cell;
+					padding: 10px;
+				}
+				.number {
+					width: 131px;
+					height: 100%;
+					font-size: 32px;
+					font-weight: 800;
+					color: #fff;
+				}
+				.time {
+					font-size: 30px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+#subway {
+	flex-direction: column;
+
+	.step_box {
+		position: relative;
+		width: 1454px;
+		height: 438px;
+		padding: 20px;
+		background: #444444;
+		border-radius: 8px;
+
+		& + .step_box {
+			margin-top: 10px;
+		}
+		.title {
+			display: flex;
+			align-items: center;
+			font-size: 32px;
+			font-weight: bold;
+			color: #fff;
+
+			img {
+				margin-right: 16px;
+			}
+		}
+	}
+	.subway_table {
+		@include position(absolute, $t: 10px, $r: 10px);
+		width: 684px;
+		height: 135px;
+		color: #fff;
+
+		td {
+			color: #fff;
+
+			&.place {
+				text-align: left;
+			}
+			&.coming_soon {
+				&.active {
+					color: #FFC700;
+				}
+			}
+		}
+	}
+	.subway_info {
+		@include position-translate(absolute, $b: 45px, $l: 50%, $x: -50%, $y: 0);
+		width: 1263px;
+
+		.subway_img {
+			height: 43px;
+			position: relative;
+
+			img {
+				@include position(absolute, $t:0, $l: 0);
+			}
+			&.step_1 {
+				img {
+					left: 87px;
+				}
+			}
+			&.step_2 {
+				img {
+					left: 346px;
+				}
+			}
+			&.step_3 {
+				img {
+					left: 592px;
+				}
+			}
+			&.step_4 {
+				img {
+					left: 844px;
+				}
+			}
+			&.step_5 {
+				img {
+					left: 1088px;
+				}
+			}
+			&.step_6 {
+				img {
+					left: 100%;
+				}
+			}
+		}
+		&.right {
+			.subway_img {
+				img {
+				  transform: rotateY(180deg);
+				}
+				&.step_1 {
+					img {
+						left: 65px;
+					}
+				}
+				&.step_2 {
+					img {
+						left: 308px;
+					}
+				}
+				&.step_3 {
+					img {
+						left: 554px;
+					}
+				}
+				&.step_4 {
+					img {
+						left: 800px;
+					}
+				}
+				&.step_5 {
+					img {
+						left: 1069px;
+					}
+				}
+				&.step_6 {
+					img {
+						left: 100%;
+					}
+				}
+			}
+			.platform_list:before {
+				transform: rotateY(180deg);
+			}
+		}
+		.platform_list {
+			position: relative;
+			display: flex;
+			justify-content: space-around;
+			margin-top: 30px;
+
+			&:before {
+				content: '';
+				@include position(absolute, $t: 7px, $l: 0);
+				width: 100%;
+				height: 44px;
+				background: url('../images/banner/subway_line.png') no-repeat 0 0 / 100%;
+				z-index: -1;
+			}
+			li {
+				font-weight: 800;
+
+				&:before {
+					content: '';
+					display: block;
+					width: 40px;
+					height: 40px;
+					margin: 0 auto 28px;
+					background: #fff;
+					border: 8px solid #444444;
+					border-radius: 50%;
+					z-index: 1;
+				}
+				&.active {
+					&:before {
+						background: #FF4020;
+						border: 8px solid #fff;
+					}
 				}
 				span {
-					text-align: left;
-
-					& + span {
-						width: calc(100% - 130px);
-						white-space: nowrap;
-					}
-				}
-				.info {
-					position: relative;
-					width: 130px;
-
-					&:after {
-						content: '';
-						@include position-translate(absolute, $t: 50%, $r: -5px, $x: 0, $y: -50%);
-						width: 1px;
-						height: 28px;
-						margin: 0 15px;
-						background: #C4C4C4;
-					}
-				}
-			}
-			.bus_list {
-				display: flex;
-				flex-wrap: wrap;
-				margin-left: -10px;
-
-				li {
-					display: table;
-					//text-align: center;
-					//display: flex;
-					width: calc(50% - 10px);
-					height: 98px;
-					margin: 10px 0 0 10px;
-					border-radius: 4px;
-					border: 1px solid #646464;
-
-					&.bus_blue .number {background: #0074E6;}
-					&.bus_blue2 .number {background: #00ACC4;}
-					&.bus_green .number {background: #00B43D;}
-					&.bus_red .number {background: #CB0031;}
-					&.active {
-						.time {
-							color: #FF0000;
-						}
-					}
-					& > p {
-						vertical-align: middle;
-						display: table-cell;
-						padding: 10px;
-					}
-					.number {
-						width: 131px;
-						height: 100%;
-						font-size: 32px;
-						font-weight: 800;
-						color: #fff;
-					}
-					.time {
-						font-size: 30px;
-						font-weight: bold;
-					}
+					display: inline-block;
+					padding: 6px 17px;
+					background: #FFFFFF;
+					border: 7px solid #B79A45;
+					border-radius: 60px;
 				}
 			}
 		}
 	}
-	#subway {
-		flex-direction: column;
-
-		.step_box {
-			position: relative;
-			width: 1454px;
-			height: 438px;
-			padding: 20px;
-			background: #444444;
-			border-radius: 8px;
-
-			& + .step_box {
-				margin-top: 10px;
-			}
-			.title {
-				display: flex;
-				align-items: center;
-				font-size: 32px;
-				font-weight: bold;
-				color: #fff;
-
-				img {
-					margin-right: 16px;
-				}
-			}
-			table {
-				@include position(absolute, $t: 10px, $r: 10px);
-				width: 684px;
-				height: 135px;
-				color: #fff;
-			}
-
-		}
-	}
+}
+#map {
+	height: 100%;
 }

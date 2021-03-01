@@ -16,7 +16,8 @@
 			opacity: 1;
 			//animation: scaleUp .7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 			@include position-translate(absolute, $t: 50%, $l: 120px, $x: 0, $y: -50%);
-			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+			transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+			//transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 1);
 		}
 	}
 	.popup_box {
