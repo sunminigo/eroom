@@ -1,16 +1,20 @@
 @@include('../include/header.html', { title: 'eroom' })
 <div id="zoom" class="wrapper">
 	<main class="container_wrap">
+		@@include('../include/control.html')
+		@@include('../include/lnb_introduce.html')
+
 		<header>
-			<h1><img src="./assets/images/logo_symbol.svg" alt="eroom simbol" />대관실 소개</h1>
+			<h1 alt="리스트 대관실 소개" tabindex="8"><img src="./assets/images/logo_symbol.svg" alt="이미지 이룸센터로고" />대관실 소개</h1>
 		</header>
 
-		<section class="content_box introduce_page card_box" aria-label="대관실 소개">
+		<section class="content_box introduce_page card_box">
 			<div class="room_box">
 				<figure>
 					<button type="button"
 					        class="btn_show_popup"
 					        data-popup-open="room_detail__eroom"
+					        alt="첫번째 항목 이룸홀 지하 1층"
 					>
 						<img src="./assets/images/banner/eroom_hall/IMG_4217.jpg" alt="" />
 						<figcaption>이룸홀</figcaption>
@@ -21,6 +25,7 @@
 					<button type="button"
 					        class="btn_show_popup"
 					        data-popup-open="room_detail__nuri"
+					        alt="두번째 항목 누리홀 지하 1층"
 					>
 						<img src="./assets/images/banner/nuri_hall/IMG_4190.jpg" alt="" />
 						<figcaption>누리홀</figcaption>
@@ -31,6 +36,7 @@
 					<button type="button"
 					        class="btn_show_popup"
 					        data-popup-open="room_detail__edu"
+					        alt="세번째 항목 교육실 2층"
 					>
 						<img src="./assets/images/banner/edu_room/IMG_4003.jpg" alt="" />
 						<figcaption>교육실</figcaption>
@@ -41,6 +47,7 @@
 					<button type="button"
 					        class="btn_show_popup"
 					        data-popup-open="room_detail__meeting"
+					        alt="네번째 항목 회의실 2층"
 					>
 						<img src="./assets/images/banner/meeting_room/IMG_3459.jpg" alt="" />
 						<figcaption>회의실</figcaption>
@@ -51,6 +58,7 @@
 					<button type="button"
 					        class="btn_show_popup"
 					        data-popup-open="room_detail__conference"
+					        alt="다섯번째 항목 대회의실 2층"
 					>
 						<img src="./assets/images/banner/conference_room/IMG_3433.jpg" alt="" />
 						<figcaption>대회의실</figcaption>
@@ -61,6 +69,7 @@
 					<button type="button"
 					        class="btn_show_popup"
 					        data-popup-open="room_detail__small_edu"
+					        alt="마지막 항목 소교육실 2층"
 					>
 						<img src="./assets/images/banner/small_edu_room/IMG_3963.jpg" alt="" />
 						<figcaption>소교육실</figcaption>
@@ -69,13 +78,11 @@
 				</figure>
 			</div>
 		</section>
-
-		@@include('../include/lnb_introduce.html')
-		@@include('../include/control.html')
 	</main>
 	@@include('../include/sideBox.html')
 </div>
 @@include('../include/footer.html')
+
 @@include('../include/popup_room_detail__eroom.html')
 @@include('../include/popup_room_detail__nuri.html')
 @@include('../include/popup_room_detail__edu.html')

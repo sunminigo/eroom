@@ -1,38 +1,42 @@
 $(function() {
 	/****************************************
+	 * LAZYLODING
+	 *****************************************/
+	$("img").lazyload({ threshold : 200 });
+
+	/****************************************
 	 * SLIDER
 	 *****************************************/
 	$('#visual_slider').slick({
+		lazyLoad: 'ondemand',
 		autoplay: true,
 		autoplaySpeed: 5000,
-		arrows: false,
+		arrows: true,
 		dots: true,
+		prevArrow: '<button type="button" class="prev"><img src="./assets/images/icon/arrow_angle_left.png" alt="이전"></button>',
+		nextArrow: '<button type="button" class="next"><img src="./assets/images/icon/arrow_angle_right.png" alt="다음"></button>',
 	});
 	$('.card_slider').slick({
-		rows: 2,
+		lazyLoad: 'ondemand',
 		autoplay: false,
+		rows: 2,
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		autoplaySpeed: 5000,
 		arrows: true,
 		dots: true,
-	});
-	$('#info_slider').slick({
-		vertical: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		autoplay: true,
-		autoplaySpeed: 3000,
-		arrows: false,
-		verticalSwiping: true
+		prevArrow: '<button type="button" class="prev" alt="버튼 이전"><img src="./assets/images/icon/arrow_angle_left.png" alt="이전"></button>',
+		nextArrow: '<button type="button" class="next" alt="버튼 다음"><img src="./assets/images/icon/arrow_angle_right.png" alt="다음"></button>',
 	});
 	$('.room_view').slick({
+		lazyLoad: 'ondemand',
 		autoplay: false,
 		slidesToShow: 1,
 		arrows: false,
 		asNavFor: '.rooms'
 	});
 	$('.rooms').slick({
+		lazyLoad: 'ondemand',
 		slidesToShow: 5,
 		arrows: false,
 		focusOnSelect: true,
@@ -88,21 +92,21 @@ $(function() {
 	$('[data-popup-open]').on('click', function(e)  {
 		var targeted_popup_class = $(this).attr('data-popup-open');
 
-		$('[data-popup="' + targeted_popup_class + '"]').addClass('active');
+		$('[data-popup="' + targeted_popup_class + '"]').fadeIn(600).addClass('active');
 		$('.card_slider').slick('refresh');
 		$('.room_view').slick('refresh');
 		$('.rooms').slick('refresh');
 		$('.zoom_box').addClass('box');
-		$('.control_btn').addClass('box');
+		$('.btn_one').addClass('box');
 
 		e.preventDefault();
 	});
 	$('[data-popup-close]').on('click', function(e)  {
 		var targeted_popup_class = $(this).attr('data-popup-close');
 
-		$('[data-popup="' + targeted_popup_class + '"]').removeClass('active');
+		$('[data-popup="' + targeted_popup_class + '"]').fadeOut('fast').removeClass('active');
 		$('.zoom_box').removeClass('box');
-		$('.control_btn').removeClass('box');
+		$('.btn_one').removeClass('box');
 
 		e.preventDefault();
 	});
@@ -110,7 +114,7 @@ $(function() {
 	/****************************************
 	 * TEXT SIZE
 	 *****************************************/
-	$('.control_text').on('click', function () {
+	$('#control_text').on('click', function () {
 		$('html, body').toggleClass('controlFontSize');
 	});
 
@@ -128,6 +132,19 @@ $(function() {
 	}
 	 *****************************************/
 
+	/****************************************
+	 * FLOOR BUTTON
+	 *****************************************/
+	$('.btn_box .close').hide();
+	$('.btn_box .next').show();
+	$('.btn_box .next').click(function(){
+		$('.close').show();
+		$(this).hide();
+	});
+	$('.btn_box .close').click(function(){
+		$('.next').show();
+		$(this).hide();
+	});
 });
 
 /****************************************
@@ -169,12 +186,16 @@ $(function() {
 
 function textToSpeech( text ) {
 	var utterThis = new SpeechSynthesisUtterance( text );
+
+	window.speechSynthesis.cancel();
+
 	utterThis.onend = function (event) {
 		console.log('SpeechSynthesisUtterance.onend');
 	}
 	utterThis.onerror = function (event) {
 		console.error('SpeechSynthesisUtterance.onerror');
 	}
+
 	utterThis.lang = 'ko-KR';
 	utterThis.pitch = 1;
 	utterThis.rate = 1;

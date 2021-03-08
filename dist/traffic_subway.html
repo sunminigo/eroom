@@ -42,15 +42,70 @@
 
 <div id="zoom" class="wrapper">
 	<main class="container_wrap">
-		<header alt="교통 안내">
-			<h1><img src="./assets/images/logo_symbol.svg" alt="" />교통 안내</h1>
+		<section class="control_box">
+			<div class="zoom_box">
+				<span class="btn_control"
+				      onclick="zoomIn()"
+				><img src="./assets/images/icon/magnifier-plus.png" alt="" /></span>
+				<span class="btn_control"
+				      onclick="zoomOut()"
+				><img src="./assets/images/icon/magnifier-minus.png" alt="" /></span>
+			</div>
+			<span id="control_text"
+			      class="btn_control btn_one"
+			><img src="./assets/images/icon/text.png" alt="" /></span>
+			<button type="button"
+			        class="btn_control btn_one"
+			        onclick="location.href='index.html'"
+			        alt="버튼 홈"
+			        tabindex="1"
+			><img src="./assets/images/icon/home.png" alt="" /></button>
+		</section>
+
+		<section class="navigation_box">
+			<nav class="lnb_box">
+				<div class="lnb">
+					<a href="javascript:history.back();"
+					   alt="버튼 뒤로가기"
+					   tabindex="2"
+					><img src="./assets/images/icon/arrow_left.png" alt="뒤로가기" /></a>
+				</div>
+				<div class="lnb">
+					<a href="traffic_bus.html"
+					   alt="버튼 버스"
+					   tabindex="3"
+					>버스</a>
+				</div>
+				<div class="lnb">
+					<a href="traffic_subway.html"
+					   alt="버튼 지하철"
+					   tabindex="4"
+					>지하철</a>
+				</div>
+				<div class="lnb">
+					<a href="traffic_map.html"
+					   alt="버튼 위치보기"
+					   tabindex="5"
+					>위치보기</a>
+				</div>
+			</nav>
+		</section>
+
+
+		<header>
+			<h1 alt="교통 안내 지하철" tabindex="8"><img src="./assets/images/logo_symbol.svg" alt="" />교통 안내 - 지하철</h1>
 		</header>
 
 		<section class="content_box traffic_page" aria-label="지하철 안내">
 			<div id="subway" class="traffic_box">
 				<article class="step_box">
-					<h2 class="title"><img src="./assets/images/banner/subway_number.png" alt="9호선">중앙보훈병원방면</h2>
-					<table cellspacing="0" cellpadding="0" class="subway_table">
+					<h2 class="title" alt="중앙보훈병원방면" tabindex="9"><img src="./assets/images/banner/subway_number.png" alt="9호선">중앙보훈병원방면</h2>
+					<table cellspacing="0"
+					       cellpadding="0"
+					       class="subway_table"
+					       alt="곧 도착 : "
+					       tabindex="10"
+					>
 						<tbody>
 							<tr>
 								<td class="time">17:00</td>
@@ -64,6 +119,7 @@
 							</tr>
 						</tbody>
 					</table>
+
 					<div class="subway_info left">
 						<!--
 							* 5단계 엑티브 포지션
@@ -83,7 +139,7 @@
 				</article>
 
 				<article class="step_box">
-					<h2 class="title"><img src="./assets/images/banner/subway_number.png" alt="9호선">개화방면</h2>
+					<h2 class="title" alt="개화방면" ><img src="./assets/images/banner/subway_number.png" alt="9호선">개화방면</h2>
 					<table cellspacing="0" cellpadding="0" class="subway_table">>
 						<tbody>
 						<tr>
@@ -117,46 +173,12 @@
 				</article>
 			</div>
 		</section>
-
-		<section class="navigation_box">
-			<nav class="lnb_box">
-				<div class="lnb">
-					<a href="index.html">
-						<img src="./assets/images/icon/arrow_left.png" alt="뒤로가기" />
-					</a>
-				</div>
-				<div class="lnb">
-					<a href="traffic_bus.html">버스</a>
-				</div>
-				<div class="lnb">
-					<a href="traffic_subway.html">지하철</a>
-				</div>
-				<div class="lnb">
-					<a href="traffic_map.html">위치보기</a>
-				</div>
-			</nav>
-		</section>
-
-		<section class="control_box" aria-label="화면 확대축소 및 글자 확대축소가 가능합니다.">
-			<div class="zoom_box">
-				<button type="button" onclick="zoomIn()" alt="버튼 화면 확대">
-					<img src="./assets/images/icon/magnifier-plus.png" alt="" />
-				</button>
-				<button type="button" onclick="zoomOut()" alt="버튼 화면 축소">
-					<img src="./assets/images/icon/magnifier-minus.png" alt="" />
-				</button>
-			</div>
-			<button type="button" class="control_btn control_text" alt="버튼 글자크기 확대 축소">
-				<img src="./assets/images/icon/text.png" alt="" />
-			</button>
-			<button type="button" class="control_btn" onclick="location.href='index.html'" alt="버튼홈으로이동">
-				<img src="./assets/images/icon/home.png" alt="" />
-			</button>
-		</section>
-
 	</main>
 	<section class="side_box" aria-label="현재 날씨 및 대관일정을 확인할 수 있습니다.">
-		<article class="weather_wrap">
+		<article class="weather_wrap"
+		         alt="2021년 01년 22일 오후 2:53 맑음 서울 영등포구 -5℃"
+		         tabindex="7"
+		>
 			<div class="today_info">
 				<p class="today_info__date">2021년 01년 22일</p>
 				<p class="today_info__time">2:53 PM</p>
@@ -187,59 +209,13 @@
 						<p class="title_box__place">회의실 4</p>
 					</div>
 				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
 			</ul>
 			<button type="button"
 			        class="btn_more"
 			        data-popup-open="schedule_detail"
-			><img src="./assets/images/icon/calender.png" alt="" class="m-r-8">일정 전체 보기</button>
+			        alt="버튼 일정 전체보기 메뉴"
+			        tabindex="6"
+			><img src="./assets/images/icon/calender.png" alt="">일정 전체 보기</button>
 		</article>
 	</section>
 
@@ -247,14 +223,17 @@
 	<div class="popup_wrap rental_detail_popup" data-popup="schedule_detail">
 	<div class="popup_box">
 		<div class="popup_box__header">
-			<h2>대관 일정 안내</h2>
+			<h2 alt="대관 일정 안내" tabindex="2">대관 일정 안내</h2>
 		</div>
 		<div class="popup_box__container card_box">
 			<div class="rental_detail_list">
 				<div class="card_slider">
-					<div class="card">
+					<div class="card"
+					     alt="행사명: 이사회, 단체명: 한국 지적 발달 장애인 협회, 행사시간 14시 부터 16시, 장소 회의실3"
+					     tabindex="3"
+					>
 						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+						<p class="intro">한국 지적 발달 장애인 협회</p>
 						<div class="info">
 							<p class="info__time">14시 ~ 16시</p>
 							<p class="info__place">회의실 3</p>
@@ -263,118 +242,7 @@
 							<button type="button"
 							        class="btn"
 							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
+							        alt="버튼 위치보기"
 							>위치보기</button>
 						</div>
 					</div>
@@ -385,43 +253,48 @@
 			<button type="button"
 			        class="btn btn_fill"
 			        data-popup-close="schedule_detail"
+			        alt="버튼 팝업 닫기"
 			>닫기</button>
 		</div>
 	</div>
 </div>
 
-	<div class="popup_wrap type_loding">
+	<div class="popup_wrap type_loding" data-popup="dialog_loding">
 		<div class="popup_box">
 			<div class="popup_box__container">
 				<div class="loding_lottie">
 					<lottie-player src="./assets/images/loding.json"
-					               class="lottie"
+					               class="lottie lazy"
 					               background="transparent"
 					               speed="1"
 					               loop
 					               autoplay
 					></lottie-player>
 				</div>
-				<p>디바이스 연결중 ...</p>
+				<p alt="디바이스 연결중 ..."
+				   tabindex="1"
+				>디바이스 연결중 ...</p>
 			</div>
 		</div>
 	</div>
 
-	<div class="popup_wrap type_alert active" data-popup="alert_btn">
+	<div class="popup_wrap type_alert" data-popup="dialog_alert">
 		<div class="popup_box">
 			<div class="popup_box__container">
-				<p alt="alert text">alert line 1</p>
+				<p alt="alert text" tabindex="1">alert line 1</p>
 			</div>
 			<div class="popup_box__footer">
 				<button type="button"
 				        class="btn btn_outline"
-				        data-popup-close="alert_btn"
-				        alt="버튼닫기"
+				        data-popup-close="dialog_alert"
+				        alt="버튼 닫기"
+				        tabindex="2"
 				>닫기</button>
 				<button type="button"
 				        class="btn btn_fill"
-				        data-popup-close="alert_btn"
-				        alt="버튼확인"
+				        data-popup-close="dialog_alert"
+				        alt="버튼 확인"
+				        tabindex="3"
 				>확인</button>
 			</div>
 		</div>
@@ -434,6 +307,8 @@
 	<script type="text/javascript" src="./assets/script/common.js"></script>
 	<!-- lottie	-->
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<!-- lazyload	-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 </body>
 </html>
 

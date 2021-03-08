@@ -1,5 +1,5 @@
 /*---------------------------
-	reset
+	RESET
 ---------------------------*/
 * {
 	margin: 0;
@@ -52,15 +52,16 @@ button{
 	background: transparent;
 	border: none;
 }
-.slick-slider div:focus,
-a:focus,
-button:focus {
-	outline: dashed $info;
-}
 
 img,
 i{
 	vertical-align: text-bottom;
+}
+
+ul,
+ol,
+li{
+	list-style-type: none;
 }
 
 .hand {

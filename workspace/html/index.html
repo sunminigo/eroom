@@ -1,26 +1,32 @@
 @@include('../include/header.html', { title: 'eroom' })
 <div id="zoom" class="wrapper">
 	<main class="container_wrap">
+		@@include('../include/control.html')
+		@@include('../include/navigation.html')
+
 		<header>
-			<h1 class="logo_box"><img src="./assets/images/logo.svg" alt="eroom logo" /></h1>
+			<h1 class="logo_box">
+				<img src="./assets/images/logo.svg" alt="이미지 이룸센터 로고" tabindex="8"/>
+			</h1>
 		</header>
 
-		<section class="content_box" aria-label="메인">
+		<section class="content_box">
 			<div class="main_box">
 				<div id="visual_slider" class="visual_wrap">
 					<div>
-						<img data-lazy="./assets/images/banner/people.png" alt="사람들 모여있는 그림" />
+						<img data-lazy="./assets/images/banner/visual_img1.png" alt=""/>
 					</div>
 					<div>
-						<img data-lazy="./assets/images/banner/people.png" alt="사람들 모여있는 그림" />
+						<img data-lazy="./assets/images/banner/visual_img2.png" alt=""/>
+					</div>
+					<div>
+						<img data-lazy="./assets/images/banner/visual_img3.png" alt=""/>
 					</div>
 				</div>
 			</div>
 		</section>
-
-		@@include('../include/navigation.html')
-		@@include('../include/control.html')
 	</main>
-		@@include('../include/sideBox.html')
+<!--	class="lazy" data-original-->
+	@@include('../include/sideBox.html')
 </div>
 @@include('../include/footer.html')

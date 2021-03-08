@@ -42,12 +42,119 @@
 
 <div id="zoom" class="wrapper">
 	<main class="container_wrap">
+		<section class="navigation_box">
+			<nav class="lnb_box" id="lnb_floor">
+				<div class="lnb">
+					<a href="javascript:history.back();"
+					   alt="버튼 뒤로가기"
+					   tabindex="2"
+					><img src="./assets/images/icon/arrow_left.png" alt="뒤로가기" /></a>
+				</div>
+				<div class="lnb">
+					<a href="floor_B1.html"
+					   alt="버튼지하1층"
+					   tabindex="3"
+					>B1</a>
+				</div>
+				<div class="lnb">
+					<a href="floor_1.html"
+					   alt="버튼1층"
+					   tabindex="4"
+					>1F</a>
+				</div>
+				<div class="lnb">
+					<a href="floor_2.html"
+					   alt="버튼2층"
+					   tabindex="5"
+					>2F</a>
+				</div>
+				<div class="lnb">
+					<a href="floor_3.html"
+					   alt="버튼3층"
+					   tabindex="6"
+					>3F</a>
+				</div>
+				<div class="lnb">
+					<a href="floor_4.html"
+					   alt="버튼4층"
+					   tabindex="7"
+					>4F</a>
+				</div>
+				<div class="lnb">
+					<a href="floor_5.html"
+					   alt="버튼5층"
+					   tabindex="8"
+					>5F</a>
+				</div>
+				<div class="lnb">
+					<a href="floor_6.html"
+					   alt="버튼6층"
+					   tabindex="9"
+					>6F</a>
+				</div>
+				<div class="lnb">
+					<a href="floor_7.html"
+					   alt="버튼7층"
+					   tabindex="10"
+					>7F</a>
+				</div>
+				<div class="lnb">
+					<a href="floor_8.html"
+					   alt="버튼8층"
+					   tabindex="11"
+					>8F</a>
+				</div>
+				<div class="lnb">
+					<a href="floor_9.html"
+					   alt="버튼9층"
+					   tabindex="12"
+					>9F</a>
+				</div>
+				<div class="lnb">
+					<a href="floor_10.html"
+					   alt="버튼10층"
+					   tabindex="13"
+					>10F</a>
+				</div>
+				<div class="lnb">
+					<a href="floor_all.html"
+					   alt="버튼전층안내"
+					   tabindex="14"
+					>전층안내</a>
+				</div>
+			</nav>
+		</section>
+
+		<section class="control_box">
+			<div class="zoom_box">
+				<span class="btn_control"
+				      onclick="zoomIn()"
+				><img src="./assets/images/icon/magnifier-plus.png" alt="" /></span>
+				<span class="btn_control"
+				      onclick="zoomOut()"
+				><img src="./assets/images/icon/magnifier-minus.png" alt="" /></span>
+			</div>
+			<span id="control_text"
+			      class="btn_control btn_one"
+			><img src="./assets/images/icon/text.png" alt="" /></span>
+			<button type="button"
+			        class="btn_control btn_one"
+			        onclick="location.href='index.html'"
+			        alt="버튼 홈"
+			        tabindex="1"
+			><img src="./assets/images/icon/home.png" alt="" /></button>
+		</section>
+
+
 		<header>
-			<h1><img src="./assets/images/logo_symbol.svg" alt="eroom simbol" />전층안내</h1>
+			<h1 alt="전층안내" tabindex="17"><img src="./assets/images/logo_symbol.svg" alt="eroom simbol" />전층안내</h1>
 		</header>
 		<section class="content_box floor_page" aria-label="층별 안내">
 			<ul class="floor_list">
-				<li class="box">
+				<li class="box"
+				    alt="10층 한국능률협회연수센터, 위치 : 401호, 전화 : 02-796-4280"
+				    tabindex="18"
+				>
 					<div class="floor">
 						<h3>10F</h3>
 					</div>
@@ -64,7 +171,11 @@
 						</ul>
 					</div>
 				</li>
-				<li class="box">
+				<li class="box"
+				    alt="9층 한국능률협회, 위치 : 401호, 전화 : 02-796-4280,
+				     KMA회남재단, 위치 : 402호, 전화 : 02-741-2060"
+				    tabindex="19"
+				>
 					<div class="floor">
 						<h3>9F</h3>
 					</div>
@@ -89,7 +200,12 @@
 						</ul>
 					</div>
 				</li>
-				<li class="box">
+				<li class="box"
+				    alt="8층
+							한국능률협회,위치 : 401호,전화 : 02-796-4280,
+							한국여성장애인연합,위치 : 402호,전화 : 02-741-2060"
+				    tabindex="20"
+				>
 					<div class="floor">
 						<h3>8F</h3>
 					</div>
@@ -114,7 +230,10 @@
 						</ul>
 					</div>
 				</li>
-				<li class="box">
+				<li class="box"
+				    alt="7층 인성회계법인,위치 : 401호,전화 : 02-796-4280"
+				    tabindex="21"
+				>
 					<div class="floor">
 						<h3>7F</h3>
 					</div>
@@ -131,7 +250,14 @@
 						</ul>
 					</div>
 				</li>
-				<li class="box">
+				<li class="box"
+				    alt="6층
+							 한국시각장애인연합회,위치 : 401호,전화 : 02-796-4280,
+							 한국장애인자립생활센터 총연합회,위치 : 402호,전화 : 02-741-2060,
+							 한국장애인부모회,위치 : 403호,전화 : 02-2675-5364,
+							 한국척수장애인협회,위치 : 404호,전화 : 02-719-1622"
+				    tabindex="22"
+				>
 					<div class="floor">
 						<h3>6F</h3>
 					</div>
@@ -174,7 +300,10 @@
 						</ul>
 					</div>
 				</li>
-				<li class="box">
+				<li class="box"
+				    alt="5층 한국장애인개발원,위치 : 401호,전화 : 02-796-4280"
+				    tabindex="23"
+				>
 					<div class="floor">
 						<h3>5F</h3>
 					</div>
@@ -191,7 +320,15 @@
 						</ul>
 					</div>
 				</li>
-				<li class="box">
+				<li class="box"
+				    alt="4층 휠체어,화장실,
+								 한국장애인단체총연맹,위치 : 401호,전화 : 02-796-4280,
+								 한국여성장애인연합,위치 : 402호,전화 : 02-741-2060,
+								 한국지적발달장애인복지협회,위치 : 403호,전화 : 02-2675-5364,
+								 한국장애인고용안정협회,위치 : 404호,전화 : 02-445-5444,
+								 한국장애인연맹,위치 : 405호,전화 : 02-719-1622"
+				    tabindex="24"
+				>
 					<div class="floor">
 						<h3>4F</h3>
 						<div class="floor__icon"><img src="./assets/images/icon/wheelchair.png" alt="" /><img src="./assets/images/icon/toilet.png" alt="" /></div>
@@ -225,7 +362,7 @@
 						</ul>
 						<ul class="room__company">
 							<li>
-								<div class="logo"><img src="./assets/images/logos/floor_info_10.png" alt="logo" /></div>
+								<div class="logo"><img src="./assets/images/logos/floor_info_10.png" alt="한국장애인고용안정협회" /></div>
 								<div class="company">
 									<p class="company__title">(사)한국장애인고용안정협회</p>
 									<p class="company__place">위치 : 404호</p>
@@ -243,10 +380,18 @@
 						</ul>
 					</div>
 				</li>
-				<li class="box">
+				<li class="box"
+				    alt="3층 휠체어,화장실,
+								한국지체장애인협회,위치 : 301호,전화 : 02-796-4280,
+								정신장애인권연대카미,위치 : 302호,전화 : 02-741-2060,
+								장애우권익문제연구소,위치 : 303호,전화 : 02-2675-5364,
+								한국특수교육총연합회,위치 : 306호,전화 : 02-445-5444,
+								한국자폐인사랑협회,위치 : 304호,전화 : 02-719-1622"
+				    tabindex="25"
+				>
 					<div class="floor">
 						<h3>3F</h3>
-						<div class="floor__icon"><img src="./assets/images/icon/wheelchair.png" alt="" /><img src="./assets/images/icon/toilet.png" alt="" /></div>
+						<div class="floor__icon"><img src="./assets/images/icon/wheelchair.png" alt="휠체어" /><img src="./assets/images/icon/toilet.png" alt="화장실" /></div>
 					</div>
 					<div class="room">
 						<ul class="room__company">
@@ -295,10 +440,15 @@
 						</ul>
 					</div>
 				</li>
-				<li class="box">
+				<li class="box" alt="2층
+								휠체어,화장실,교육실1,교육실2,회의실1,소교육실,대회의실,
+								대한민국휠체어합창단,위치 : 인큐베이팅 룸,전화 : 070-7765-2019,
+								한국청각장애여성회,위치 : 인큐베이팅 룸,전화 : 02-784-5337"
+				    tabindex="26"
+				>
 					<div class="floor">
 						<h3>2F</h3>
-						<div class="floor__icon"><img src="./assets/images/icon/wheelchair.png" alt="" /><img src="./assets/images/icon/toilet.png" alt="" /></div>
+						<div class="floor__icon"><img src="./assets/images/icon/wheelchair.png" alt="휠체어" /><img src="./assets/images/icon/toilet.png" alt="화장실" /></div>
 					</div>
 					<div class="room">
 						<ul class="room__eroom">
@@ -337,7 +487,10 @@
 				    </ul>
 					</div>
 				</li>
-				<li class="box">
+				<li class="box"
+				    alt="1층 로비,카페"
+				    tabindex="27"
+				>
 					<div class="floor">
 						<h3>1F</h3>
 					</div>
@@ -348,7 +501,10 @@
 						</ul>
 					</div>
 				</li>
-				<li class="box">
+				<li class="box"
+				    alt="지하1층 이룸홀,누리홀,식당"
+				    tabindex="28"
+				>
 					<div class="floor">
 						<h3>B1</h3>
 						<div class="floor__icon"><img src="./assets/images/icon/wheelchair.png" alt="" /><img src="./assets/images/icon/toilet.png" alt="" /></div>
@@ -361,7 +517,10 @@
 						</ul>
 					</div>
 				</li>
-				<li class="box">
+				<li class="box"
+				    alt="지하2층, 지하3층 주차장"
+				    tabindex="29"
+				>
 					<div class="floor">
 						<h3>B2,3</h3>
 					</div>
@@ -373,73 +532,12 @@
 				</li>
 			</ul>
 		</section>
-
-		<section class="navigation_box">
-			<nav class="lnb_box" id="lnb_floor">
-				<div class="lnb">
-					<a href="index.html">
-						<img src="./assets/images/icon/arrow_left.png" alt="뒤로가기" />
-					</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_B1.html">B1</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_1.html">1F</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_2.html">2F</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_3.html">3F</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_4.html">4F</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_5.html">5F</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_6.html">6F</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_7.html">7F</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_8.html">8F</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_9.html">9F</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_10.html">10F</a>
-				</div>
-				<div class="lnb">
-					<a href="floor_all.html">전층안내</a>
-				</div>
-			</nav>
-		</section>
-
-		<section class="control_box" aria-label="화면 확대축소 및 글자 확대축소가 가능합니다.">
-			<div class="zoom_box">
-				<button type="button" onclick="zoomIn()" alt="버튼 화면 확대">
-					<img src="./assets/images/icon/magnifier-plus.png" alt="" />
-				</button>
-				<button type="button" onclick="zoomOut()" alt="버튼 화면 축소">
-					<img src="./assets/images/icon/magnifier-minus.png" alt="" />
-				</button>
-			</div>
-			<button type="button" class="control_btn control_text" alt="버튼 글자크기 확대 축소">
-				<img src="./assets/images/icon/text.png" alt="" />
-			</button>
-			<button type="button" class="control_btn" onclick="location.href='index.html'" alt="버튼홈으로이동">
-				<img src="./assets/images/icon/home.png" alt="" />
-			</button>
-		</section>
-
 	</main>
 	<section class="side_box" aria-label="현재 날씨 및 대관일정을 확인할 수 있습니다.">
-		<article class="weather_wrap">
+		<article class="weather_wrap"
+		         alt="2021년 01년 22일 오후 2:53 맑음 서울 영등포구 -5℃"
+		         tabindex="7"
+		>
 			<div class="today_info">
 				<p class="today_info__date">2021년 01년 22일</p>
 				<p class="today_info__time">2:53 PM</p>
@@ -470,59 +568,13 @@
 						<p class="title_box__place">회의실 4</p>
 					</div>
 				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
 			</ul>
 			<button type="button"
 			        class="btn_more"
 			        data-popup-open="schedule_detail"
-			><img src="./assets/images/icon/calender.png" alt="" class="m-r-8">일정 전체 보기</button>
+			        alt="버튼 일정 전체보기 메뉴"
+			        tabindex="6"
+			><img src="./assets/images/icon/calender.png" alt="">일정 전체 보기</button>
 		</article>
 	</section>
 
@@ -530,14 +582,17 @@
 	<div class="popup_wrap rental_detail_popup" data-popup="schedule_detail">
 	<div class="popup_box">
 		<div class="popup_box__header">
-			<h2>대관 일정 안내</h2>
+			<h2 alt="대관 일정 안내" tabindex="2">대관 일정 안내</h2>
 		</div>
 		<div class="popup_box__container card_box">
 			<div class="rental_detail_list">
 				<div class="card_slider">
-					<div class="card">
+					<div class="card"
+					     alt="행사명: 이사회, 단체명: 한국 지적 발달 장애인 협회, 행사시간 14시 부터 16시, 장소 회의실3"
+					     tabindex="3"
+					>
 						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+						<p class="intro">한국 지적 발달 장애인 협회</p>
 						<div class="info">
 							<p class="info__time">14시 ~ 16시</p>
 							<p class="info__place">회의실 3</p>
@@ -546,118 +601,7 @@
 							<button type="button"
 							        class="btn"
 							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
+							        alt="버튼 위치보기"
 							>위치보기</button>
 						</div>
 					</div>
@@ -668,43 +612,48 @@
 			<button type="button"
 			        class="btn btn_fill"
 			        data-popup-close="schedule_detail"
+			        alt="버튼 팝업 닫기"
 			>닫기</button>
 		</div>
 	</div>
 </div>
 
-	<div class="popup_wrap type_loding">
+	<div class="popup_wrap type_loding" data-popup="dialog_loding">
 		<div class="popup_box">
 			<div class="popup_box__container">
 				<div class="loding_lottie">
 					<lottie-player src="./assets/images/loding.json"
-					               class="lottie"
+					               class="lottie lazy"
 					               background="transparent"
 					               speed="1"
 					               loop
 					               autoplay
 					></lottie-player>
 				</div>
-				<p>디바이스 연결중 ...</p>
+				<p alt="디바이스 연결중 ..."
+				   tabindex="1"
+				>디바이스 연결중 ...</p>
 			</div>
 		</div>
 	</div>
 
-	<div class="popup_wrap type_alert active" data-popup="alert_btn">
+	<div class="popup_wrap type_alert" data-popup="dialog_alert">
 		<div class="popup_box">
 			<div class="popup_box__container">
-				<p alt="alert text">alert line 1</p>
+				<p alt="alert text" tabindex="1">alert line 1</p>
 			</div>
 			<div class="popup_box__footer">
 				<button type="button"
 				        class="btn btn_outline"
-				        data-popup-close="alert_btn"
-				        alt="버튼닫기"
+				        data-popup-close="dialog_alert"
+				        alt="버튼 닫기"
+				        tabindex="2"
 				>닫기</button>
 				<button type="button"
 				        class="btn btn_fill"
-				        data-popup-close="alert_btn"
-				        alt="버튼확인"
+				        data-popup-close="dialog_alert"
+				        alt="버튼 확인"
+				        tabindex="3"
 				>확인</button>
 			</div>
 		</div>
@@ -717,6 +666,8 @@
 	<script type="text/javascript" src="./assets/script/common.js"></script>
 	<!-- lottie	-->
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<!-- lazyload	-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 </body>
 </html>
 

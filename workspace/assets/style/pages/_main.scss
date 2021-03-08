@@ -1,41 +1,40 @@
+/* 메인페이지 */
 .main_box {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	width: 100%;
+	max-width: 1200px;
 	height: 100%;
+	margin: 0 auto;
 
 	.visual_wrap {
 		width: 100%;
-		height: 500px;
 
+		.slick-track {
+			display: flex;
+			align-items: center;
+		}
+		.slick-list {
+			height: 587px;
+		}
 		.slick-slide {
 			img {
-				margin: 0 auto;
+				margin: 0 auto !important;
 			}
 		}
+
 		.slick-dots {
-			display: flex !important;
-			align-items: center;
-			justify-content: center;
-			margin-top: 17px;
+			bottom: -80px;
 
 			li {
-				width: 8px;
-				height: 8px;
-				margin: 0 3px;
-				border-radius: 6px;
-				background: rgba($black, .22);
-				overflow: hidden;
-
-				button {
-					text-indent: -50px;
+				&.slick-active {
+					button:before {
+						background: $info;
+						opacity: 1;
+					}
 				}
-			}
-			.slick-active {
-				width: 24px;
-				background: $info;
 			}
 		}
 	}

@@ -1,3 +1,4 @@
+/* 대관안내 */
 .rental_page {
 	.slick-active {
 		button:before {
@@ -16,6 +17,10 @@
 	align-items: center;
 	justify-content: center;
 
+	.slick-track {
+		margin-left: 0;
+		margin-right: 0;
+	}
 	.card {
 		width: 376px !important;
 		margin: 8px;

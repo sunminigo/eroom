@@ -1,23 +1,20 @@
+/*---------------
+	POPUP
+---------------*/
 .popup_wrap {
-	//display: none;
+	display: none;
 	@include position(fixed, $t: 0, $l: 0, $b: 0, $r: 0);
-	z-index: -2;
 	background: rgba(0,0,0,.5);
-	transform: scale(0);
-	animation: fadeOut .5s .3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+	z-index: 10;
 
 	&.active {
-		transform: scale(1);
-		animation: fadeIn .5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-		z-index: 10;
+		display: block;
 
 		.popup_box {
 			background: #fff;
 			opacity: 1;
-			//animation: scaleUp .7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 			@include position-translate(absolute, $t: 50%, $l: 120px, $x: 0, $y: -50%);
 			transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-			//transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 1);
 		}
 	}
 	.popup_box {
@@ -30,7 +27,6 @@
 		border-radius: 8px;
 		opacity: 0;
 		transition: all 0.65s ease;
-		//animation: scaleDown .7s .8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 
 		&__header {
 			text-align: center;
@@ -47,7 +43,6 @@
 		&__container {
 			height: calc(100% - 203px);
 			padding: 0 26px;
-			//border: 1px solid #DDDDDD;
 			background: $lightGrey2;
 			overflow-y: auto;
 		}
@@ -70,7 +65,6 @@
 				}
 			}
 			.btn_outline {
-				background: $brandColor-blue;
 				color: $brandColor-blue;
 				background: #FFFFFF;
 				border: 1px solid #B9C1C6;
@@ -100,6 +94,7 @@
 				padding: 16px 16px 0;
 				height: calc(100% - 94px);
 				background: none;
+				overflow: hidden;
 
 				& * {
 					font-size: 32px;
@@ -108,6 +103,7 @@
 			}
 			&__footer {
 				height: 93px;
+				padding: 0 16px;
 			}
 		}
 	}
@@ -155,46 +151,41 @@
 		}
 	}
 }
+#popup_floor {
+	.popup_box {
+		text-align: center;
+		width: 820px;
+		height: auto;
 
-/* Dimmed showing */
-@keyframes fadeIn {
-	0% {
-		background: transparent;
-	}
-	100% {
-		background: rgba(0, 0, 0, .5);
-	}
-}
-/* Show modal content from bottom to top */
-@keyframes scaleUp {
-	0% {
-		/* 모달 콘텐츠를 하단에 위치시킴 */
-		transform: scale(.8) translateY(200%);
-		opacity: 0;
-	}
-	100% {
-		/* 모달 콘텐츠를 본래 위치로 돌려놓음 */
-		transform: scale(1) translateY(-50%);
-		opacity: 1;
-	}
-}
-/* Dimmed hiding */
-@keyframes fadeOut {
-	0% {
-		background: rgba(0, 0, 0, .5);
-	}
-	100% {
-		background: transparent;
-	}
-}
-/* modal content from top to bottom */
-@keyframes scaleDown {
-	0% {
-		transform: scale(1) translateY(-50%);
-		opacity: 1;
-	}
-	100% {
-		transform: scale(.8) translateY(200%);
-		opacity: 0;
+		&__container {
+			.company_wrap {
+				width: 100%;
+				padding: 45px;
+				background: #F4F4F4;
+			}
+			.company_logo {
+				width: 146px;
+				height: 146px;
+				margin: 0 auto 10px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+			}
+			.company_info {
+				margin: 21px 0 14px;
+				font-size: 30px;
+				font-weight: bold;
+			}
+			.company_info {
+				font-size: 24px;
+				font-weight: 400;
+			}
+		}
+		&__footer {
+			justify-content: space-between;
+		}
 	}
 }

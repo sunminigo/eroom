@@ -42,129 +42,175 @@
 
 <div id="zoom" class="wrapper">
 	<main class="container_wrap">
-		<header>
-			<h1><img src="./assets/images/logo_symbol.svg" alt="eroom simbol" />편의시설 안내</h1>
-		</header>
-
-		<section class="content_box introduce_page card_box" aria-label="편의시설 소개">
-			<div class="convenience_box card_slider">
-				<figure>
-					<img src="./assets/images/banner/convenience/item_1.jpg" alt="" />
-					<figcaption>안내 촉지도</figcaption>
-					<p>이룸센터 정문 앞</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_2.jpg" alt="" />
-					<figcaption>화상전화기</figcaption>
-					<p>전동휠체어 급속 충전기B1,2층</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_3.jpg" alt="" />
-					<figcaption>전동휠체어 급속 충전기</figcaption>
-					<p>B1,2층</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_4.jpg" alt="" />
-					<figcaption>물품보관함</figcaption>
-					<p>이룸센터 정문 앞</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_5.jpg" alt="" />
-					<figcaption>무인과금복합기</figcaption>
-					<p>(1층 로비데스크 옆)</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_6.jpg" alt="" />
-					<figcaption>전자음성안내시스템</figcaption>
-					<p>B1,2층</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_7.jpg" alt="" />
-					<figcaption>장애인화장실</figcaption>
-					<p>B1, 1~6층</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_8.jpg" alt="" />
-					<figcaption>안전유도 손잡이</figcaption>
-					<p>-</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_9.jpg" alt="" />
-					<figcaption>B1-1층 전용 엘리베이터</figcaption>
-					<p>-</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_10.jpg" alt="" />
-					<figcaption>음성유도기</figcaption>
-					<p>각 층</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_11.jpg" alt="" />
-					<figcaption>음성유도기 안내리모콘</figcaption>
-					<p>1층 로비문의</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_12.jpg" alt="" />
-					<figcaption>피난대피용 보조기기</figcaption>
-					<p>각 층 계단</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_13.jpg" alt="" />
-					<figcaption>혈압측정기</figcaption>
-					<p>2층</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_14.jpg" alt="" />
-					<figcaption>통로 문턱 없음</figcaption>
-					<p>-</p>
-				</figure>
-				<figure>
-					<img src="./assets/images/banner/convenience/item_15.jpg" alt="" />
-					<figcaption>점자형 블록</figcaption>
-					<p>-</p>
-				</figure>
+		<section class="control_box">
+			<div class="zoom_box">
+				<span class="btn_control"
+				      onclick="zoomIn()"
+				><img src="./assets/images/icon/magnifier-plus.png" alt="" /></span>
+				<span class="btn_control"
+				      onclick="zoomOut()"
+				><img src="./assets/images/icon/magnifier-minus.png" alt="" /></span>
 			</div>
+			<span id="control_text"
+			      class="btn_control btn_one"
+			><img src="./assets/images/icon/text.png" alt="" /></span>
+			<button type="button"
+			        class="btn_control btn_one"
+			        onclick="location.href='index.html'"
+			        alt="버튼 홈"
+			        tabindex="1"
+			><img src="./assets/images/icon/home.png" alt="" /></button>
 		</section>
 
 		<section class="navigation_box">
 			<nav class="lnb_box">
 				<div class="lnb">
-					<a href="index.html">
-						<img src="./assets/images/icon/arrow_left.png" alt="뒤로가기" />
-					</a>
+					<a href="javascript:history.back();"
+					   alt="버튼 뒤로가기"
+					   tabindex="2"
+					><img src="./assets/images/icon/arrow_left.png" alt="" /></a>
 				</div>
 				<div class="lnb">
-					<a href="introduce_eroom.html">아름센터 소개</a>
+					<a href="introduce_eroom.html"
+					   alt="버튼 이룸센터 소개 메뉴"
+					   tabindex="3"
+					>이룸센터 소개</a>
 				</div>
 				<div class="lnb">
-					<a href="introduce_room.html">대관실 소개</a>
+					<a href="introduce_room.html"
+					   alt="버튼 대관실 소개 메뉴"
+					   tabindex="4"
+					>대관실 소개</a>
 				</div>
 				<div class="lnb">
-					<a href="introduce_convenience.html">편의시설 안내</a>
+					<a href="introduce_convenience.html"
+					   alt="버튼 편의시설 소개 메뉴"
+					   tabindex="5"
+					>편의시설 안내</a>
 				</div>
 			</nav>
 		</section>
 
-		<section class="control_box" aria-label="화면 확대축소 및 글자 확대축소가 가능합니다.">
-			<div class="zoom_box">
-				<button type="button" onclick="zoomIn()" alt="버튼 화면 확대">
-					<img src="./assets/images/icon/magnifier-plus.png" alt="" />
-				</button>
-				<button type="button" onclick="zoomOut()" alt="버튼 화면 축소">
-					<img src="./assets/images/icon/magnifier-minus.png" alt="" />
-				</button>
-			</div>
-			<button type="button" class="control_btn control_text" alt="버튼 글자크기 확대 축소">
-				<img src="./assets/images/icon/text.png" alt="" />
-			</button>
-			<button type="button" class="control_btn" onclick="location.href='index.html'" alt="버튼홈으로이동">
-				<img src="./assets/images/icon/home.png" alt="" />
-			</button>
-		</section>
 
+		<header alt="리스트 편의시설 안내 리스트" tabindex="8">
+			<h1><img src="./assets/images/logo_symbol.svg" alt="eroom simbol" />편의시설 안내</h1>
+		</header>
+
+		<section class="content_box introduce_page card_box">
+			<div class="convenience_box card_slider">
+				<figure>
+					<button type="button" alt="첫번째 항목 안내 촉지도 이룸센터 정문 앞">
+						<img data-lazy="./assets/images/banner/convenience/item_1.jpg" alt="" />
+						<figcaption>안내 촉지도</figcaption>
+						<p>이룸센터 정문 앞</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="두번째 항목 화상전화기 전동휠체어 급속 충전기B1,2층">
+						<img data-lazy="./assets/images/banner/convenience/item_2.jpg" alt="" />
+						<figcaption>화상전화기</figcaption>
+						<p>전동휠체어 급속 충전기B1,2층</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="세번째 항목 전동휠체어 급속 충전기 B1,2층">
+						<img data-lazy="./assets/images/banner/convenience/item_3.jpg" alt="" />
+						<figcaption>전동휠체어 급속 충전기</figcaption>
+						<p>B1,2층</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="네번째 항목 물품보관함 이룸센터 정문 앞">
+						<img data-lazy="./assets/images/banner/convenience/item_4.jpg" alt="" />
+						<figcaption>물품보관함</figcaption>
+						<p>이룸센터 정문 앞</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="다섯번째 항목 무인과금복합기 (1층 로비데스크 옆)">
+						<img data-lazy="./assets/images/banner/convenience/item_5.jpg" alt="" />
+						<figcaption>무인과금복합기</figcaption>
+						<p>(1층 로비데스크 옆)</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="여섯번째 항목 전자음성안내시스템 B1,2층">
+						<img data-lazy="./assets/images/banner/convenience/item_6.jpg" alt="" />
+						<figcaption>전자음성안내시스템</figcaption>
+						<p>B1,2층</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="일곱번째 항목 장애인화장실 B1, 1~6층">
+						<img data-lazy="./assets/images/banner/convenience/item_7.jpg" alt="" />
+						<figcaption>장애인화장실</figcaption>
+						<p>B1, 1~6층</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="여덟번째 항목 안전유도 손잡이">
+						<img data-lazy="./assets/images/banner/convenience/item_8.jpg" alt="" />
+						<figcaption>안전유도 손잡이</figcaption>
+						<p>-</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="아홉번째 항목 B1-1층 전용 엘리베이터">
+						<img data-lazy="./assets/images/banner/convenience/item_9.jpg" alt="" />
+						<figcaption>B1-1층 전용 엘리베이터</figcaption>
+						<p>-</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="열번째 항목 음성유도기 각 층">
+						<img data-lazy="./assets/images/banner/convenience/item_10.jpg" alt="" />
+						<figcaption>음성유도기</figcaption>
+						<p>각 층</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="열한번째 항목 음성유도기 안내리모콘 1층 로비문의">
+						<img data-lazy="./assets/images/banner/convenience/item_11.jpg" alt="" />
+						<figcaption>음성유도기 안내리모콘</figcaption>
+						<p>1층 로비문의</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="열두번째 항목 피난대피용 보조기기 각 층 계단">
+						<img data-lazy="./assets/images/banner/convenience/item_12.jpg" alt="" />
+						<figcaption>피난대피용 보조기기</figcaption>
+						<p>각 층 계단</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="열세번째 항목 혈압측정기 2층">
+						<img data-lazy="./assets/images/banner/convenience/item_13.jpg" alt="" />
+						<figcaption>혈압측정기</figcaption>
+						<p>2층</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="열네번째 항목 통로 문턱 없음">
+						<img data-lazy="./assets/images/banner/convenience/item_14.jpg" alt="" />
+						<figcaption>통로 문턱 없음</figcaption>
+						<p>-</p>
+					</button>
+				</figure>
+				<figure>
+					<button type="button" alt="열다섯번째 항목 점자형 블록">
+						<img data-lazy="./assets/images/banner/convenience/item_15.jpg" alt="" />
+						<figcaption>점자형 블록</figcaption>
+						<p>-</p>
+					</button>
+				</figure>
+			</div>
+		</section>
 	</main>
 	<section class="side_box" aria-label="현재 날씨 및 대관일정을 확인할 수 있습니다.">
-		<article class="weather_wrap">
+		<article class="weather_wrap"
+		         alt="2021년 01년 22일 오후 2:53 맑음 서울 영등포구 -5℃"
+		         tabindex="7"
+		>
 			<div class="today_info">
 				<p class="today_info__date">2021년 01년 22일</p>
 				<p class="today_info__time">2:53 PM</p>
@@ -195,59 +241,13 @@
 						<p class="title_box__place">회의실 4</p>
 					</div>
 				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
-				<li class="randomColor">
-					<div class="content_box">
-						<h3 class="content_box__title">이사회</h3>
-						<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
-					</div>
-					<div class="title_box">
-						<h4>시간</h4>
-						<p class="title_box__time">09시 ~ 16시</p>
-						<h4>장소</h4>
-						<p class="title_box__place">회의실 4</p>
-					</div>
-				</li>
 			</ul>
 			<button type="button"
 			        class="btn_more"
 			        data-popup-open="schedule_detail"
-			><img src="./assets/images/icon/calender.png" alt="" class="m-r-8">일정 전체 보기</button>
+			        alt="버튼 일정 전체보기 메뉴"
+			        tabindex="6"
+			><img src="./assets/images/icon/calender.png" alt="">일정 전체 보기</button>
 		</article>
 	</section>
 
@@ -255,14 +255,17 @@
 	<div class="popup_wrap rental_detail_popup" data-popup="schedule_detail">
 	<div class="popup_box">
 		<div class="popup_box__header">
-			<h2>대관 일정 안내</h2>
+			<h2 alt="대관 일정 안내" tabindex="2">대관 일정 안내</h2>
 		</div>
 		<div class="popup_box__container card_box">
 			<div class="rental_detail_list">
 				<div class="card_slider">
-					<div class="card">
+					<div class="card"
+					     alt="행사명: 이사회, 단체명: 한국 지적 발달 장애인 협회, 행사시간 14시 부터 16시, 장소 회의실3"
+					     tabindex="3"
+					>
 						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
+						<p class="intro">한국 지적 발달 장애인 협회</p>
 						<div class="info">
 							<p class="info__time">14시 ~ 16시</p>
 							<p class="info__place">회의실 3</p>
@@ -271,118 +274,7 @@
 							<button type="button"
 							        class="btn"
 							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
-							>위치보기</button>
-						</div>
-					</div>
-					<div class="card">
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회 한국 지적 발달 장애인 협회한국 지적 발달 장애인 협회</p>
-						<div class="info">
-							<p class="info__time">14시 ~ 16시</p>
-							<p class="info__place">회의실 3</p>
-						</div>
-						<div class="btn_wrap">
-							<button type="button"
-							        class="btn"
-							        onclick="location.href='floor_B1.html'"
+							        alt="버튼 위치보기"
 							>위치보기</button>
 						</div>
 					</div>
@@ -393,43 +285,48 @@
 			<button type="button"
 			        class="btn btn_fill"
 			        data-popup-close="schedule_detail"
+			        alt="버튼 팝업 닫기"
 			>닫기</button>
 		</div>
 	</div>
 </div>
 
-	<div class="popup_wrap type_loding">
+	<div class="popup_wrap type_loding" data-popup="dialog_loding">
 		<div class="popup_box">
 			<div class="popup_box__container">
 				<div class="loding_lottie">
 					<lottie-player src="./assets/images/loding.json"
-					               class="lottie"
+					               class="lottie lazy"
 					               background="transparent"
 					               speed="1"
 					               loop
 					               autoplay
 					></lottie-player>
 				</div>
-				<p>디바이스 연결중 ...</p>
+				<p alt="디바이스 연결중 ..."
+				   tabindex="1"
+				>디바이스 연결중 ...</p>
 			</div>
 		</div>
 	</div>
 
-	<div class="popup_wrap type_alert active" data-popup="alert_btn">
+	<div class="popup_wrap type_alert" data-popup="dialog_alert">
 		<div class="popup_box">
 			<div class="popup_box__container">
-				<p alt="alert text">alert line 1</p>
+				<p alt="alert text" tabindex="1">alert line 1</p>
 			</div>
 			<div class="popup_box__footer">
 				<button type="button"
 				        class="btn btn_outline"
-				        data-popup-close="alert_btn"
-				        alt="버튼닫기"
+				        data-popup-close="dialog_alert"
+				        alt="버튼 닫기"
+				        tabindex="2"
 				>닫기</button>
 				<button type="button"
 				        class="btn btn_fill"
-				        data-popup-close="alert_btn"
-				        alt="버튼확인"
+				        data-popup-close="dialog_alert"
+				        alt="버튼 확인"
+				        tabindex="3"
 				>확인</button>
 			</div>
 		</div>
@@ -442,6 +339,8 @@
 	<script type="text/javascript" src="./assets/script/common.js"></script>
 	<!-- lottie	-->
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<!-- lazyload	-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 </body>
 </html>
 

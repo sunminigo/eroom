@@ -1,3 +1,4 @@
+/* 네비게이션 */
 .navigation_box {
 	@include position(absolute, $b: 0, $l: 0);
 	display: flex;

@@ -1,5 +1,5 @@
+/* 센터안내 */
 .introduce_page {
-
 	.eroom_box {
 		display: flex;
 		width: 1352px;
@@ -46,6 +46,11 @@
 			width: 100%;
 		}
 	}
+	.room_box {
+		figure {
+			margin: 8px !important;
+		}
+	}
 	.room_box,
 	.convenience_box {
 		display: flex;
@@ -53,11 +58,14 @@
 		width: 1200px;
 		margin: 0 auto;
 
+		.slick-list {
+			height: 700px;
+		}
 		figure {
 			width: calc((100% / 3) - 16px);
 			height: 100%;
 			max-height: 472px;
-			margin: 8px;
+			margin: 8px 0;
 			padding: 11px 11px 20px;
 			border: 1px solid #E1E1E1;
 			border-radius: 8px;
