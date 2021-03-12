@@ -140,6 +140,16 @@ $(function() {
 		$('.next').show();
 		$(this).hide();
 	});
+	
+	/****************************************
+	 * SCROLL TEXT
+	 *****************************************/
+	$('.scrollingText').smoothDivScroll({
+		autoScrollingMode: "always",
+		autoScrollingDirection: "endlessLoopRight",
+		autoScrollingStep: 1,
+		autoScrollingInterval: 25
+	});
 });
 
 /****************************************
