@@ -13,30 +13,53 @@
 	}
 }
 .rental_detail_list {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	//display: flex;
+	//align-items: center;
+	//justify-content: center;
+	height: 100%;
 
+	.list_none {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		height: 100%;
+
+		.list_none_box {
+			p {
+				margin-top: 40px;
+				font-size: 32px;
+			}
+		}
+	}
+	.slick-slider {
+		margin-top: 45px;
+	}
 	.slick-track {
 		margin-left: 0;
 		margin-right: 0;
 	}
 	.card {
-		width: 376px !important;
-		margin: 8px;
+		//width: 327px !important;
+		height: 337px;
+		margin: 8px 0;
 		padding: 25px 24px 10px;
 		border-radius: 4px;
 		background: #FFFFFF;
 
+		.card_content {
+			height: calc(100% - 135px);
+		}
 		h3 {
 			font-size: 1.5rem; /* 24px */
+			@include dot(2, 1.2)
 		}
 		.intro {
-			min-height: 120px;
-			margin-top: 20px;
+			min-height: 80px;
+			margin: 20px 0 10px;
 			font-size: 1.25rem; /* 20px */
 			font-weight: 400;
-			@include dot(5, 1.2);
+			@include dot(4, 1.2);
 		}
 		.info {
 			padding-top: 17px;
@@ -75,7 +98,13 @@
 }
 .rental_detail_popup {
 	.rental_detail_list {
-		padding: 0 0 52px;
+		//padding: 0 0 52px;
+
+		.slick-slider {
+			//height: 100%;
+			margin-top: 0;
+			margin-bottom: 60px;
+		}
 	}
 	.popup_box {
 		&__container {

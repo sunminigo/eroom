@@ -166,6 +166,14 @@
 		<article class="info_wrap">
 			<h2 class="title">오늘의 대관현황</h2>
 			<ul class="info_list">
+				<!-- 리스트 없을 때 .list_none 추가 -->
+				<li class="randomColor list_none">
+					<div class="content_box">
+						<img src="./assets/images/icon/calendar_2.png" alt="" />
+						<p class="content_box__title">오늘의 대관 일정이<br>없습니다.</p>
+					</div>
+				</li>
+				<!-- 리스트 있을 때 -->
 				<li class="randomColor">
 					<div class="content_box">
 						<h3 class="content_box__title">이사회</h3>
@@ -196,13 +204,21 @@
 		</div>
 		<div class="popup_box__container card_box">
 			<div class="rental_detail_list">
+				<div class="list_none">
+					<div class="list_none_box">
+						<img src="./assets/images/banner/none.png" alt="" />
+						<p>오늘의 대관 일정이 없습니다.</p>
+					</div>
+				</div>
 				<div class="card_slider">
 					<div class="card"
 					     alt="행사명: 이사회, 단체명: 한국 지적 발달 장애인 협회, 행사시간 14시 부터 16시, 장소 회의실3"
 					     tabindex="3"
 					>
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회</p>
+						<div class="card_content">
+							<h3>이사회</h3>
+							<p class="intro">한국 지적 발달 장애인 협회</p>
+						</div>
 						<div class="info">
 							<p class="info__time">14시 ~ 16시</p>
 							<p class="info__place">회의실 3</p>
@@ -233,7 +249,7 @@
 			<div class="popup_box__container">
 				<div class="loding_lottie">
 					<lottie-player src="./assets/images/loding.json"
-					               class="lottie lazy"
+					               class="lottie"
 					               background="transparent"
 					               speed="1"
 					               loop
@@ -276,8 +292,6 @@
 	<script type="text/javascript" src="./assets/script/common.js"></script>
 	<!-- lottie	-->
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-	<!-- lazyload	-->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 </body>
 </html>
 

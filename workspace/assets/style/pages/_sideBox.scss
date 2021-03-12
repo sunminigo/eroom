@@ -105,8 +105,23 @@
 				&:nth-child(5n+5) {
 					border-left-color: $brandColor-green;
 				}
-				.content_box {
+				&.list_none {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					height: 98%;
+					border-left: 1px solid $light;
 
+					.content_box {
+						&__title {
+							line-height: 50px;
+							margin-top: 30px;
+							color: #666666;
+						}
+					}
+				}
+				.content_box {
 					&__title {
 						font-size: 1.5rem; /* 24px */
 						font-weight: 800;

@@ -122,11 +122,14 @@
 
 					<div class="subway_info left">
 						<!--
-							* 5단계 엑티브 포지션
-							step_1, step_2, step_3, step_4, step_5, step_6
+							* 5단계 엑티브 포지션 (왼쪽에서 오른쪽 순)
+							step_1, step_2, step_3, step_4, step_5
+							step_1-1, step_2-1, step_3-1, step_4-1, step_5-1
+
+							** 열차 추가시 이미지(.subway_img)를 추가 해 주세요.
 						-->
-						<div class="subway_img step_1">
-							<img src="./assets/images/icon/subway.png" alt="" />
+						<div class="subway_step_box">
+							<img class="subway_img step_1" src="./assets/images/icon/subway.png" alt="" />
 						</div>
 						<ul class="platform_list">
 							<li><span>국회의사당</span></li>
@@ -139,8 +142,8 @@
 				</article>
 
 				<article class="step_box">
-					<h2 class="title" alt="개화방면" ><img src="./assets/images/banner/subway_number.png" alt="9호선">개화방면</h2>
-					<table cellspacing="0" cellpadding="0" class="subway_table">>
+					<h2 class="title" alt="개화방면"><img src="./assets/images/banner/subway_number.png" alt="9호선">개화방면</h2>
+					<table cellspacing="0" cellpadding="0" class="subway_table">
 						<tbody>
 						<tr>
 							<td class="time">17:00</td>
@@ -156,11 +159,14 @@
 					</table>
 					<div class="subway_info right">
 						<!--
-							* 5단계 엑티브 포지션
-							step_1, step_2, step_3, step_4, step_5, step_6
+							* 5단계 엑티브 포지션 (왼쪽에서 오른쪽 순)
+							step_1, step_2, step_3, step_4, step_5
+							step_1-1, step_2-1, step_3-1, step_4-1, step_5-1
+
+							** 열차 추가시 이미지(.subway_img)를 추가 해 주세요.
 						-->
-						<div class="subway_img step_1">
-							<img src="./assets/images/icon/subway.png" alt="" />
+						<div class="subway_step_box">
+							<img class="subway_img step_1" src="./assets/images/icon/subway.png" alt="" />
 						</div>
 						<ul class="platform_list">
 							<li><span>노들</span></li>
@@ -197,6 +203,14 @@
 		<article class="info_wrap">
 			<h2 class="title">오늘의 대관현황</h2>
 			<ul class="info_list">
+				<!-- 리스트 없을 때 .list_none 추가 -->
+				<li class="randomColor list_none">
+					<div class="content_box">
+						<img src="./assets/images/icon/calendar_2.png" alt="" />
+						<p class="content_box__title">오늘의 대관 일정이<br>없습니다.</p>
+					</div>
+				</li>
+				<!-- 리스트 있을 때 -->
 				<li class="randomColor">
 					<div class="content_box">
 						<h3 class="content_box__title">이사회</h3>
@@ -227,13 +241,21 @@
 		</div>
 		<div class="popup_box__container card_box">
 			<div class="rental_detail_list">
+				<div class="list_none">
+					<div class="list_none_box">
+						<img src="./assets/images/banner/none.png" alt="" />
+						<p>오늘의 대관 일정이 없습니다.</p>
+					</div>
+				</div>
 				<div class="card_slider">
 					<div class="card"
 					     alt="행사명: 이사회, 단체명: 한국 지적 발달 장애인 협회, 행사시간 14시 부터 16시, 장소 회의실3"
 					     tabindex="3"
 					>
-						<h3>이사회</h3>
-						<p class="intro">한국 지적 발달 장애인 협회</p>
+						<div class="card_content">
+							<h3>이사회</h3>
+							<p class="intro">한국 지적 발달 장애인 협회</p>
+						</div>
 						<div class="info">
 							<p class="info__time">14시 ~ 16시</p>
 							<p class="info__place">회의실 3</p>
@@ -264,7 +286,7 @@
 			<div class="popup_box__container">
 				<div class="loding_lottie">
 					<lottie-player src="./assets/images/loding.json"
-					               class="lottie lazy"
+					               class="lottie"
 					               background="transparent"
 					               speed="1"
 					               loop
@@ -307,8 +329,6 @@
 	<script type="text/javascript" src="./assets/script/common.js"></script>
 	<!-- lottie	-->
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-	<!-- lazyload	-->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 </body>
 </html>
 
