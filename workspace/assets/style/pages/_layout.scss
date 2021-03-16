@@ -74,34 +74,33 @@ body.controlFontSize {
 	width: calc(100% - 360px);
 	padding: 0 0 76px 72px;
 	overflow: hidden;
+}
+header {
+	h1 {
+		display: flex;
+		align-items: center;
+		height: 86px;
+		font-size: 28px;
+		font-weight: bold;
 
-	header {
-		h1 {
-			display: flex;
-			align-items: center;
-			height: 86px;
-			font-size: 28px;
-			font-weight: bold;
+		&.logo_box {
+			width: 94px;
 
-			&.logo_box {
-				width: 94px;
-
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 	}
-	.content_box {
-		position: relative;
-		width: 100%;
-		height: calc(100% - 86px);
-		margin: 0 auto;
-		border-radius: 8px;
-		background: #EEEEEE;
-		overflow: hidden;
-		overflow-y: auto;
-	}
+}
+.container_box {
+	position: relative;
+	width: 100%;
+	height: calc(100% - 86px);
+	margin: 0 auto;
+	border-radius: 8px;
+	background: #EEEEEE;
+	overflow: hidden;
+	overflow-y: auto;
 }
 
 /* SLICK SLIDER CSS */
@@ -152,6 +151,7 @@ body.controlFontSize {
 		}
 	}
 }
+
 /* CARD_BOX - SLICK SLIDER CSS */
 .card_box {
 	display: flex;
@@ -164,7 +164,7 @@ body.controlFontSize {
 
 		&.slick-slider {
 			.slick-list {
-				//margin: 9px;
+				margin: 9px;
 
 				.slick-slide {
 					margin: 9px;

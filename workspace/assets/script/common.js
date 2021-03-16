@@ -8,8 +8,8 @@ $(function() {
 		autoplaySpeed: 5000,
 		arrows: true,
 		dots: true,
-		prevArrow: '<button type="button" class="prev"><img src="./assets/images/icon/arrow_angle_left.png" alt="이전"></button>',
-		nextArrow: '<button type="button" class="next"><img src="./assets/images/icon/arrow_angle_right.png" alt="다음"></button>',
+		prevArrow: '<button type="button" class="prev"><img src="../assets/images/icon/arrow_angle_left.png" alt="이전"></button>',
+		nextArrow: '<button type="button" class="next"><img src="../assets/images/icon/arrow_angle_right.png" alt="다음"></button>',
 	});
 	$('.card_slider').slick({
 		lazyLoad: 'ondemand',
@@ -20,8 +20,8 @@ $(function() {
 		autoplaySpeed: 5000,
 		arrows: true,
 		dots: true,
-		prevArrow: '<button type="button" class="prev" alt="버튼 이전"><img src="./assets/images/icon/arrow_angle_left.png" alt="이전"></button>',
-		nextArrow: '<button type="button" class="next" alt="버튼 다음"><img src="./assets/images/icon/arrow_angle_right.png" alt="다음"></button>',
+		prevArrow: '<button type="button" class="prev" alt="버튼 이전"><img src="../assets/images/icon/arrow_angle_left.png" alt="이전"></button>',
+		nextArrow: '<button type="button" class="next" alt="버튼 다음"><img src="../assets/images/icon/arrow_angle_right.png" alt="다음"></button>',
 	});
 	$('.room_view').slick({
 		lazyLoad: 'ondemand',
@@ -140,7 +140,7 @@ $(function() {
 		$('.next').show();
 		$(this).hide();
 	});
-	
+
 	/****************************************
 	 * SCROLL TEXT
 	 *****************************************/
