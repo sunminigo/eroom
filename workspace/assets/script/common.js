@@ -43,16 +43,22 @@ $(function() {
 	 *****************************************/
 	var url = window.location.pathname;
 	var urlName = url.replace('/', '').split('.')[0];
+	var iframeUrl = $('#iframe_content').attr('src');
 
+/*
+	$('.lnb_box').hide();
 	$('.gnb').each(function () {
 		var ref = $(this).children('button').attr('ref');
 
-		if (urlName.indexOf(ref) != -1) {
+		if (iframeUrl.indexOf(ref) != -1) {
 			$(this).addClass('active');
 			$(this).find('.lnb_wrap').addClass('active')
 		}
 
 		$(this).on('click', function() {
+			var noMenu = $('.lnb_box li').not('li:nth-child(2)');
+
+/!*
 			if ($(this).children().hasClass('lnb_wrap')) {
 				$(this).addClass('active');
 				$(this).find('.lnb_wrap').addClass('active');
@@ -62,15 +68,17 @@ $(function() {
 				$('.gnb_wrap').removeClass('active');
 				return false;
 			}
+*!/
 		});
 	});
+*/
 	$('.lnb').each(function () {
 		var href = $(this).find('a').attr('href');
 
 		if (href != undefined) {
 			href = href.split('.')[0]
 		}
-		if (urlName.indexOf(href) != -1) {
+		if (iframeUrl.indexOf(href) != -1) {
 			$(this).addClass('active');
 		}
 	});
@@ -194,15 +202,33 @@ function textToSpeech( text ) {
 
 	window.speechSynthesis.cancel();
 
+/*
 	utterThis.onend = function (event) {
 		console.log('SpeechSynthesisUtterance.onend');
 	}
 	utterThis.onerror = function (event) {
 		console.error('SpeechSynthesisUtterance.onerror');
 	}
+*/
 
 	utterThis.lang = 'ko-KR';
 	utterThis.pitch = 1;
 	utterThis.rate = 1;
 	synth.speak(utterThis);
 }
+
+/****************************************
+ * CHANGE IFRAME URL
+ *****************************************/
+
+function changeIframeUrl(url) {
+	var iframeSrc = document.getElementById('iframe_content').src;
+
+			iframeSrc = '/iframe/'+url+'.html';
+
+	if (iframeSrc.indexOf(url) != -1) {
+		console.log('-------------------------')
+console.log(url)
+	}
+}
+

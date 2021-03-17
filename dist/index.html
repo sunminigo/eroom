@@ -61,11 +61,11 @@
 
 		<section class="navigation_box">
 			<nav class="navigation">
-				<ul class="gnb_box">
+				<ul id="gnb_main" class="gnb_box">
 					<li id="introduce" class="gnb">
 						<button type="button"
 						        ref="introduce"
-						        onclick="location.href='introduce_eroom.html'"
+						        onclick="changeIframeUrl('introduce_eroom')"
 						        alt="버튼 센터소개 메뉴"
 						        tabindex="2"
 						>센터소개</button>
@@ -73,7 +73,7 @@
 					<li class="gnb">
 						<button type="button"
 						        ref="rental"
-						        onclick="location.href='rental_information.html'"
+						        onclick="changeIframeUrl('rental_information')"
 						        alt="버튼 대관안내 메뉴"
 						        tabindex="3"
 						>대관안내</button>
@@ -81,7 +81,7 @@
 					<li id="floor" class="gnb">
 						<button typee="button"
 						        ref="floor"
-						        onclick="location.href='floor_all.html'"
+						        onclick="changeIframeUrl('floor_all')"
 						        alt="버튼 층별안내 메뉴"
 						        tabindex="4"
 						>층별안내</button>
@@ -89,7 +89,7 @@
 					<li id="traffic" class="gnb">
 						<button type="button"
 						        ref="traffic"
-						        onclick="location.href='traffic_bus.html'"
+						        onclick="changeIframeUrl('traffic_bus')"
 						        alt="버튼 교통안내 메뉴"
 						        tabindex="5"
 						>교통안내</button>
@@ -98,8 +98,66 @@
 			</nav>
 		</section>
 
+		<section class="navigation_box">
+			<nav id="lnb_introduce" class="lnb_box">
+				<div class="lnb">
+					<a href="javascript:history.back();"
+					   alt="버튼 뒤로가기"
+					   tabindex="2"
+					><img src="./assets/images/icon/arrow_left.png" alt="" /></a>
+				</div>
+				<div class="lnb">
+					<a href="introduce_eroom.html"
+					   alt="버튼 이룸센터 소개 메뉴"
+					   tabindex="3"
+					>이룸센터 소개</a>
+				</div>
+				<div class="lnb">
+					<a href="introduce_room.html"
+					   alt="버튼 대관실 소개 메뉴"
+					   tabindex="4"
+					>대관실 소개</a>
+				</div>
+				<div class="lnb">
+					<a href="introduce_convenience.html"
+					   alt="버튼 편의시설 소개 메뉴"
+					   tabindex="5"
+					>편의시설 안내</a>
+				</div>
+			</nav>
+		</section>
 
-		<iframe src="iframe/main.html" frameborder="0" width="100%" height="100%"></iframe>
+		<section class="navigation_box">
+			<nav id="lnb_traffic" class="lnb_box">
+				<div class="lnb">
+					<a href="javascript:history.back();"
+					   alt="버튼 뒤로가기"
+					   tabindex="2"
+					><img src="./assets/images/icon/arrow_left.png" alt="뒤로가기" /></a>
+				</div>
+				<div class="lnb">
+					<a href="traffic_bus.html"
+					   alt="버튼 버스"
+					   tabindex="3"
+					>버스</a>
+				</div>
+				<div class="lnb">
+					<a href="traffic_subway.html"
+					   alt="버튼 지하철"
+					   tabindex="4"
+					>지하철</a>
+				</div>
+				<div class="lnb">
+					<a href="traffic_map.html"
+					   alt="버튼 위치보기"
+					   tabindex="5"
+					>위치보기</a>
+				</div>
+			</nav>
+		</section>
+
+
+		<iframe id="iframe_content" src="iframe/main.html" frameborder="0" width="100%" height="100%"></iframe>
 	</main>
 <!--	class="lazy" data-original-->
 	<section class="side_box" aria-label="현재 날씨 및 대관일정을 확인할 수 있습니다.">
