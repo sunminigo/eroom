@@ -8,8 +8,6 @@
 	height: 76px;
 	background: #fff;
 
-	.navigation {
-	}
 	.gnb_box {
 		position: relative;
 		display: flex;
@@ -50,10 +48,11 @@
 	}
 }
 .lnb_box {
+	display: none;
 	@include position-translate(absolute, $b: 0, $l: 50%, $x: -50%, $y: 0);
-	display: flex;
 	text-align: center;
 	overflow: hidden;
+	z-index: 1;
 
 	& > .lnb {
 		position: relative;
@@ -70,13 +69,6 @@
 			width: 1px;
 			height: 31px;
 			background: $light;
-		}
-		&:first-child {
-			width: 102px;
-
-			img {
-				vertical-align: -22px;
-			}
 		}
 		&.active {
 			background: $brandColor-yellow;

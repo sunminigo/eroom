@@ -40,27 +40,24 @@
 <div id="zoom" class="wrapper">
 	<main class="container_wrap">
 		<section class="navigation_box">
-			<nav class="lnb_box">
+			<nav id="lnb_traffic" class="lnb_box">
 				<div class="lnb">
-					<a href="javascript:history.back();"
-					   alt="버튼 뒤로가기"
-					   tabindex="2"
-					><img src="./assets/images/icon/arrow_left.png" alt="뒤로가기" /></a>
-				</div>
-				<div class="lnb">
-					<a href="traffic_bus.html"
+					<a onclick="changeIframeUrl('traffic_bus')"
+						 ref="traffic_bus"
 					   alt="버튼 버스"
 					   tabindex="3"
 					>버스</a>
 				</div>
 				<div class="lnb">
-					<a href="traffic_subway.html"
+					<a onclick="changeIframeUrl('traffic_subway')"
+						 ref="traffic_subway"
 					   alt="버튼 지하철"
 					   tabindex="4"
 					>지하철</a>
 				</div>
 				<div class="lnb">
-					<a href="traffic_map.html"
+					<a onclick="changeIframeUrl('traffic_map')"
+						 ref="traffic_map"
 					   alt="버튼 위치보기"
 					   tabindex="5"
 					>위치보기</a>

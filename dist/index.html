@@ -60,11 +60,12 @@
 		</section>
 
 		<section class="navigation_box">
-			<nav class="navigation">
+			<nav id="gnb_main" class="navigation">
 				<ul class="gnb_box">
 					<li id="introduce" class="gnb">
 						<button type="button"
 						        ref="introduce"
+						        onclick="changeIframeUrl('introduce_eroom')"
 						        alt="버튼 센터소개 메뉴"
 						        tabindex="2"
 						>센터소개</button>
@@ -72,6 +73,7 @@
 					<li class="gnb">
 						<button type="button"
 						        ref="rental"
+						        onclick="changeIframeUrl('rental_information')"
 						        alt="버튼 대관안내 메뉴"
 						        tabindex="3"
 						>대관안내</button>
@@ -79,6 +81,7 @@
 					<li id="floor" class="gnb">
 						<button typee="button"
 						        ref="floor"
+						        onclick="changeIframeUrl('floor_all')"
 						        alt="버튼 층별안내 메뉴"
 						        tabindex="4"
 						>층별안내</button>
@@ -86,6 +89,7 @@
 					<li id="traffic" class="gnb">
 						<button type="button"
 						        ref="traffic"
+						        onclick="changeIframeUrl('traffic_bus')"
 						        alt="버튼 교통안내 메뉴"
 						        tabindex="5"
 						>교통안내</button>
@@ -94,8 +98,155 @@
 			</nav>
 		</section>
 
+		<section class="navigation_box">
+			<nav id="lnb_introduce" class="lnb_box">
+				<div class="lnb">
+					<a onclick="changeIframeUrl('introduce_eroom')"
+					   alt="버튼 이룸센터 소개 메뉴"
+					   tabindex="3"
+					   ref="introduce_eroom"
+					>이룸센터 소개</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('introduce_room')"
+					   alt="버튼 대관실 소개 메뉴"
+					   tabindex="4"
+					   ref="introduce_room"
+					>대관실 소개</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('introduce_convenience')"
+					   alt="버튼 편의시설 소개 메뉴"
+					   tabindex="5"
+					   ref="introduce_convenience"
+					>편의시설 안내</a>
+				</div>
+			</nav>
+		</section>
 
-		<iframe src="iframe/main.html" frameborder="0" width="100%" height="100%"></iframe>
+		<section class="navigation_box">
+			<nav id="lnb_floor" class="lnb_box">
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_B1')"
+						 ref="floor_B1"
+					   alt="버튼지하1층"
+					   tabindex="3"
+					>B1</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_1')"
+						 ref="floor_1"
+					   alt="버튼1층"
+					   tabindex="4"
+					>1F</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_2')"
+					   ref="floor_2"
+					   alt="버튼2층"
+					   tabindex="5"
+					>2F</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_3')"
+					   ref="floor_3"
+					   alt="버튼3층"
+					   tabindex="6"
+					>3F</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_4')"
+					   ref="floor_4"
+					   alt="버튼4층"
+					   tabindex="7"
+					>4F</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_5')"
+					   ref="floor_5"
+					   alt="버튼5층"
+					   tabindex="8"
+					>5F</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_6')"
+					   ref="floor_6"
+					   alt="버튼6층"
+					   tabindex="9"
+					>6F</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_7')"
+					   ref="floor_7"
+					   alt="버튼7층"
+					   tabindex="10"
+					>7F</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_8')"
+					   ref="floor_8"
+					   alt="버튼8층"
+					   tabindex="11"
+					>8F</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_9')"
+					   ref="floor_9"
+					   alt="버튼9층"
+					   tabindex="12"
+					>9F</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_10')"
+					   ref="floor_10"
+					   alt="버튼10층"
+					   tabindex="13"
+					>10F</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('floor_all')"
+					   ref="floor_all"
+					   alt="버튼전층안내"
+					   tabindex="14"
+					>전층안내</a>
+				</div>
+			</nav>
+		</section>
+
+		<section class="navigation_box">
+			<nav id="lnb_traffic" class="lnb_box">
+				<div class="lnb">
+					<a onclick="changeIframeUrl('traffic_bus')"
+						 ref="traffic_bus"
+					   alt="버튼 버스"
+					   tabindex="3"
+					>버스</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('traffic_subway')"
+						 ref="traffic_subway"
+					   alt="버튼 지하철"
+					   tabindex="4"
+					>지하철</a>
+				</div>
+				<div class="lnb">
+					<a onclick="changeIframeUrl('traffic_map')"
+						 ref="traffic_map"
+					   alt="버튼 위치보기"
+					   tabindex="5"
+					>위치보기</a>
+				</div>
+			</nav>
+		</section>
+
+
+		<iframe id="iframe_content"
+		        src="iframe/main.html"
+		        frameborder="0"
+		        width="100%"
+		        height="100%"
+		        style="border: 1px solid;"
+		></iframe>
 	</main>
 	<section class="side_box" aria-label="현재 날씨 및 대관일정을 확인할 수 있습니다.">
 		<article class="weather_wrap"

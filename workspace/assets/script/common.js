@@ -40,24 +40,24 @@ $(function() {
 
 	/****************************************
 	 * NAVIGATION
-	 *****************************************/
-		//클릭 후 iframe src 변경
-		//iframe src 이름이 gnb 이름에 포함되있으면 active
-		
 	var url = window.location.pathname;
 	var urlName = url.replace('/', '').split('.')[0];
 	var getIframe = document.getElementsByTagName('iframe');
 
-	console.log(getIframe.src)
+	var iframeUrl = $('#iframe_content').attr('src');
+
+	$('.lnb_box').hide();
 	$('.gnb').each(function () {
 		var ref = $(this).children('button').attr('ref');
 
-		if (urlName.indexOf(ref) != -1) {
+		if (iframeUrl.indexOf(ref) != -1) {
 			$(this).addClass('active');
 			$(this).find('.lnb_wrap').addClass('active');
 		}
 
 		$(this).on('click', function() {
+			var noMenu = $('.lnb_box li').not('li:nth-child(2)');
+
 			if ($(this).children().hasClass('lnb_wrap')) {
 				$(this).addClass('active');
 				$(this).find('.lnb_wrap').addClass('active');
@@ -75,16 +75,18 @@ $(function() {
 		if (href != undefined) {
 			href = href.split('.')[0]
 		}
-		if (urlName.indexOf(href) != -1) {
+		if (iframeUrl.indexOf(href) != -1) {
 			$(this).addClass('active');
 		}
 	});
+	
 	$('.btn_back').on('click', function(){
 		$('.gnb_wrap').removeClass('active');
 		$('.lnb_wrap').removeClass('active');
 		$('.lnb').removeClass('active');
 		return false;
 	});
+	 *****************************************/
 
 	/****************************************
 	* POPUP OPEN CLOSE
@@ -211,3 +213,68 @@ function textToSpeech( text ) {
 	utterThis.rate = 1;
 	synth.speak(utterThis);
 }
+
+/****************************************
+ * CHANGE IFRAME URL
+ *****************************************/
+function changeIframeUrl(url) {
+	var getIframe = document.getElementById('iframe_content');
+			getIframe.src = 'iframe/'+url+'.html';
+	
+	if (getIframe.src.indexOf(url) != -1) {
+		let text = url.split('_')[0]
+		
+		switch(text) {
+			case 'introduce':
+				var lnbList = document.getElementById('lnb_introduce').querySelectorAll('.lnb')
+				
+				document.getElementById('lnb_introduce').style.display = 'flex';
+				document.getElementById('gnb_main').style.display = 'none';
+				
+				for(let i=0; i<lnbList.length; i++) {
+					lnbList[i].querySelector('a').getAttribute('ref') == url
+						? lnbList[i].classList.add('active')
+						: lnbList[i].classList.remove('active')
+				}
+				break;
+				
+			case 'floor':
+				var lnbList = document.getElementById('lnb_floor').querySelectorAll('.lnb')
+
+				document.getElementById('lnb_floor').style.display = 'flex';
+				document.getElementById('gnb_main').style.display = 'none';
+				
+				for(let i=0; i<lnbList.length; i++) {
+					lnbList[i].querySelector('a').getAttribute('ref') == url
+						? lnbList[i].classList.add('active')
+						: lnbList[i].classList.remove('active')
+				}
+				break;
+			
+			case 'traffic':
+				var lnbList = document.getElementById('lnb_traffic').querySelectorAll('.lnb')
+				
+				document.getElementById('lnb_traffic').style.display = 'flex';
+				document.getElementById('gnb_main').style.display = 'none';
+
+				for(let i=0; i<lnbList.length; i++) {
+					lnbList[i].querySelector('a').getAttribute('ref') == url
+						? lnbList[i].classList.add('active')
+						: lnbList[i].classList.remove('active')
+				}
+				break;
+				
+			case 'rental':
+				var lnbList = document.getElementById('gnb_main').querySelectorAll('.gnb')
+				console.log(url)
+				for(let i=0; i<lnbList.length; i++) {
+					console.log(lnbList[i].querySelector('button').getAttribute('ref'))
+					lnbList[i].querySelector('button').getAttribute('ref') == url.split('_')[0]
+						? lnbList[i].classList.add('active')
+						: lnbList[i].classList.remove('active')
+				}
+				break;
+		}
+	}
+}
+
