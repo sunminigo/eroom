@@ -1,0 +1,52 @@
+<section class="side_box" aria-label="현재 날씨 및 대관일정을 확인할 수 있습니다.">
+	<article class="weather_wrap"
+	         alt="2021년 01년 22일 오후 2:53 맑음 서울 영등포구 -5℃"
+	         tabindex="7"
+	>
+		<div class="today_info">
+			<p class="today_info__date">2021년 01년 22일</p>
+			<p class="today_info__time">2:53 PM</p>
+		</div>
+		<div class="temp_info">
+			<div class="temp_info__img">
+				<img src="./assets/images/weather/weather_01.svg" alt="날씨" />
+			</div>
+			<div class="temp_info__txt">
+				<p>-5℃</p>
+				<p class="location">서울 영등포구</p>
+			</div>
+		</div>
+	</article>
+
+	<article class="info_wrap">
+		<h2 class="title">오늘의 대관현황</h2>
+		<ul class="info_list">
+			<!-- 리스트 없을 때 .list_none 추가 -->
+			<li class="randomColor list_none">
+				<div class="content_box">
+					<img src="./assets/images/icon/calendar_2.png" alt="" />
+					<p class="content_box__title">오늘의 대관 일정이<br>없습니다.</p>
+				</div>
+			</li>
+			<!-- 리스트 있을 때 -->
+			<li class="randomColor">
+				<div class="content_box">
+					<h3 class="content_box__title">이사회</h3>
+					<p class="content_box__txt">한국 지적 발달 장애인 협회</p>
+				</div>
+				<div class="title_box">
+					<h4>시간</h4>
+					<p class="title_box__time">09시 ~ 16시</p>
+					<h4>장소</h4>
+					<p class="title_box__place">회의실 4</p>
+				</div>
+			</li>
+		</ul>
+		<button type="button"
+		        class="btn_more"
+		        data-popup-open="schedule_detail"
+		        alt="버튼 일정 전체보기 메뉴"
+		        tabindex="6"
+		><img src="./assets/images/icon/calender.png" alt="">일정 전체 보기</button>
+	</article>
+</section>

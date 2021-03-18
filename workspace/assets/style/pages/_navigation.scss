@@ -1,0 +1,102 @@
+/* 네비게이션 */
+.navigation_box {
+	@include position(absolute, $b: 0, $l: 0);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 76px;
+	background: #fff;
+
+	.navigation {
+	}
+	.gnb_box {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: auto;
+		z-index: 1;
+
+		& > .gnb {
+			height: 100%;
+
+			&.active {
+				background: $brandColor-yellow;
+				border-radius: 8px;
+			}
+			& > button {
+				position: relative;
+				text-align: center;
+				width: 281px;
+				height: 76px;
+				font-size: 1.625rem; /* 26px */
+
+				&:before {
+					@include position-translate(absolute, $t: 50%, $l: 0, $x: 0, $y: -50%);
+					content: '';
+					width: 1px;
+					height: 31px;
+					background: $light;
+				}
+			}
+			&:first-child button {
+				//width: 102px;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+.lnb_box {
+	@include position-translate(absolute, $b: 0, $l: 50%, $x: -50%, $y: 0);
+	display: flex;
+	text-align: center;
+	overflow: hidden;
+
+	& > .lnb {
+		position: relative;
+		text-align: center;
+		width: 281px;
+		line-height: 76px;
+		font-size: 1.625rem; /* 26px */
+		font-weight: 800;
+		border-radius: 8px;
+
+		& + .lnb:before {
+			@include position-translate(absolute, $t: 50%, $l: 0, $x: 0, $y: -50%);
+			content: '';
+			width: 1px;
+			height: 31px;
+			background: $light;
+		}
+		&:first-child {
+			width: 102px;
+
+			img {
+				vertical-align: -22px;
+			}
+		}
+		&.active {
+			background: $brandColor-yellow;
+			border-radius: 8px;
+		}
+		a {
+			display: block;
+		}
+		.btn_back {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+#lnb_floor.lnb_box {
+	& > .lnb {
+		width: 102px;
+
+		&:last-child {
+			width: 153px;
+		}
+	}
+}
