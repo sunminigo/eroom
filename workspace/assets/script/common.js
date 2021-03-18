@@ -118,6 +118,8 @@ $(function() {
 	 *****************************************/
 	$('#control_text').on('click', function () {
 		$('html, body').toggleClass('controlFontSize');
+		console.log($('#iframe_content body'));
+		$('#iframe_content').contents().find('html, body').toggleClass('controlFontSize');
 	});
 
 	/****************************************
@@ -277,4 +279,3 @@ function changeIframeUrl(url) {
 		}
 	}
 }
-
