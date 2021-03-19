@@ -10,7 +10,7 @@
 	.step_box {
 		flex: 1;
 		text-align: center;
-		width: 721px;
+		width: 50%;
 		//height: 882px;
 		padding: 27px 15px;
 		background: #fff;
@@ -21,12 +21,12 @@
 			margin-left: 10px;
 		}
 		.title {
-			font-size: 42px;
+			font-size: 2.625rem; /* 42px */
 			font-weight: bold;
 
 			p {
 				margin-top: 10px;
-				font-size: 24px;
+				font-size: 1.5rem; /* 24px */
 				color: #666666;
 			}
 		}
@@ -38,7 +38,7 @@
 			padding: 17px 16px 16px;
 			background: #333333;
 			border-radius: 8px;
-			font-size: 34px;
+			font-size: 2.125rem; /* 34px */
 			font-weight: 800;
 			overflow: hidden;
 			
@@ -49,7 +49,7 @@
 				color: #FFFFFF;
 				
 				&:after {
-					content: '';
+					content: "";
 					@include position-translate(absolute, $t: 50%, $r: -23px, $x: 0, $y: -50%);
 					width: 1px;
 					height: 28px;
@@ -156,12 +156,12 @@
 				.number {
 					width: 131px;
 					height: 100%;
-					font-size: 32px;
+					font-size: 2rem; /* 32px */
 					font-weight: 800;
 					color: #fff;
 				}
 				.time {
-					font-size: 30px;
+					font-size: 1.875rem; /* 30px */
 					font-weight: bold;
 				}
 			}
@@ -185,7 +185,7 @@
 		.title {
 			display: flex;
 			align-items: center;
-			font-size: 32px;
+			font-size: 2rem; /* 32px */
 			font-weight: bold;
 			color: #fff;
 
@@ -262,18 +262,18 @@
 			margin-top: 30px;
 
 			&:before {
-				content: '';
+				content: "";
 				@include position(absolute, $t: 7px, $l: 0);
 				width: 100%;
 				height: 44px;
-				background: url('../images/banner/subway_line.png') no-repeat 0 0 / 100%;
+				background: url("../images/banner/subway_line.png") no-repeat 0 0 / 100%;
 				z-index: -1;
 			}
 			li {
 				font-weight: 800;
 
 				&:before {
-					content: '';
+					content: "";
 					display: block;
 					width: 40px;
 					height: 40px;
@@ -302,4 +302,13 @@
 }
 #map {
 	height: 97%;
+}
+
+.controlFontSize {
+	.info {
+		width: 152px !important;
+	}
+	.scrollingText {
+		width: calc(100% - 152px) !important;
+	}
 }

@@ -118,7 +118,6 @@ $(function() {
 	 *****************************************/
 	$('#control_text').on('click', function () {
 		$('html, body').toggleClass('controlFontSize');
-		console.log($('#iframe_content body'));
 		$('#iframe_content').contents().find('html, body').toggleClass('controlFontSize');
 	});
 
@@ -177,10 +176,16 @@ function zoomIn() {
 	zooms();
 }
 function zooms() {
-	var wrapper = document.getElementById('zoom');
-			wrapper.style.width = nowZoom + "%";
-			wrapper.style.height = nowZoom + "%";
-			wrapper.style.zoom = nowZoom + "%";
+	$('.zoom').css({
+		'width': nowZoom + "%",
+		'height': nowZoom + "%",
+		'zoom': nowZoom + "%",
+	})
+	$('#iframe_content').contents().find('body').css({
+		'width': nowZoom + "%",
+		'height': nowZoom + "%",
+		'zoom': nowZoom + "%",
+	})
 
 	if(nowZoom === 200) {
 		alert('더 이상 확대할 수 없습니다.');
