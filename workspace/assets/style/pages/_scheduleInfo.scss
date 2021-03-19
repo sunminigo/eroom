@@ -13,18 +13,13 @@
 	}
 }
 .rental_detail_list {
-	//display: flex;
-	//align-items: center;
-	//justify-content: center;
+	display: flex;
+	align-items: center;
 	height: 100%;
 
 	.list_none {
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		text-align: center;
-		height: 100%;
-
+		
 		.list_none_box {
 			p {
 				margin-top: 40px;
@@ -32,15 +27,11 @@
 			}
 		}
 	}
-	.slick-slider {
-		margin-top: 45px;
-	}
 	.slick-track {
 		margin-left: 0;
 		margin-right: 0;
 	}
 	.card {
-		//width: 327px !important;
 		height: 337px;
 		margin: 8px 0;
 		padding: 25px 24px 10px;
