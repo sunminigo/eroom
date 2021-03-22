@@ -247,6 +247,7 @@ function changeIframeUrl(url) {
 				
 			case 'floor':
 				var lnbList = document.getElementById('lnb_floor').querySelectorAll('.lnb')
+				var targeted_popup_class = $(this).attr('data-popup-close');
 
 				document.getElementById('lnb_floor').style.display = 'flex';
 				document.getElementById('gnb_main').style.display = 'none';
@@ -255,6 +256,13 @@ function changeIframeUrl(url) {
 					lnbList[i].querySelector('a').getAttribute('ref') == url
 						? lnbList[i].classList.add('active')
 						: lnbList[i].classList.remove('active')
+				}
+				if ($('.rental_detail_popup').hasClass('active')) {
+					var targeted_popup_class = $('.rental_detail_popup').attr('data-popup-close');
+					
+					$('.rental_detail_popup').fadeOut('fast').removeClass('active');
+					$('.zoom_box').removeClass('box');
+					$('.btn_one').removeClass('box');
 				}
 				break;
 			
