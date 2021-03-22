@@ -16,11 +16,26 @@
 		z-index: 1;
 
 		& > .gnb {
+			position: relative;
 			height: 100%;
-
+			
+			& + .gnb:before {
+				@include position-translate(absolute, $t: 50%, $l: 0, $x: 0, $y: -50%);
+				content: '';
+				width: 1px;
+				height: 31px;
+				background: $light;
+			}
 			&.active {
 				background: $brandColor-yellow;
 				border-radius: 8px;
+				
+				&:focus:before {
+					z-index: -1;
+				}
+				& + .gnb:before {
+					z-index: -1;
+				}
 			}
 			& > button {
 				position: relative;
@@ -28,21 +43,6 @@
 				width: 281px;
 				height: 76px;
 				font-size: 1.625rem; /* 26px */
-
-				&:before {
-					@include position-translate(absolute, $t: 50%, $l: 0, $x: 0, $y: -50%);
-					content: '';
-					width: 1px;
-					height: 31px;
-					background: $light;
-				}
-			}
-			&:first-child button {
-				//width: 102px;
-
-				&:before {
-					display: none;
-				}
 			}
 		}
 	}
@@ -73,6 +73,13 @@
 		&.active {
 			background: $brandColor-yellow;
 			border-radius: 8px;
+			
+			&:before {
+				z-index: -1;
+			}
+			& + .lnb:before {
+				z-index: -1;
+			}
 		}
 		a {
 			display: block;
