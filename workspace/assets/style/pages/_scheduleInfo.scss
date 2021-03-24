@@ -90,9 +90,12 @@
 .rental_detail_popup {
 	.rental_detail_list {
 		.slick-slider {
-			min-height: 720px;
 			margin-top: 0;
 			margin-bottom: 60px;
+			
+			.slick-list {
+				min-height: 720px;
+			}
 		}
 	}
 	.popup_box {
