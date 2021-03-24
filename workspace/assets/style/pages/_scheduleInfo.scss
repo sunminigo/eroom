@@ -89,10 +89,8 @@
 }
 .rental_detail_popup {
 	.rental_detail_list {
-		//padding: 0 0 52px;
-
 		.slick-slider {
-			//height: 100%;
+			min-height: 720px;
 			margin-top: 0;
 			margin-bottom: 60px;
 		}
