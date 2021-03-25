@@ -51,7 +51,7 @@
 	display: none;
 	@include position-translate(absolute, $b: 0, $l: 50%, $x: -50%, $y: 0);
 	text-align: center;
-	overflow: hidden;
+	//overflow: hidden;
 	z-index: 1;
 
 	& > .lnb {
