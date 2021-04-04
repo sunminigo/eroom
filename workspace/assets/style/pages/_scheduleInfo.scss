@@ -19,7 +19,7 @@
 
 	.list_none {
 		text-align: center;
-		
+
 		.list_none_box {
 			p {
 				margin-top: 40px;
@@ -53,6 +53,7 @@
 			@include dot(4, 1.2);
 		}
 		.info {
+			height: 90px;
 			padding-top: 17px;
 			border-top: 1px solid $light;
 
@@ -74,7 +75,6 @@
 		}
 		.btn_wrap {
 			text-align: center;
-			margin-top: 27px;
 
 			.btn {
 				width: 166px;
@@ -92,7 +92,7 @@
 		.slick-slider {
 			margin-top: 0;
 			margin-bottom: 60px;
-			
+
 			.slick-list {
 				min-height: 720px;
 			}
