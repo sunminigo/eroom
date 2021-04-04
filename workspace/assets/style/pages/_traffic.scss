@@ -41,13 +41,13 @@
 			font-size: 2.125rem; /* 34px */
 			font-weight: 800;
 			overflow: hidden;
-			
+
 			.info {
 				position: relative;
 				width: 130px;
 				margin-right: 20px;
 				color: #FFFFFF;
-				
+
 				&:after {
 					content: "";
 					@include position-translate(absolute, $t: 50%, $r: -23px, $x: 0, $y: -50%);
@@ -57,16 +57,16 @@
 					background: #C4C4C4;
 				}
 			}
-			
+
 			/* 흐르는 텍스트 */
 			.scrollingText {
 				text-align: left;
 				width: calc(100% - 130px);
-				
+
 				.scrollableArea {
 					display: inline-block;
 					white-space: nowrap;
-					
+
 					span {
 						display: inline-block;
 						padding: 0 15px;
@@ -305,8 +305,10 @@
 }
 
 .controlFontSize {
-	.info {
-		width: 152px !important;
+	#bus {
+		.info {
+			width: 152px !important;
+		}
 	}
 	.scrollingText {
 		width: calc(100% - 152px) !important;
